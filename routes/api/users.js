@@ -5,8 +5,8 @@ const User = require('../../models/User');
 const jwt = require('jsonwebtoken');
 const keys = require('../../config/keys');
 const passport = require('passport');
-
-module.exports = router;
+const validateRegisterInput = require('../../validation/register');
+const validateLoginInput = require('../../validation/login');
 
 router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
   res.json({
@@ -16,12 +16,20 @@ router.get('/current', passport.authenticate('jwt', { session: false }), (req, r
 })
 
 router.post('/register', (req, res) => {
+  const { errors, isValid } = validateRegisterInput(req.body);
+
+  if (!isValid) {
+    return res.status(400).json(errors);
+  }
+
   // Check to make sure nobody has already registered with a duplicate email
   User.findOne({ email: req.body.email })
     .then(user => {
       if (user) {
+        errors.email = 'This email address is already taken!';
+
         // Throw a 400 error if the email address already exists
-        return res.status(400).json({ email: "This email address is already taken!" })
+        return res.status(400).json(errors);
       } else {
         // Otherwise create a new user
         const newUser = new User({
@@ -43,13 +51,20 @@ router.post('/register', (req, res) => {
 });
 
 router.post('/login', (req, res) => {
+  const { errors, isValid } = validateLoginInput(req.body);
+
+  if (!isValid) {
+    return res.status(400).json(errors);
+  }
+
   const email = req.body.email;
   const password = req.body.password;
 
   User.findOne({ email })
     .then(user => {
       if (!user) {
-        return res.status(404).json({ email: 'Account not found!' });
+        errors.email = 'Account not found!';
+        return res.status(404).json(errors);
       }
 
       bcrypt.compare(password, user.password)
@@ -69,8 +84,11 @@ router.post('/login', (req, res) => {
                 });
               });
           } else {
-            return res.status(400).json({ password: 'Incorrect password' });
+            errors.password = 'Incorrect password'
+            return res.status(400).json(errors);
           }
         })
     })
 });
+
+module.exports = router;
