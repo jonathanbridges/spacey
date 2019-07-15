@@ -1,0 +1,66 @@
+@import 'reset';
+@import 'navbar';
+@import 'modal';
+$MainBackground: #252c37;
+$MainPage--SideBarColor: #252c37;
+$MainBackground--Header: rgb(16, 22, 31);
+$LeftSideBar: 20%;
+$BoxShadow : 0px 1px 80px rgb(21, 10, 47);
+
+
+#root{
+    height: 100vh;
+    background: pink;
+}
+.App{
+
+    background: purple;
+    height: 100%;
+}
+body{
+    background: green;
+}
+
+.MainPage{
+    width: 100vw;
+    height: 100vh;
+    background: $MainBackground;
+    position: relative;
+
+}
+.NavBar{
+    display: flex;
+    padding: 0px 70px;
+    align-items: center;
+    justify-content: space-between;
+    background: $MainBackground--Header;
+    height: 100px;
+    width: 100%;
+    color: white;
+    position: relative;
+    box-shadow: $BoxShadow;
+    z-index: 1;
+}
+.MainPage--Body{
+    background: red;
+    display: grid;
+    height:100%;
+    width:100%;
+    grid-template-areas: "left right";
+
+    grid-template-columns: 275px auto;
+}
+
+.MainPage--SideBar{
+    z-index: 0;
+    position: relative;
+    background: $MainPage--SideBarColor;
+    grid-area: left;
+    box-shadow:$BoxShadow;
+
+}
+.MainPage--Widgets{
+    background: rgb(43, 37, 65);
+    grid-area: right;
+
+}

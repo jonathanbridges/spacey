@@ -15,32 +15,44 @@ class NavBar extends React.Component {
       e.preventDefault();
       this.props.logout();
   }
+//                <Link to={'/tweets'}>All Tweets</Link>
+//                <Link to={'/profile'}>Profile</Link>
+//                <Link to={'/new_tweet'}>Write a Tweet</Link>
 
   // Selectively render links dependent on whether the user is logged in
   getLinks() {
+    //debugger
+    console.log(this.props)
       if (this.props.loggedIn) {
         return (
             <div>
-                <Link to={'/tweets'}>All Tweets</Link>
-                <Link to={'/profile'}>Profile</Link>
-                <Link to={'/new_tweet'}>Write a Tweet</Link>
+              <span>Hi </span>
                 <button onClick={this.logoutUser}>Logout</button>
             </div>
         );
       } else {
         return (
-            <div>
-                <Link to={'/signup'}>Signup</Link>
-                <Link to={'/login'}>Login</Link>
+            <div className ="NavBar--SignedOut">
+              <div className="NavBar--Signup">
+                <Link to={'/signup'} >Signup</Link>
+              </div>
+                &nbsp;&nbsp;&nbsp;
+              <div className="NavBar--Login">
+                <Link to={'/login'} >Login</Link>
+              </div>
+
             </div>
         );
       }
   }
 
   render() {
+    console.log(this.props, 'this is prtops!!!')
+  //loggedIn: state.session.isAuthenticated
       return (
-        <div>
-            <h1>Chirper</h1>
+        <div className="NavBar">
+            <h1>Spacey</h1>
+            {this.props.loggedIn}
             { this.getLinks() }
         </div>
       );

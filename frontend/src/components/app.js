@@ -1,7 +1,7 @@
 import React from 'react';
+
 import { AuthRoute } from '../util/route_util';
-import { Switch } from 'react-router-dom';
-import NavBarContainer from './nav/navbar_container';
+import { Switch ,Route} from 'react-router-dom';
 
 import MainPage from './main/main_page';
 import LoginFormContainer from './session/login_form_container';
@@ -10,18 +10,39 @@ import SignupFormContainer from './session/signup_form_container';
 
 import NasaIOTD from './widgets/nasa_iotd_container'
 
-const App = () => {
-  return (
-    <div>
-      <NavBarContainer />
+
+class App extends React.Component{
+    constructor(props){
+    super(props)
+
+    this.state={
+      modal: 'close' 
+    }
+  }
+/* modal stuff
+        <button onClick={()=>this.setState({modal:'open'})}>this is a button</button>
+
+      <div className={`overlay${ this.state.modal==='open'?"--open" :""}`} onClick={()=>this.setState({modal: 'close'})}>
+        <div className={`modal${ this.state.modal==='open'?"--open" :""}`}>
+          <h3>this is stuff</h3>
+          <p>mosdlj fasdjkfasd fasdj;l fasdjkl;fadsre stuff</p>
+        </div>
+      </div>
+      */
+
+  render(){
+    return (
+    <div className="App">
+
+
       <Switch>
-          <AuthRoute exact path="/" component={MainPage} />
+          <Route exact path="/" component={MainPage} />
           <AuthRoute exact path="/login" component={LoginFormContainer} />
           <AuthRoute exact path="/signup" component={SignupFormContainer} />
       </Switch>
-      <NasaIOTD />
-    </div>
-  )
+         <NasaIOTD />
+    </div>)}
+
 };
 
 export default App;
