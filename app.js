@@ -15,6 +15,7 @@ mongoose
   .catch(err => console.log(err));
 
 app.get("/", (req, res) => res.send("New Text"));
+//app.get("/", (req, res) => res.send('./frontend//index.html'));
 app.use(passport.initialize());
 require('./config/passport')(passport);
 
