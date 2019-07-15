@@ -1,4 +1,4 @@
-import * as NasaAPIUtil from '../util/nasa_iotd_util'
+import * as NasaAPIUtil from '../util/external_api_util';
 
 export const RECEIVE_IOTD = 'RECEIVE_IOTD';
 
