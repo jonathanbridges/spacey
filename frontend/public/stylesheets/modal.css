@@ -1,24 +1,35 @@
 .overlay {
   position: absolute;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
+  z-index: 5;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  height: 10000px;
   display: none;
-  background: purple;
 }
 
 .overlay--open {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
   display: flex;
 }
 
 .modal {
+  float: right;
   max-width: 600px;
   background: purple;
   opacity: 0;
 }
 
 .modal--open {
+  float: right;
   animation: 0.3s show;
   animation-delay: 0.2s;
   animation-fill-mode: forwards;
@@ -37,47 +48,18 @@
   }
   to {
     opacity: 1;
-    transform: translate3d(0, -40px, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 @keyframes hide {
   from {
     opacity: 1;
-    transform: translate3d(0, -40px, 0);
+    transform: translate3d(0, 0, 0);
   }
   to {
     opacity: 0;
     transform: translate3d(0, 0, 0);
   }
 }
-/*
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 8px;
-}
-
-header button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 24px;
-}
-
-header button:hover {
-  cursor: pointer;
-}
-
-section {
-  padding: 0 8px 18px;
-}
-
-button {
-  padding: 8px;
-  background: ghostwhite;
-}
-*/
 
 /*# sourceMappingURL=modal.css.map */
