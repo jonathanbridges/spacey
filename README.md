@@ -1,6 +1,6 @@
 # spacey
 
-### spacey 
+### spacey
 
 spacey is a central hub for content pertaining to astronomy and the space industry. It allows visitors to make select and filter their favorite content, and save a customized dashboard that they can view on repeat visits.
 
@@ -10,9 +10,9 @@ Consolidating content from a multitude of sources allows users to spend less tim
 
 spacey aggregates content from API endpoints such as NASA, SpaceX, and Twitter.
 
-We will need to: 
+We will need to:
   * Create a webapp that is capable of making GET requests to many different APIs
-  * Work with extracting data from JSON responses and make them visually appealing to end users 
+  * Work with extracting data from JSON responses and make them visually appealing to end users
   * Build a database that allows for users to persist their favorite modules/feeds
   * Create a notification system that alerts users when items in their feeds have been updated
 
@@ -29,6 +29,10 @@ We will need to:
    - [ ] Notifications
    - [ ] Comments / Channels
 
+## Wireframes
+
+![Wireframe 0](assets/wireframe-0.png "Wireframe 0")
+
 ## Technologies
 
   ##### Backend: MongoDB/Express
@@ -40,14 +44,14 @@ Many of the API endpoints for anything related to space science are incredibly d
 
   - Extensive research on available data from APIs
   - Making effective API calls and parsing the data appropriately
-  - Parsing data and making it visually appealing for visitors 
-  - Persisting user views from session to session 
+  - Parsing data and making it visually appealing for visitors
+  - Persisting user views from session to session
   - Learning a new technology stack
 
 ## Accomplished over the Weekend
 
-  - Extensive research on API endpoints from NASA, SpaceX, Twitter, other sources 
-  - Design aesthetic and basic layout for page agreed upon 
+  - Extensive research on API endpoints from NASA, SpaceX, Twitter, other sources
+  - Design aesthetic and basic layout for page agreed upon
   - Database and Repo created
   - Readme
   - User authentication on database backend
@@ -64,7 +68,7 @@ Many of the API endpoints for anything related to space science are incredibly d
   - BE User Auth and Testing - **Eric, Jonathan**
   - React/Redux FE setup = **Emarson, Eric**
   - Readme - **Jonathan**
-  
+
 ### July 15 - 17
 
 TODOs - # Default Dashboard & Feeds, Filtering, Subscribing, Notifications, Comments
