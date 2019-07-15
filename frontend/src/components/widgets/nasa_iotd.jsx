@@ -7,7 +7,7 @@ class imageOfTheDay extends React.Component {
   }
 
   render () {
-    if (!this.props.nasaIOTD === undefined) {
+    if (this.props.nasaIOTD === undefined) {
       return (<div></div>)
     } else {
       let iotd = this.props.nasaIOTD.data;
