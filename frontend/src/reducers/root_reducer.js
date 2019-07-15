@@ -3,10 +3,12 @@
 import { combineReducers } from 'redux';
 import session from './session_reducer';
 import errors from './errors_reducer';
+import nasaIOTD from './nasa_iotd_reducer';
 
 const RootReducer = combineReducers({
   session,
-  errors
+  errors,
+  nasaIOTD
 });
 
 export default RootReducer;

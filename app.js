@@ -1,3 +1,5 @@
+const axios = require('axios');
+
 const mongoose = require('mongoose');
 const db = require('./config/keys').mongoURI;
 
@@ -8,6 +10,9 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 
 const users = require("./routes/api/users");
+
+const cors = require('cors');
+app.use(cors());
 
 mongoose
   .connect(db, { useNewUrlParser: true })
@@ -25,6 +30,20 @@ app.use("/api/users", users);
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server is running on port ${port}`));
+
+// let config = {
+//   headers: {
+//     'Access-Control-Allow-Origin': 'https://spacelaunchnow.me/api',
+//     // 'Access-Control-Allow-Methods': 'GET',
+//     // 'Access-Control-Allow-Headers': 'Content-TypeError, Authorization'
+//   }
+// }
+
+// axios.get('https://api.nasa.gov/planetary/apod?api_key=d4ZI9zLharrE2OR7EKtesQzSmI3w4hxfx8FMkVSF')
+
+// fetch('https://spacelaunchnow.me/api/3.3.0/event/?format=json').then(blob => blob.json()).then(data => console.log(data));
+axios.get('https://spacelaunchnow.me/api/3.3.0/event/?format=json').then(data => console.log(data));
+
 
 
 
