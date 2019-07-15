@@ -18,6 +18,8 @@ class NavBar extends React.Component {
 
   // Selectively render links dependent on whether the user is logged in
   getLinks() {
+    //debugger
+    console.log(this.props)
       if (this.props.loggedIn) {
         return (
             <div>
@@ -25,6 +27,7 @@ class NavBar extends React.Component {
                 <Link to={'/profile'}>Profile</Link>
                 <Link to={'/new_tweet'}>Write a Tweet</Link>
                 <button onClick={this.logoutUser}>Logout</button>
+                {this.props.loggedIn}
             </div>
         );
       } else {
@@ -38,9 +41,12 @@ class NavBar extends React.Component {
   }
 
   render() {
+    console.log(this.props, 'this is prtops!!!')
+  //loggedIn: state.session.isAuthenticated
       return (
-        <div>
-            <h1>Chirper</h1>
+        <div className="NavBar">
+            <h1>Spacey</h1>
+            {this.props.loggedIn}
             { this.getLinks() }
         </div>
       );
