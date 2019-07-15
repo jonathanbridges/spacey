@@ -5,9 +5,9 @@ class imageOfTheDay extends React.Component {
   componentDidMount() {
     this.props.fetchImageOfTheDay();
   }
-  
+
   render () {
-    if (!this.props.nasaIOTD.status) {
+    if (!this.props.nasaIOTD === undefined) {
       return (<div></div>)
     } else {
       let iotd = this.props.nasaIOTD.data;

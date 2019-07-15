@@ -5,7 +5,7 @@ import NasaIOTD from './nasa_iotd'
 const msp = (state, ownProps) => {
   return (
     {
-      nasaIOTD: state.nasaIOTD
+      nasaIOTD: state.apis.nasaIOTD
     }
   )
 }
