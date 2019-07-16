@@ -17,6 +17,7 @@ import { setAuthToken } from './util/session_api_util';
 
 // We have not created this action yet, but will do so in the next step
 import { logout } from './actions/session_actions';
+import { fetchSpaceLaunchNow } from './actions/space_launch_now_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -52,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.store = store
 
   window.getState = store.getState
+  window.fetchSpaceLaunchNow = fetchSpaceLaunchNow;
 
   ReactDOM.render(<Root store={store} />, root);
 });

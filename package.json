@@ -24,6 +24,7 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.6.4",
+    "nuka-carousel": "^4.5.9",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "react-dom": "^16.8.6",
