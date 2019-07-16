@@ -1,0 +1,25 @@
+.Timeline{
+  width: 50%;
+}
+
+.Timeline--Link{
+  color: #000;
+}
+
+.Timeline--Image{
+  width: 100px;
+  height: 100px;
+}
+
+.Timeline--Body{
+  width: calc(100% - 120px);
+  float: right;
+}
+
+.Timeline--Location{
+  font-weight: 500;
+}
+
+.Timeline--Description{
+  font-weight: 400;
+}
