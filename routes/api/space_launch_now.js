@@ -1,21 +1,18 @@
 const express = require("express");
 const router = express.Router();
-const axios = require('axios')
+const axios = require('axios');
 
 router.get('/', (req, res) => {
 
-  function spaceLaunchNow() {
-    return axios.get('https://spacelaunchnow.me/api/3.3.0/event/?format=json')
-      .then(response => {
-        return response.data
-      }
-    );
-  }
+  const getSpaceLaunchNews = () => {
+    let url = 'https://spacelaunchnow.me/api/3.3.0/event/?format=json';
+    return axios.get(url).then(response => response.data);
+  };
 
-  spaceLaunchNow().then(data => {
+  getSpaceLaunchNews().then(data => {
     res.json({
       message: "Request received!",
-      data
+      data: data.results
     })
   })
 
