@@ -10,3 +10,14 @@ export const fetchSpaceXLaunches = () => {
   let url = 'https://api.spacexdata.com/v3/launches/upcoming';
   return axios.get(url);
 };
+
+// Returns a response which lets you know the latest date available for photos
+export const fetchRoverManifest = () => {
+  let url = `https://api.nasa.gov/mars-photos/api/v1/manifests/curiosity?api_key=${keys.nasa}`;
+  return axios.get(url);
+}
+
+export const fetchRoverPhotos = (date) => {
+  let url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=${keys.nasa}&earth_date=${date}`;
+  return axios.get(url);
+}

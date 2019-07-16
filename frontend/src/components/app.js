@@ -9,6 +9,7 @@ import SignupFormContainer from './session/signup_form_container';
 // import axios from 'axios';
 
 import NasaIOTD from './widgets/nasa_iotd_container'
+import RoverPhotos from './widgets/rover_images_container'
 
 
 class App extends React.Component{
@@ -40,7 +41,9 @@ class App extends React.Component{
           <AuthRoute exact path="/login" component={LoginFormContainer} />
           <AuthRoute exact path="/signup" component={SignupFormContainer} />
       </Switch>
-         <NasaIOTD />
+      <NasaIOTD />
+      <RoverPhotos />
+
     </div>)}
 
 };
