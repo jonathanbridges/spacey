@@ -1,6 +1,7 @@
 import React from 'react';
 import { Timeline, TimelineEvent } from 'react-event-timeline';
 import LaunchIcon from './assets/launch_icon';
+import Img from './assets/img';
 
 class SpaceLaunchNews extends React.Component {
 
@@ -39,10 +40,11 @@ class SpaceLaunchNews extends React.Component {
           // createdAt={date}
           icon={<LaunchIcon />}
           // container="card"
+          showContent
           collapsible
         >
           <a className="Timeline--Link" href={news_url}>
-            <img className="Timeline--Image" src={feature_image} alt="" />
+            <Img className="Timeline--Image" src={feature_image} alt=""></Img>
             <section className="Timeline--Body">
               <p className="Timeline--Location">{location}</p>
               <p className="Timeline--Description">{description}</p>
