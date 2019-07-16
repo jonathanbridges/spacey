@@ -6,9 +6,9 @@ import { Switch ,Route} from 'react-router-dom';
 import MainPage from './main/main_page';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
-// import axios from 'axios';
 
-import NasaIOTD from './widgets/nasa_iotd_container'
+import NasaIOTD from './widgets/nasa_iotd_container';
+import News from './widgets/all_news';
 import RoverPhotos from './widgets/rover_images_container'
 
 
@@ -17,7 +17,7 @@ class App extends React.Component{
     super(props)
 
     this.state={
-      modal: 'close' 
+      modal: 'close'
     }
   }
 /* modal stuff
@@ -42,8 +42,8 @@ class App extends React.Component{
           <AuthRoute exact path="/signup" component={SignupFormContainer} />
       </Switch>
       <NasaIOTD />
+      <News />
       <RoverPhotos />
-
     </div>)}
 
 };

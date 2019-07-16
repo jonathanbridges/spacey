@@ -2,6 +2,9 @@ import { RECEIVE_IOTD } from '../actions/nasa_iotd_actions';
 import { RECEIVE_LAUNCHES } from '../actions/spacex_launch_actions';
 import { RECEIVE_ROVER_MANIFEST, RECEIVE_ROVER_PHOTOS } from '../actions/nasa_rover_images_actions';
 
+import { RECEIVE_SPACE_LAUNCH_NEWS } from '../actions/space_launch_now_actions';
+import { RECEIVE_HUBBLE_NEWS } from '../actions/hubble_news_actions';
+
 const externalApiReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   switch (action.type) {
@@ -13,6 +16,10 @@ const externalApiReducer = (oldState = {}, action) => {
       return Object.assign({}, oldState, { marsRoverManifest: action.payload });
     case RECEIVE_ROVER_PHOTOS:
       return Object.assign({}, oldState, { marsRoverPhotos: action.payload });
+    case RECEIVE_SPACE_LAUNCH_NEWS:
+      return Object.assign({}, oldState, { spaceLaunchNews: action.payload });
+    case RECEIVE_HUBBLE_NEWS:
+      return Object.assign({}, oldState, { hubbleNews: action.payload });
     default:
       return oldState;
   }
