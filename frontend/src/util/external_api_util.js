@@ -10,3 +10,8 @@ export const fetchSpaceXLaunches = () => {
   let url = 'https://api.spacexdata.com/v3/launches/upcoming';
   return axios.get(url);
 };
+
+export const fetchSpaceLaunchNow = () => {
+  let url = '/api/spacelaunchnow'
+  return axios.get(url);
+}
