@@ -1,4 +1,6 @@
 import React from 'react';
+import Carousel from 'nuka-carousel';
+
 
 class roverImages extends React.Component {
 
@@ -12,20 +14,36 @@ class roverImages extends React.Component {
 
   render() {
     if (!this.props.roverImages) {
-      return (<div></div>)
+      return (
+        <div id="slides">
+          <div className="slide"></div>
+        </div>
+      )
     } else {
-    let roverImageCollection = this.props.roverImages.data.photos;
-    let roverImages = roverImageCollection.map((roverImg, idx) => (
-      <img key={idx} src={roverImg.img_src} alt="" height="auto" width="100%" />
-    ));
+
+      // const imgStyle = {
+      //   height: `480px`,
+      //   width: `100%`,
+      //   objectFit: `cover`
+      // };
+
+      let roverImageCollection = this.props.roverImages.data.photos;
+      let roverImages = roverImageCollection.map((roverImg, idx) => (
+        <div className="rover-img-container" key={idx} style={{backgroundImage: `url(${roverImg.img_src})`}}>
+          {/* <img src={roverImg.img_src} className="rover-img" alt="" style={imgStyle} /> */}
+        </div>
+      ));
 
       return (
         <div>
-          {roverImages}
+          <Carousel>
+            {roverImages}
+          </Carousel>
         </div>
       )
     }
   }
 }
+
 
 export default roverImages;

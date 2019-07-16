@@ -18,6 +18,6 @@ export const fetchRoverManifest = () => {
 }
 
 export const fetchRoverPhotos = (date) => {
-  let url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=${keys.nasa}&earth_date=${date}`;
+  let url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=${keys.nasa}&earth_date=${date}&page=1`;
   return axios.get(url);
 }
