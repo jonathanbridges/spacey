@@ -43,25 +43,26 @@ class LoginForm extends React.Component {
       password: this.state.password
     };
 
-    this.props.login(user).then(this.props.history.push('/')); 
+    this.props.login(user); 
   }
 
   // Render the session errors if there are any
   renderErrors() {
-    return(
-      <ul>
-        {Object.keys(this.state.errors).map((error, i) => (
-          <li key={`error-${i}`}>
-            {this.state.errors[error]}
-          </li>
-        ))}
-      </ul>
-    );
+      return( 
+        <div className="SessionErrors">
+          {Object.keys(this.state.errors).map((error, i) => (
+            <p key={`error-${i}`}>
+              {this.state.errors[error]}
+            </p>
+          ))}
+        </div>
+      );
+
   }
 
   render() {
     return (
-      <div>
+      <div className="ModalForm">
         <form onSubmit={this.handleSubmit}>
           <div>
               <input type="text"
@@ -76,8 +77,8 @@ class LoginForm extends React.Component {
                 placeholder="Password"
               />
             <br/>
-            <input type="submit" value="Submit" />
-            {this.renderErrors()}
+            <input type="submit" value="Login" />
+            { Object.keys(this.state.errors).length>0?this.renderErrors(): ""}
           </div>
         </form>
       </div>

@@ -41,6 +41,7 @@ class App extends React.Component{
           <AuthRoute exact path="/login" component={LoginFormContainer} />
           <AuthRoute exact path="/signup" component={SignupFormContainer} />
       </Switch>
+
       <NasaIOTD />
       <News />
       <RoverPhotos />

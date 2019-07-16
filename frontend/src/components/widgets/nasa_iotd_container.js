@@ -1,10 +1,12 @@
 import { connect } from 'react-redux';
 import { fetchImageOfTheDay } from '../../actions/nasa_iotd_actions';
+
 import NasaIOTD from './nasa_iotd'
 
 const msp = (state, ownProps) => {
   return (
     {
+      display: state.ui.nasaIotd,
       nasaIOTD: state.apis.nasaIOTD
     }
   )

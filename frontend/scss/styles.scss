@@ -1,22 +1,26 @@
 @import 'reset';
 @import 'navbar';
 @import 'modal';
+@import 'nasaiotd';
 @import 'news';
+
 $MainBackground: #252c37;
 $MainPage--SideBarColor: #252c37;
 $MainBackground--Header: rgb(16, 22, 31);
 $LeftSideBar: 20%;
 $BoxShadow : 0px 1px 80px rgb(21, 10, 47);
 
+$HeightOfDashBoard: 100vh;
+$NavBarHeight: 100px;
 
 #root{
-    height: 100vh;
+    height: $HeightOfDashBoard;
     background: pink;
 }
 .App{
 
     background: purple;
-    height: 100%;
+    height: $HeightOfDashBoard;
 }
 body{
     background: green;
@@ -24,7 +28,7 @@ body{
 
 .MainPage{
     width: 100vw;
-    height: 100vh;
+    height: $HeightOfDashBoard;
     background: $MainBackground;
     position: relative;
 
@@ -35,23 +39,29 @@ body{
     align-items: center;
     justify-content: space-between;
     background: $MainBackground--Header;
-    height: 100px;
+    height: $NavBarHeight;
     width: 100%;
     color: white;
-    position: relative;
+    position: absolute;
     box-shadow: $BoxShadow;
     z-index: 1;
 }
 .MainPage--Body{
     background: red;
     display: grid;
-    height:100%;
+    height:$HeightOfDashBoard;
     width:100%;
-    grid-template-areas: "left right";
 
+    grid-template-areas: "top top" "left right";
+
+    grid-template-rows: $NavBarHeight auto;
     grid-template-columns: 275px auto;
 }
+.MainPage--Top{
+    height: $NavBarHeight;
+    grid-area: top;
 
+}
 .MainPage--SideBar{
     z-index: 0;
     position: relative;
