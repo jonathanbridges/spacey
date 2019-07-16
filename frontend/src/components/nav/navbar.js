@@ -47,7 +47,6 @@ class NavBar extends React.Component {
   }
 
   render() {
-    console.log(this.props, 'this is prtops!!!')
   //loggedIn: state.session.isAuthenticated
       return (
         <div className="NavBar">
