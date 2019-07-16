@@ -1,5 +1,7 @@
 
+$InputWidth: 400px;
 $ModalBackgroundClr: rgb(30, 43, 61);
+$ModalWidth: 600px;
 
 .overlay{
   position: absolute;
@@ -22,94 +24,38 @@ $ModalBackgroundClr: rgb(30, 43, 61);
 }
 .ModalForm{
   border-radius: 10px;
-  width:45vw;
+  width:$ModalWidth;
   z-index: 33;
-  height: 500px;
+  height: 300px;
   background: $ModalBackgroundClr;
   box-shadow: 0px 0px 100px  black;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*.overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 5;
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height:10000px;
-  display: none;
-}
-
-.overlay--open {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 5;
-  display: flex;
-}
-
-.modal {
-  float: right;
-  max-width: 600px;
-  background: purple;
-  opacity: 0;
-}
-
-.modal--open {
-  float: right;
-  animation: 0.3s show;
-  animation-delay: 0.2s;
-  animation-fill-mode: forwards;
-}
-
-.modal--hide {
-  animation: 0.3s hide;
-  animation-delay: 0.2s;
-  animation-fill-mode: backwards;
-}
-
-@keyframes show {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 0, 0);
+  input[type=text]{
+    margin: 10px 0px;
+    height: 30px;
+    width:$InputWidth;
   }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
+  input[type=password]{
+    margin: 10px 0px;
+    height: 30px;
+    width: $InputWidth;
   }
+  input[type=submit]{
+    margin: 10px 0px;
+    height: 30px;
+    width:$InputWidth;
+  }
+
+}
+.SessionErrors{
+  position:absolute;
+  background:  red;
+  width: $InputWidth;
+  text-align: center;
+  top: 220px;
+  padding: 30px 0px;
+
 }
 
-@keyframes hide {
-  from {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    opacity: 0;
-    transform: translate3d(0, 0, 0);
-  }
-}
-*/

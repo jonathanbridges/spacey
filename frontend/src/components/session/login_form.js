@@ -48,18 +48,20 @@ class LoginForm extends React.Component {
 
   // Render the session errors if there are any
   renderErrors() {
-    return(
-      <ul>
-        {Object.keys(this.state.errors).map((error, i) => (
-          <li key={`error-${i}`}>
-            {this.state.errors[error]}
-          </li>
-        ))}
-      </ul>
-    );
+      return( 
+        <div className="SessionErrors">
+          {Object.keys(this.state.errors).map((error, i) => (
+            <p key={`error-${i}`}>
+              {this.state.errors[error]}
+            </p>
+          ))}
+        </div>
+      );
+
   }
 
   render() {
+    console.log(this.state.errors,'this shoudl be eerors')
     return (
       <div className="ModalForm">
         <form onSubmit={this.handleSubmit}>
@@ -77,7 +79,7 @@ class LoginForm extends React.Component {
               />
             <br/>
             <input type="submit" value="Submit" />
-            {this.renderErrors()}
+            { Object.keys(this.state.errors).length>0?this.renderErrors(): ""}
           </div>
         </form>
       </div>
