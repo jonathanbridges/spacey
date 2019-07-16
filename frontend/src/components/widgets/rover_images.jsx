@@ -24,7 +24,6 @@ class roverImages extends React.Component {
     } else {
 
       let roverImageCollection = this.props.roverImages.data.photos;
-      debugger
       let roverImages = roverImageCollection.map((roverImg, idx) => (
         <div className="rover-img-container" key={idx} style={{backgroundImage: `url(${roverImg.img_src})`}}>
           <div className="rover-deets">

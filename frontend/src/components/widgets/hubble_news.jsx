@@ -38,7 +38,7 @@ class HubbleNews extends React.Component {
           // container="card"
           collapsible
         >
-          <a className="Timeline--Link" href={link.slice(2)}>
+          <a className="Timeline--Link" href={link}>
             <img className="Timeline--Image" src={thumbnail} alt="" />
             <section className="Timeline--Body">
               <p className="Timeline--Description">{description}</p>
