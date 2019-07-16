@@ -13,6 +13,7 @@
 
 # misc
 keys.js
+keys_dev
 .DS_Store
 .env.local
 .env.development.local
