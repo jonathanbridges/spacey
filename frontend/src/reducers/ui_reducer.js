@@ -1,7 +1,14 @@
 
-import {TURN_ON_NASAIOTD, TURN_OFF_NASAIOTD } from '../actions/ui_actions'
+
+
+import {TURN_ON_NASAIOTD,
+        TURN_OFF_NASAIOTD ,
+        TURN_ON_MODAL,
+        TURN_OFF_MODAL} from '../actions/ui_actions'
+
 const allOn={
-    nasaIotd:'off'
+    nasaIotd:'off',
+    modal: 'on'
 }
 
 
@@ -16,6 +23,14 @@ const uiReducer = (oldState = allOn, action) => {
 
     case TURN_OFF_NASAIOTD:
       nextState.nasaIotd = 'off'
+      return nextState
+    
+    case TURN_ON_MODAL:
+      nextState.modal='on'
+      return nextState
+
+    case TURN_OFF_MODAL:
+      nextState.modal='off'
       return nextState
 
     default:

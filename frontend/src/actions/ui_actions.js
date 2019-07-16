@@ -23,6 +23,9 @@ const turnOffModal = () => ({
   type: 'TURN_OFF_MODAL',
 });
 
+
+
+
 export const dispatchTurnOnNiotd = () => dispatch => (
    dispatch(turnOnNiotd())
 )
