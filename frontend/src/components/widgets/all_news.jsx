@@ -31,7 +31,7 @@ class AllNews extends React.Component {
       const className = `${source}${isActive}`;
 
       return (
-        <li key={idx}>
+        <li key={idx} className="News--Source">
           <Link className={className} to="#" onClick={this.selectNews}>
             {source}
           </Link>
@@ -53,7 +53,7 @@ class AllNews extends React.Component {
 
     return (
       <div>
-        <ul>
+        <ul className="News--Sources">
           {tabsList}
         </ul>
         {source}

@@ -9,7 +9,7 @@ class HubbleNews extends React.Component {
   }
 
   render() {
-    if (!this.props.hubbleNews) return null;
+    if (!this.props.hubbleNews) return <div className="Timeline"></div>;
 
     const { data } = this.props.hubbleNews.data;
     const timeline_events = data.map((event, idx) => {

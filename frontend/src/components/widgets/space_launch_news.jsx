@@ -9,7 +9,7 @@ class SpaceLaunchNews extends React.Component {
   }
 
   render() {
-    if (!this.props.spaceLaunchNews) return null;
+    if (!this.props.spaceLaunchNews) return <div className="Timeline"></div>;
 
     const { data } = this.props.spaceLaunchNews.data;
     const timeline_events = data.map((event, idx) => {
