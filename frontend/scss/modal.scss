@@ -50,12 +50,15 @@ $ModalWidth: 600px;
 
 }
 .SessionErrors{
+  color: #fff;
   position:absolute;
-  background:  red;
+  background:  rgb(78, 0, 0);
   width: $InputWidth;
   text-align: center;
   top: 220px;
   padding: 30px 0px;
+  font-weight: bold;
+  border-radius: 3px;
 
 }
 

@@ -11,7 +11,7 @@ const mapStateToProps = state => ({
 });
 const mdtp = dispatch =>({
   modalOn : (modal)=>dispatch(dispatchTurnOn(modal)),
-  logout
+  logout: ()=>dispatch(logout())
 
 })
 

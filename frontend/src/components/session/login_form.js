@@ -43,7 +43,7 @@ class LoginForm extends React.Component {
       password: this.state.password
     };
 
-    this.props.login(user).then(this.props.history.push('/')); 
+    this.props.login(user); 
   }
 
   // Render the session errors if there are any
@@ -61,7 +61,6 @@ class LoginForm extends React.Component {
   }
 
   render() {
-    console.log(this.state.errors,'this shoudl be eerors')
     return (
       <div className="ModalForm">
         <form onSubmit={this.handleSubmit}>
@@ -78,7 +77,7 @@ class LoginForm extends React.Component {
                 placeholder="Password"
               />
             <br/>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Login" />
             { Object.keys(this.state.errors).length>0?this.renderErrors(): ""}
           </div>
         </form>
