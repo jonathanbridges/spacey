@@ -2,6 +2,7 @@
 
 import React from 'react';
 import NavBarContainer from '../nav/navbar_container';
+import NasaIOTD from '../widgets/nasa_iotd_container'
 
 class MainPage extends React.Component {
 
@@ -18,7 +19,7 @@ class MainPage extends React.Component {
             sidebara
           </div>
           <div className="MainPage--Widgets">
-            stuff here
+               <NasaIOTD />
           </div> 
         </div>
 

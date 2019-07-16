@@ -13,11 +13,11 @@ class imageOfTheDay extends React.Component {
       let iotd = this.props.nasaIOTD.data;
 
       return (
-        <div>
-          <h3 className="iotd-header">NASA Image of the Day</h3>
-          <p className="iotd-copyright">Copyright: {iotd.copyright}</p>
-          <img className="iotd-img" src={iotd.url} width="100%" height="auto" alt=""/>
-          <p className="iotd-desc">{iotd.explanation}</p>
+        <div className="NasaIotd">
+          <h3 className="NasaIotd--header">NASA Image of the Day</h3>
+          <p className="NasaIotd--copyright">Copyright: {iotd.copyright}</p>
+          <img className="NasaIotd--img" src={iotd.url} width="100%" height="auto" alt=""/>
+          <p className="NasaIotd-desc">{iotd.explanation}</p>
         </div>
       )
     }
