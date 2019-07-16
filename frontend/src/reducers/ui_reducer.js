@@ -26,7 +26,8 @@ const uiReducer = (oldState = allOn, action) => {
       return nextState
     
     case TURN_ON_MODAL:
-      nextState.modal='on'
+      nextState.modal=action.modal
+
       return nextState
 
     case TURN_OFF_MODAL:

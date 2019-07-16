@@ -15,8 +15,9 @@ const turnOffNiotd = () => ({
 
 
 
-const turnOnModal = () => ({
+const turnOnModal = ( modal) => ({
   type: 'TURN_ON_MODAL',
+  modal
 });
 
 const turnOffModal = () => ({
@@ -33,8 +34,8 @@ export const dispatchTurnOffNiotd = () => dispatch => (
    dispatch(turnOffNiotd())
 )
 
-export const dispatchTurnOn = () => dispatch => (
-   dispatch(turnOnModal())
+export const dispatchTurnOn = (modal) => dispatch => (
+   dispatch(turnOnModal(modal))
 )
 export const dispatchTurnOff = () => dispatch => (
    dispatch(turnOffModal())

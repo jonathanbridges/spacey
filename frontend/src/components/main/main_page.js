@@ -7,6 +7,7 @@ import {connect} from 'react-redux'
 
 
 import LoginContainer from '../session/login_form_container'
+import SignUpContainer from '../session/signup_form_container'
 
 import { dispatchTurnOff, dispatchTurnOn} from '../../actions/ui_actions'
 
@@ -16,7 +17,7 @@ const mstp=(state,ownProps)=>({
 })
 
 const mdtp = (dispatch) =>({
-  modalOn : ()=>dispatch(dispatchTurnOn()),
+  modalOn : (modal)=>dispatch(dispatchTurnOn(modal)),
   modalOff : ()=>dispatch(dispatchTurnOff())
 
 })
@@ -26,13 +27,24 @@ class MainPage extends React.Component {
 
 
   render() {
-    const overlay = this.props.modal ==="on"? 
-        <div className='overlay' > 
+    let overlay  = ""
+    if( this.props.modal!=='off'){
+      if(this.props.modal==='signUp'){
+       overlay= (<div className='overlay' > 
+          <div className="overlay--ClickGrabber"  onClick={()=>this.props.modalOff()} ></div>
+          <SignUpContainer/>
+       </div> )
+
+      }else if( this.props.modal ==='login'){
+       overlay= (<div className='overlay' > 
           <div className="overlay--ClickGrabber"  onClick={()=>this.props.modalOff()} ></div>
           <LoginContainer/>
-        </div> : ""
+       </div> )
 
-    console.log(this.props, "thsi is the propss of mainpage")
+      }
+    }
+
+
     return (
       <div className="MainPage">
         {overlay}
@@ -47,7 +59,7 @@ class MainPage extends React.Component {
           <div className="MainPage--Widgets">
             this hsould be here?
                <NasaIOTD />
-               <button onClick={()=>this.props.modalOn()}> modal on</button>
+
           </div> 
         </div>
 

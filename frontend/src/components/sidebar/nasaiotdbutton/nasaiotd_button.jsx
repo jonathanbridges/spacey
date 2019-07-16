@@ -12,7 +12,6 @@ const mdtp = ( dispatch)=>({
 })
 
 const NasaIotdButton = ( props )=>{
-    console.log(props.nasaIotd)
     let func
     if(props.nasaIotd ==='on'){
         func = props.turnOff.bind(this)
