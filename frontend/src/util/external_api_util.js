@@ -12,6 +12,11 @@ export const fetchSpaceXLaunches = () => {
 };
 
 export const fetchSpaceLaunchNow = () => {
-  let url = '/api/spacelaunchnow'
+  let url = '/api/external/spacelaunchnow'
   return axios.get(url);
-}
+};
+
+export const fetchHubbleNews = () => {
+  let url = '/api/external/hubblesite'
+  return axios.get(url);
+};

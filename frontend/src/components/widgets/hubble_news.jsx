@@ -2,27 +2,24 @@ import React from 'react';
 import { Timeline, TimelineEvent } from 'react-event-timeline';
 import LaunchIcon from './assets/launch_icon';
 
-class SpaceLaunchNews extends React.Component {
+class HubbleNews extends React.Component {
 
   componentDidMount() {
-    this.props.fetchSpaceLaunchNow();
+    this.props.fetchHubbleNews();
   }
 
   render() {
-    if (!this.props.spaceLaunchNews) return null;
+    if (!this.props.hubbleNews) return null;
 
-    const { data } = this.props.spaceLaunchNews.data;
+    const { data } = this.props.hubbleNews.data;
     const timeline_events = data.map((event, idx) => {
       const {
-        date,
+        pub_date,
+        title,
         description,
-        feature_image,
-        location,
-        name,
-        news_url
+        thumbnail,
+        link
       } = event;
-
-      if (!feature_image || !news_url) return null;
 
       const titleStyle = { fontWeight: "500" };
       const subtitleStyle = { color: "purple" };
@@ -31,20 +28,19 @@ class SpaceLaunchNews extends React.Component {
       return (
         <TimelineEvent
           key={idx}
-          title={name}
+          title={title}
           titleStyle={titleStyle}
-          subtitle={date}
+          subtitle={pub_date}
           subtitleStyle={subtitleStyle}
           contentStyle={contentStyle}
-          // createdAt={date}
+          // createdAt={pub_date}
           icon={<LaunchIcon />}
           // container="card"
           collapsible
         >
-          <a className="Timeline--Link" href={news_url}>
-            <img className="Timeline--Image" src={feature_image} alt="" />
+          <a className="Timeline--Link" href={link.slice(2)}>
+            <img className="Timeline--Image" src={thumbnail} alt="" />
             <section className="Timeline--Body">
-              <p className="Timeline--Location">{location}</p>
               <p className="Timeline--Description">{description}</p>
             </section>
           </a>
@@ -54,7 +50,7 @@ class SpaceLaunchNews extends React.Component {
 
     return (
       <div className="Timeline">
-        <h1>Space Launch News</h1>
+        <h1>Hubble News</h1>
         <Timeline>
           {timeline_events}
         </Timeline>
@@ -63,4 +59,4 @@ class SpaceLaunchNews extends React.Component {
   }
 }
 
-export default SpaceLaunchNews;
+export default HubbleNews;

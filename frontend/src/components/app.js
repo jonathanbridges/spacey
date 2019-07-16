@@ -10,6 +10,7 @@ import SignupFormContainer from './session/signup_form_container';
 
 import NasaIOTD from './widgets/nasa_iotd_container'
 import SpaceLaunchNews from './widgets/space_launch_news_container'
+import HubbleNews from './widgets/hubble_news_container'
 
 
 class App extends React.Component{
@@ -17,7 +18,7 @@ class App extends React.Component{
     super(props)
 
     this.state={
-      modal: 'close' 
+      modal: 'close'
     }
   }
 /* modal stuff
@@ -43,6 +44,7 @@ class App extends React.Component{
       </Switch>
       <NasaIOTD />
       <SpaceLaunchNews />
+      <HubbleNews />
     </div>)}
 
 };
