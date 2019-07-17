@@ -98,8 +98,8 @@
 .NasaIotd {
   padding: 30px;
   background: pink;
-  max-width: 50%;
-  height: 1000px;
+  max-width: 47%;
+  height: auto;
 }
 
 .NasaIotd--header {
@@ -107,7 +107,6 @@
 }
 
 .News--Sources {
-  width: 50%;
   height: 80px;
   list-style: none;
   overflow: hidden;
@@ -173,7 +172,7 @@
 }
 
 .Timeline {
-  width: 50%;
+  min-width: 420px;
   height: 500px;
   min-height: 500px;
   overflow-y: scroll;
@@ -215,6 +214,10 @@
   font-weight: 400;
 }
 
+.rover-images {
+  width: 100%;
+}
+
 #root {
   height: 100vh;
   background: pink;
@@ -226,7 +229,7 @@
 }
 
 body {
-  background: green;
+  background: #10161f;
 }
 
 .MainPage {
@@ -249,6 +252,9 @@ body {
   box-shadow: 0px 1px 80px #150a2f;
   z-index: 1;
 }
+.NavBar h1 {
+  min-width: fit-content;
+}
 
 .MainPage--Body {
   background: red;
@@ -256,8 +262,8 @@ body {
   height: 100vh;
   width: 100%;
   grid-template-areas: "top top" "left right";
-  grid-template-rows: 100px auto;
-  grid-template-columns: 275px auto;
+  grid-template-rows: 100px 1fr;
+  grid-template-columns: 10% 90%;
 }
 
 .MainPage--Top {
@@ -266,6 +272,10 @@ body {
 }
 
 .MainPage--SideBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 2rem;
   z-index: 0;
   position: relative;
   background: #252c37;
@@ -276,6 +286,10 @@ body {
 .MainPage--Widgets {
   background: #2b2541;
   grid-area: right;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .slider {

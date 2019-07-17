@@ -1,10 +1,13 @@
 // src/components/main/main_page.js
 import React from 'react';
+
 import NavBarContainer from '../nav/navbar_container';
 import NasaIOTD from '../widgets/nasa_iotd_container'
+import News from '../widgets/all_news';
+import RoverPhotos from '../widgets/rover_images_container'
+
 import SideBar from '../sidebar/sidebar'
 import {connect} from 'react-redux'
-
 
 import LoginContainer from '../session/login_form_container'
 import SignUpContainer from '../session/signup_form_container'
@@ -57,9 +60,9 @@ class MainPage extends React.Component {
             <SideBar/>
           </div>
           <div className="MainPage--Widgets">
-            this hsould be here?
-               <NasaIOTD />
-
+            <NasaIOTD />
+            <News />
+            <RoverPhotos />
           </div> 
         </div>
 

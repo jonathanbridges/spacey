@@ -3,6 +3,7 @@
 @import 'modal';
 @import 'nasaiotd';
 @import 'news';
+@import 'rover';
 
 $MainBackground: #252c37;
 $MainPage--SideBarColor: #252c37;
@@ -18,12 +19,11 @@ $NavBarHeight: 100px;
     background: pink;
 }
 .App{
-
     background: purple;
     height: $HeightOfDashBoard;
 }
 body{
-    background: green;
+    background: $MainBackground--Header;
 }
 
 .MainPage{
@@ -45,24 +45,28 @@ body{
     position: absolute;
     box-shadow: $BoxShadow;
     z-index: 1;
+
+    h1 {
+        min-width: fit-content;
+    }
 }
 .MainPage--Body{
     background: red;
     display: grid;
     height:$HeightOfDashBoard;
     width:100%;
-
     grid-template-areas: "top top" "left right";
-
-    grid-template-rows: $NavBarHeight auto;
-    grid-template-columns: 275px auto;
-}
+    grid-template-rows: $NavBarHeight 1fr;
+    grid-template-columns: 10% 90%;}
 .MainPage--Top{
     height: $NavBarHeight;
     grid-area: top;
-
 }
 .MainPage--SideBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 2rem;
     z-index: 0;
     position: relative;
     background: $MainPage--SideBarColor;
@@ -73,7 +77,10 @@ body{
 .MainPage--Widgets{
     background: rgb(43, 37, 65);
     grid-area: right;
-
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .slider {
