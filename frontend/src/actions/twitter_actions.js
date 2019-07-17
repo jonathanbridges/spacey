@@ -7,6 +7,6 @@ const getTwitterFeed = payload => ({
   payload
 });
 
-export const fetchNASATweets = () => dispatch => (
-  TwitterAPIUtil.fetchNASATweets().then(tweets => dispatch(getTwitterFeed(tweets)))
+export const fetchTweets = () => dispatch => (
+  TwitterAPIUtil.fetchTweets().then(tweets => dispatch(getTwitterFeed(tweets)))
 );

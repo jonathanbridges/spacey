@@ -38,7 +38,7 @@ router.get('/hubblesite', (req, res) => {
 router.get('/tweets/:handle?', (req, res) => {
 
   const getTweets = () => {
-    let url = `https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=${req.params.handle}`;
+    let url = `https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=${req.params.handle}&tweet_mode=extended`;
     let token = keys.twitterToken;
     return axios.get(url, { headers: { "Authorization": `Bearer ${token}` } })
       .then(response => response.data);
