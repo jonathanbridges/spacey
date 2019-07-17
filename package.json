@@ -35,9 +35,13 @@
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "validator": "^11.1.0"
+    "validator": "^11.1.0",
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
+  },
+  "engines": {
+    "node": "^v10.13.0",
+    "npm": "^6.4.1"
   }
 }
