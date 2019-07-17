@@ -70,7 +70,7 @@ class SpaceLaunchNews extends React.Component {
 
     return (
       <div className="Timeline">
-        <h1>NASA Twitter Feed</h1>
+        <h1>Space Tweets</h1>
         <Timeline>
           {timeline_events}
         </Timeline>

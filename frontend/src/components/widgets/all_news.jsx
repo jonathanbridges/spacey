@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SpaceLaunchNews from './space_launch_news_container';
 import HubbleNews from './hubble_news_container';
-import NasaFeed from './twitter_feed_container';
+import TwitterFeed from './twitter_feed_container';
 
 class AllNews extends React.Component {
 
@@ -13,7 +13,7 @@ class AllNews extends React.Component {
       sources: [
         'SpaceLaunch',
         'Hubble',
-        'NasaFeed'
+        'Twitter'
       ]
     };
     this.selectNews = this.selectNews.bind(this);
@@ -49,8 +49,8 @@ class AllNews extends React.Component {
       case 'Hubble':
         source = <HubbleNews />;
         break;
-      case 'NasaFeed':
-        source = <NasaFeed />;
+      case 'Twitter':
+        source = <TwitterFeed />;
         break;
       default:
         source = <SpaceLaunchNews />;
