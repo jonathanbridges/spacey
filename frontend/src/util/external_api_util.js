@@ -31,3 +31,8 @@ export const fetchHubbleNews = () => {
   let url = '/api/external/hubblesite'
   return axios.get(url);
 };
+
+export const fetchNASATweets = () => {
+  let url = `/api/external/tweets/nasa`;
+  return axios.get(url);
+};
