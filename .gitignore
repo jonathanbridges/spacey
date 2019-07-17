@@ -1,6 +1,7 @@
-.sass-cache
-/config/keys.js
+# .sass-cache
+# /config/keys.js
 /node_modules
+/config/keys_dev.js
 
 # misc
 .DS_Store

@@ -1,0 +1,12 @@
+.NasaIotd {
+  padding: 30px;
+  background: pink;
+  max-width: 50%;
+  height: 1000px;
+}
+
+.NasaIotd--header {
+  background: green;
+}
+
+/*# sourceMappingURL=nasaiotd.css.map */

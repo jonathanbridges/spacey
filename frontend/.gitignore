@@ -12,7 +12,7 @@
 /build
 
 # misc
-keys.js
+# keys.js
 .DS_Store
 .env.local
 .env.development.local

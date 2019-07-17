@@ -9,7 +9,8 @@
     "frontend-install": "npm install --prefix frontend",
     "sass": "sass --watch frontend/scss:frontend/public/stylesheets/",
     "frontend": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run frontend\" \"npm run sass\""
+    "dev": "concurrently \"npm run server\" \"npm run frontend\" \"npm run sass\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend && sass frontend/scss:frontend/public/stylesheets/"
   },
   "author": "",
   "license": "ISC",
@@ -34,9 +35,14 @@
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
+    "sass": "^1.22.5",
     "validator": "^11.1.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
+  },
+  "engines": {
+    "node": "^v10.13.0",
+    "npm": "^6.4.1"
   }
 }

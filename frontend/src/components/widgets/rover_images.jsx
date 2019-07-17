@@ -34,7 +34,7 @@ class roverImages extends React.Component {
 
       return (
         <div>
-          <Carousel>
+          <Carousel slidesToShow={2}>
             {roverImages}
           </Carousel>
         </div>
