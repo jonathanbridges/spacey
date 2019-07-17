@@ -30,13 +30,13 @@ class MainPage extends React.Component {
     let overlay  = ""
     if( this.props.modal!=='off'){
       if(this.props.modal==='signUp'){
-       overlay= (<div className='overlay' > 
+       overlay= (<div className='overlay' >
           <div className="overlay--ClickGrabber"  onClick={()=>this.props.modalOff()} ></div>
           <SignUpContainer/>
        </div> )
 
       }else if( this.props.modal ==='login'){
-       overlay= (<div className='overlay' > 
+       overlay= (<div className='overlay' >
           <div className="overlay--ClickGrabber"  onClick={()=>this.props.modalOff()} ></div>
           <LoginContainer/>
        </div> )
@@ -60,11 +60,15 @@ class MainPage extends React.Component {
             this hsould be here?
                <NasaIOTD />
 
-          </div> 
+          </div>
+
+          <div class="stars"></div>
+          <div class="twinkling"></div>
+          <div class="clouds"></div>
         </div>
 
 
-  
+
 
       </div>
     );
