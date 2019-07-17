@@ -2,8 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-}
+  font-family: 'Roboto', sans-serif; }
 
 .NavBar--SignedOut {
   height: 100%;
@@ -11,11 +10,9 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  font-weight: bold;
-}
-.NavBar--SignedOut a {
-  text-decoration-line: none;
-}
+  font-weight: bold; }
+  .NavBar--SignedOut a {
+    text-decoration-line: none; }
 
 .NavBar--Signup {
   border-radius: 5px;
@@ -24,8 +21,7 @@
   background: #151f2f;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
+  justify-content: center; }
 
 .NavBar--Login {
   border-radius: 5px;
@@ -34,8 +30,7 @@
   background: #151f2f;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
+  justify-content: center; }
 
 .overlay {
   position: absolute;
@@ -44,17 +39,15 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
+  justify-content: center; }
 
 .overlay--ClickGrabber {
   position: absolute;
   width: 100%;
   height: 100%;
   background: black;
-  opacity: 0.25;
-  z-index: -1;
-}
+  opacity: .25;
+  z-index: -1; }
 
 .ModalForm {
   border-radius: 10px;
@@ -62,26 +55,22 @@
   z-index: 33;
   height: 300px;
   background: #1e2b3d;
-  box-shadow: 0px 0px 100px black;
+  box-shadow: 0px 0px 100px  black;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-.ModalForm input[type=text] {
-  margin: 10px 0px;
-  height: 30px;
-  width: 400px;
-}
-.ModalForm input[type=password] {
-  margin: 10px 0px;
-  height: 30px;
-  width: 400px;
-}
-.ModalForm input[type=submit] {
-  margin: 10px 0px;
-  height: 30px;
-  width: 400px;
-}
+  align-items: center; }
+  .ModalForm input[type=text] {
+    margin: 10px 0px;
+    height: 30px;
+    width: 400px; }
+  .ModalForm input[type=password] {
+    margin: 10px 0px;
+    height: 30px;
+    width: 400px; }
+  .ModalForm input[type=submit] {
+    margin: 10px 0px;
+    height: 30px;
+    width: 400px; }
 
 .SessionErrors {
   color: #fff;
@@ -92,75 +81,66 @@
   top: 220px;
   padding: 30px 0px;
   font-weight: bold;
-  border-radius: 3px;
-}
+  border-radius: 3px; }
 
 .NasaIotd {
   padding: 30px;
   background: pink;
   max-width: 50%;
-  height: 1000px;
-}
+  height: 1000px; }
 
 .NasaIotd--header {
-  background: green;
-}
+  background: green; }
 
 .News--Sources {
   width: 50%;
   height: 80px;
   list-style: none;
   overflow: hidden;
-  padding: 0;
-}
+  padding: 0; }
 
 .News--Source {
   float: left;
-  width: 50%;
-}
-.News--Source a {
-  position: relative;
-  display: block;
-  height: 52px;
-  margin-top: 40px;
-  padding: 10px 0 0 0;
-  font-size: 18px;
-  text-align: center;
-  text-decoration: none;
-  color: #444;
-  background: #f2d187;
-  -webkit-box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
-  -box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
-  border: 0px solid #000;
-  -webkit-transition: padding 0.2s ease, margin 0.2s ease;
-  -moz-transition: padding 0.2s ease, margin 0.2s ease;
-  -ms-transition: padding 0.2s ease, margin 0.2s ease;
-  -o-transition: padding 0.2s ease, margin 0.2s ease;
-  transition: padding 0.2s ease, margin 0.2s ease;
-}
-.News--Source a:hover {
-  margin: 35px 0 0 0;
-  padding: 10px 0 5px 0;
-}
-.News--Source a.active {
-  margin: 30px 0 0 0;
-  padding: 10px 0 10px 0;
-  color: #444;
-  background: #f2d187;
-  border-top: 2px solid #72655F;
-  border-right: 2px solid #72655F;
-  border-left: 2px solid #72655F;
-  z-index: 6;
-  outline: none;
-}
+  width: 33.3%; }
+  .News--Source a {
+    position: relative;
+    display: block;
+    height: 52px;
+    margin-top: 40px;
+    padding: 10px 0 0 0;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #444;
+    background: #f2d187;
+    -webkit-box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
+    -box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
+    border: 0px solid #000;
+    -webkit-transition: padding 0.2s ease, margin 0.2s ease;
+    -moz-transition: padding 0.2s ease, margin 0.2s ease;
+    -ms-transition: padding 0.2s ease, margin 0.2s ease;
+    -o-transition: padding 0.2s ease, margin 0.2s ease;
+    transition: padding 0.2s ease, margin 0.2s ease; }
+  .News--Source a:hover {
+    margin: 35px 0 0 0;
+    padding: 10px 0 5px 0; }
+  .News--Source a.active {
+    margin: 30px 0 0 0;
+    padding: 10px 0 10px 0;
+    color: #444;
+    background: #f2d187;
+    border-top: 2px solid #72655F;
+    border-right: 2px solid #72655F;
+    border-left: 2px solid #72655F;
+    z-index: 6;
+    outline: none; }
 
 .News--Source:first-child a {
   z-index: 5;
   -webkit-border-top-left-radius: 8px;
   -moz-border-radius-topleft: 8px;
-  border-top-left-radius: 8px;
-}
+  border-top-left-radius: 8px; }
 
 .News--Source:last-child a {
   z-index: 1;
@@ -169,8 +149,7 @@
   box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
   -webkit-border-top-right-radius: 8px;
   -moz-border-radius-topright: 8px;
-  border-top-right-radius: 8px;
-}
+  border-top-right-radius: 8px; }
 
 .Timeline {
   width: 50%;
@@ -190,51 +169,136 @@
   border-bottom-left-radius: 8px;
   border-bottom: 2px solid #72655F;
   border-right: 2px solid #72655F;
-  border-left: 2px solid #72655F;
-}
+  border-left: 2px solid #72655F; }
 
 .Timeline--Link {
-  color: #000;
-}
+  color: #000; }
 
 .Timeline--Image {
+  position: relative;
   width: 100px;
-  height: 100px;
-}
+  height: 100px; }
+
+.Timeline--Image::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  background-image: url("https://i.gifer.com/24OD.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100px;
+  height: 100px; }
 
 .Timeline--Body {
   width: calc(100% - 120px);
-  float: right;
-}
+  float: right; }
 
 .Timeline--Location {
-  font-weight: 500;
-}
+  font-weight: 500; }
 
 .Timeline--Description {
-  font-weight: 400;
-}
+  font-weight: 400; }
+
+.Timeline--Media {
+  width: 100%; }
+
+/* =============================================================================
+SED Innovations
+https://sed.am
+https://mkrtchyan.ga
+============================================================================= */
+* {
+  margin: 0;
+  padding: 0; }
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: -10000px 5000px; } }
+@-webkit-keyframes move-twink-back {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: -10000px 5000px; } }
+@-moz-keyframes move-twink-back {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: -10000px 5000px; } }
+@-ms-keyframes move-twink-back {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: -10000px 5000px; } }
+@keyframes move-clouds-back {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 10000px 0; } }
+@-webkit-keyframes move-clouds-back {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 10000px 0; } }
+@-moz-keyframes move-clouds-back {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 10000px 0; } }
+@-ms-keyframes move-clouds-back {
+  from {
+    background-position: 0; }
+  to {
+    background-position: 10000px 0; } }
+.stars, .twinkling, .clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block; }
+
+.stars {
+  background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index: 0; }
+
+.twinkling {
+  background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  z-index: 1;
+  -moz-animation: move-twink-back 200s linear infinite;
+  -ms-animation: move-twink-back 200s linear infinite;
+  -o-animation: move-twink-back 200s linear infinite;
+  -webkit-animation: move-twink-back 200s linear infinite;
+  animation: move-twink-back 200s linear infinite; }
+
+.clouds {
+  background: transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
+  z-index: 3;
+  -moz-animation: move-clouds-back 200s linear infinite;
+  -ms-animation: move-clouds-back 200s linear infinite;
+  -o-animation: move-clouds-back 200s linear infinite;
+  -webkit-animation: move-clouds-back 200s linear infinite;
+  animation: move-clouds-back 200s linear infinite; }
 
 #root {
   height: 100vh;
-  background: pink;
-}
+  background: pink; }
 
 .App {
   background: purple;
-  height: 100vh;
-}
+  height: 100vh; }
 
 body {
-  background: green;
-}
+  background: green; }
 
 .MainPage {
   width: 100vw;
   height: 100vh;
   background: #252c37;
-  position: relative;
-}
+  position: relative; }
 
 .NavBar {
   display: flex;
@@ -247,42 +311,40 @@ body {
   color: white;
   position: absolute;
   box-shadow: 0px 1px 80px #150a2f;
-  z-index: 1;
-}
+  z-index: 1111; }
 
 .MainPage--Body {
+  position: relative;
   background: red;
   display: grid;
   height: 100vh;
   width: 100%;
   grid-template-areas: "top top" "left right";
   grid-template-rows: 100px auto;
-  grid-template-columns: 275px auto;
-}
+  grid-template-columns: 275px auto; }
 
 .MainPage--Top {
   height: 100px;
-  grid-area: top;
-}
+  grid-area: top; }
 
 .MainPage--SideBar {
-  z-index: 0;
+  z-index: 111;
   position: relative;
   background: #252c37;
   grid-area: left;
-  box-shadow: 0px 1px 80px #150a2f;
-}
+  box-shadow: 0px 1px 80px #150a2f; }
 
 .MainPage--Widgets {
   background: #2b2541;
-  grid-area: right;
-}
+  grid-area: right; }
+  .MainPage--Widgets div {
+    z-index: 11;
+    position: relative; }
 
 .slider {
   overflow: hidden;
   border-radius: 3rem;
-  box-shadow: 0 0.1px 0.1px 0.2px;
-}
+  box-shadow: 0 0.1px 0.1px 0.2px; }
 
 .rover-img-container {
   display: flex;
@@ -291,11 +353,9 @@ body {
   height: 480px;
   background-size: cover;
   object-fit: cover;
-  background-position-y: top;
-}
+  background-position-y: top; }
 
 .rover-info {
-  margin: 2rem;
-}
+  margin: 2rem; }
 
 /*# sourceMappingURL=styles.css.map */

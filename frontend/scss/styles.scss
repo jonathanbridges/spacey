@@ -3,6 +3,7 @@
 @import 'modal';
 @import 'nasaiotd';
 @import 'news';
+@import 'nightsky';
 
 $MainBackground: #252c37;
 $MainPage--SideBarColor: #252c37;
@@ -44,9 +45,10 @@ body{
     color: white;
     position: absolute;
     box-shadow: $BoxShadow;
-    z-index: 1;
+    z-index: 1111;
 }
 .MainPage--Body{
+    position: relative;
     background: red;
     display: grid;
     height:$HeightOfDashBoard;
@@ -63,7 +65,7 @@ body{
 
 }
 .MainPage--SideBar{
-    z-index: 0;
+    z-index: 111;
     position: relative;
     background: $MainPage--SideBarColor;
     grid-area: left;
@@ -73,7 +75,10 @@ body{
 .MainPage--Widgets{
     background: rgb(43, 37, 65);
     grid-area: right;
-
+    div{
+        z-index: 11;
+        position: relative;
+    }
 }
 
 .slider {
