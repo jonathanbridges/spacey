@@ -66,6 +66,18 @@ class MainPage extends React.Component {
           <div className="stars"></div>
           <div className="twinkling"></div>
           <div className="clouds"></div>
+          <div className="night">
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+          </div>
         </div>
       </div>
     );
