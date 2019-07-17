@@ -57,7 +57,7 @@ class AllNews extends React.Component {
     }
 
     return (
-      <div>
+      <div className="news-container">
         <ul className="News--Sources">
           {tabsList}
         </ul>

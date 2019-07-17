@@ -1,12 +1,9 @@
 .NasaIotd {
   padding: 30px;
-  background: pink;
-  max-width: 47%;
+  background: #10161e;
+  color: white;
+  width: 47%;
   height: auto;
-}
-
-.NasaIotd--header {
-  background: green;
 }
 
 /*# sourceMappingURL=nasaiotd.css.map */

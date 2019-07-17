@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .NavBar--SignedOut {
@@ -25,6 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .NavBar--Login {
@@ -35,6 +36,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+}
+
+.emoji {
+  position: absolute;
+  top: 34px;
+  left: 200px;
 }
 
 .overlay {
@@ -97,16 +105,14 @@
 
 .NasaIotd {
   padding: 30px;
-  background: pink;
-  max-width: 47%;
+  background: #10161e;
+  color: white;
+  width: 47%;
   height: auto;
 }
 
-.NasaIotd--header {
-  background: green;
-}
-
 .News--Sources {
+  margin-top: -30px;
   height: 80px;
   list-style: none;
   overflow: hidden;
@@ -126,8 +132,8 @@
   font-size: 18px;
   text-align: center;
   text-decoration: none;
-  color: #444;
-  background: #f2d187;
+  color: white;
+  background: #10161e;
   -webkit-box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
   -box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
@@ -145,8 +151,8 @@
 .News--Source a.active {
   margin: 30px 0 0 0;
   padding: 10px 0 10px 0;
-  color: #444;
-  background: #f2d187;
+  color: white;
+  background: #10161e;
   border-top: 2px solid #72655F;
   border-right: 2px solid #72655F;
   border-left: 2px solid #72655F;
@@ -172,12 +178,11 @@
 }
 
 .Timeline {
-  min-width: 420px;
   height: 500px;
   min-height: 500px;
   overflow-y: scroll;
   padding: 20px;
-  background: #f2d187;
+  background: #10161e;
   -webkit-box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
   box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
@@ -190,10 +195,11 @@
   border-bottom: 2px solid #72655F;
   border-right: 2px solid #72655F;
   border-left: 2px solid #72655F;
+  color: white;
 }
 
 .Timeline--Link {
-  color: #000;
+  color: white;
 }
 
 .Timeline--Image {
@@ -216,6 +222,7 @@
 .Timeline--Body {
   width: calc(100% - 120px);
   float: right;
+  color: black;
 }
 
 .Timeline--Location {
@@ -228,6 +235,10 @@
 
 .Timeline--Media {
   width: 100%;
+}
+
+.news-container {
+  width: 47%;
 }
 
 .rover-images {
@@ -309,7 +320,7 @@ https://mkrtchyan.ga
   }
 }
 .stars, .twinkling, .clouds {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -345,13 +356,12 @@ https://mkrtchyan.ga
 }
 
 #root {
-  height: 100vh;
-  background: pink;
+  height: 100%;
 }
 
 .App {
   background: purple;
-  height: 100vh;
+  height: 100%;
 }
 
 body {
@@ -360,7 +370,7 @@ body {
 
 .MainPage {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: #252c37;
   position: relative;
 }
@@ -386,11 +396,12 @@ body {
   position: relative;
   background: red;
   display: grid;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   grid-template-areas: "top top" "left right";
   grid-template-rows: 100px 1fr;
   grid-template-columns: 10% 90%;
+  overflow: hidden;
 }
 
 .MainPage--Top {
@@ -404,10 +415,12 @@ body {
   justify-content: center;
   padding-top: 2rem;
   z-index: 111;
-  position: relative;
   background: #252c37;
   grid-area: left;
   box-shadow: 0px 1px 80px #150a2f;
+  height: 1100px;
+  opacity: 0.8;
+  overflow: visible;
 }
 
 .MainPage--Widgets {
@@ -417,6 +430,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  padding: 2% 0 2% 0;
 }
 .MainPage--Widgets div {
   z-index: 11;
@@ -427,6 +441,7 @@ body {
   overflow: hidden;
   border-radius: 3rem;
   box-shadow: 0 0.1px 0.1px 0.2px;
+  min-height: 480px;
 }
 
 .rover-img-container {
@@ -441,6 +456,13 @@ body {
 
 .rover-info {
   margin: 2rem;
+}
+
+.top-widgets {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding-bottom: 2%;
 }
 
 /*# sourceMappingURL=styles.css.map */

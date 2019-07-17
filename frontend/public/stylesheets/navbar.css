@@ -18,6 +18,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .NavBar--Login {
@@ -28,6 +29,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+}
+
+.emoji {
+  position: absolute;
+  top: 34px;
+  left: 200px;
 }
 
 /*# sourceMappingURL=navbar.css.map */

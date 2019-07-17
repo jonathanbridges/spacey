@@ -57,13 +57,15 @@ class MainPage extends React.Component {
             <SideBar/>
           </div>
           <div className="MainPage--Widgets">
-            <NasaIOTD />
-            <News />
+            <div className="top-widgets">
+              <NasaIOTD />
+              <News />
+            </div>
             <RoverPhotos />
           </div>
-          <div class="stars"></div>
-          <div class="twinkling"></div>
-          <div class="clouds"></div>
+          <div className="stars"></div>
+          <div className="twinkling"></div>
+          <div className="clouds"></div>
         </div>
       </div>
     );

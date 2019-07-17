@@ -12,13 +12,13 @@ $MainBackground--Header: rgb(16, 22, 31);
 $LeftSideBar: 20%;
 $BoxShadow : 0px 1px 80px rgb(21, 10, 47);
 
-$HeightOfDashBoard: 100vh;
+$HeightOfDashBoard: 100%;
 $NavBarHeight: 100px;
 
 #root{
     height: $HeightOfDashBoard;
-    background: pink;
 }
+
 .App{
     background: purple;
     height: $HeightOfDashBoard;
@@ -58,7 +58,10 @@ body{
     width:100%;
     grid-template-areas: "top top" "left right";
     grid-template-rows: $NavBarHeight 1fr;
-    grid-template-columns: 10% 90%;}
+    grid-template-columns: 10% 90%;
+    overflow: hidden;
+}
+
 .MainPage--Top{
     height: $NavBarHeight;
     grid-area: top;
@@ -69,11 +72,12 @@ body{
     justify-content: center;
     padding-top: 2rem;
     z-index: 111;
-    position: relative;
     background: $MainPage--SideBarColor;
     grid-area: left;
     box-shadow:$BoxShadow;
-
+    height: 1100px;
+    opacity: .8;
+    overflow: visible;
 }
 .MainPage--Widgets{
     background: rgb(43, 37, 65);
@@ -86,12 +90,14 @@ body{
         z-index: 11;
         position: relative;
     }
+    padding: 2% 0 2% 0;
 }
 
 .slider {
     overflow: hidden;
     border-radius: 3rem;
     box-shadow: 0 0.1px 0.1px 0.2px;
+    min-height: 480px;
 }
 
 .rover-img-container {
@@ -107,3 +113,11 @@ body{
 .rover-info {
     margin: 2rem;
 }
+
+.top-widgets {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding-bottom: 2%;
+}
+
