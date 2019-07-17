@@ -49,7 +49,7 @@ class NavBar extends React.Component {
   //loggedIn: state.session.isAuthenticated
       return (
         <div className="NavBar">
-            <h1>Spacey</h1>
+          <h1 className="nav-header">Spacey <span className="emoji" role="img" aria-label="rocket">🚀</span></h1>
             {this.props.loggedIn}
             { this.getLinks() }
         </div>

@@ -1,10 +1,13 @@
 // src/components/main/main_page.js
 import React from 'react';
+
 import NavBarContainer from '../nav/navbar_container';
 import NasaIOTD from '../widgets/nasa_iotd_container'
+import News from '../widgets/all_news';
+import RoverPhotos from '../widgets/rover_images_container'
+
 import SideBar from '../sidebar/sidebar'
 import {connect} from 'react-redux'
-
 
 import LoginContainer from '../session/login_form_container'
 import SignUpContainer from '../session/signup_form_container'
@@ -48,28 +51,34 @@ class MainPage extends React.Component {
     return (
       <div className="MainPage">
         {overlay}
-
-
-
         <NavBarContainer />
         <div className ="MainPage--Body">
           <div className="MainPage--SideBar">
             <SideBar/>
           </div>
           <div className="MainPage--Widgets">
-            this hsould be here?
-               <NasaIOTD />
-
+            <div className="top-widgets">
+              <NasaIOTD />
+              <News />
+            </div>
+            <RoverPhotos />
           </div>
-
-          <div class="stars"></div>
-          <div class="twinkling"></div>
-          <div class="clouds"></div>
+          <div className="stars"></div>
+          <div className="twinkling"></div>
+          <div className="clouds"></div>
+          <div className="night">
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+          </div>
         </div>
-
-
-
-
       </div>
     );
   }

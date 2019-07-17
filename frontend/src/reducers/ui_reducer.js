@@ -1,6 +1,3 @@
-
-
-
 import {TURN_ON_NASAIOTD,
         TURN_OFF_NASAIOTD ,
         TURN_ON_MODAL,
@@ -27,15 +24,16 @@ const uiReducer = (oldState = allOn, action) => {
     
     case TURN_ON_MODAL:
       nextState.modal=action.modal
-
       return nextState
 
     case TURN_OFF_MODAL:
       nextState.modal='off'
       return nextState
+
     case RECEIVE_CURRENT_USER:
       nextState.modal = 'off'
       return  nextState
+      
     default:
       return oldState;
   }

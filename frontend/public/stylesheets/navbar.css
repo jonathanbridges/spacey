@@ -4,11 +4,9 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  font-weight: bold;
-}
-.NavBar--SignedOut a {
-  text-decoration-line: none;
-}
+  font-weight: bold; }
+  .NavBar--SignedOut a {
+    text-decoration-line: none; }
 
 .NavBar--Signup {
   border-radius: 5px;
@@ -18,7 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
+  cursor: pointer; }
 
 .NavBar--Login {
   border-radius: 5px;
@@ -28,6 +26,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
+  cursor: pointer; }
+
+.emoji {
+  position: absolute;
+  top: 34px;
+  left: 200px; }
 
 /*# sourceMappingURL=navbar.css.map */
