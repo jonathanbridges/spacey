@@ -67,16 +67,16 @@ class MainPage extends React.Component {
           <div className="twinkling"></div>
           <div className="clouds"></div>
           <div className="night">
-            <div class="shooting_star"></div>
-            <div class="shooting_star"></div>
-            <div class="shooting_star"></div>
-            <div class="shooting_star"></div>
-            <div class="shooting_star"></div>
-            <div class="shooting_star"></div>
-            <div class="shooting_star"></div>
-            <div class="shooting_star"></div>
-            <div class="shooting_star"></div>
-            <div class="shooting_star"></div>
+            <div className="shooting_star"></div>
+            <div className="shooting_star"></div>
+            <div className="shooting_star"></div>
+            <div className="shooting_star"></div>
+            <div className="shooting_star"></div>
+            <div className="shooting_star"></div>
+            <div className="shooting_star"></div>
+            <div className="shooting_star"></div>
+            <div className="shooting_star"></div>
+            <div className="shooting_star"></div>
           </div>
         </div>
       </div>

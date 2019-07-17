@@ -27,8 +27,6 @@ class SpaceLaunchNews extends React.Component {
       let media_image;
       if (extended_entities) {
         const { media_url_https } = extended_entities.media[0];
-        console.log(full_text);
-        console.log(media_url_https);
         media_image = <img className="Timeline--Media" src={media_url_https}></img>;
       } else {
         media_image = null;
