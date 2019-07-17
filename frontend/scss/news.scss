@@ -8,7 +8,7 @@
 
 .News--Source{
   float: left;
-  width: 50%;
+  width: 33.3%;
   a{
     position: relative;
     display: block;
@@ -94,6 +94,7 @@
   width: 100px;
   height: 100px;
 }
+
 .Timeline--Image::after{
   content: "";
   position: absolute;
@@ -116,4 +117,8 @@
 
 .Timeline--Description{
   font-weight: 400;
+}
+
+.Timeline--Media{
+  width: 100%;
 }
