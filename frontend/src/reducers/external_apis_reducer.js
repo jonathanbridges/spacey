@@ -4,6 +4,7 @@ import { RECEIVE_ROVER_MANIFEST, RECEIVE_ROVER_PHOTOS } from '../actions/nasa_ro
 
 import { RECEIVE_SPACE_LAUNCH_NEWS } from '../actions/space_launch_now_actions';
 import { RECEIVE_HUBBLE_NEWS } from '../actions/hubble_news_actions';
+import { RECEIVE_TWEETS } from '../actions/twitter_actions';
 
 const externalApiReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
@@ -20,6 +21,8 @@ const externalApiReducer = (oldState = {}, action) => {
       return Object.assign({}, oldState, { spaceLaunchNews: action.payload });
     case RECEIVE_HUBBLE_NEWS:
       return Object.assign({}, oldState, { hubbleNews: action.payload });
+    case RECEIVE_TWEETS:
+      return Object.assign({}, oldState, { tweets: action.payload });
     default:
       return oldState;
   }

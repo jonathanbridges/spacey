@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const axios = require('axios');
+const axios = require("axios");
+const keys = require("../../config/keys");
 
 router.get('/spacelaunchnow', (req, res) => {
 
@@ -26,6 +27,24 @@ router.get('/hubblesite', (req, res) => {
   };
 
   getHubbleSiteNews().then(data => {
+    res.json({
+      message: "Request received!",
+      data
+    })
+  })
+
+});
+
+router.get('/tweets/:handle?', (req, res) => {
+
+  const getTweets = () => {
+    let url = `https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=${req.params.handle}&tweet_mode=extended`;
+    let token = keys.twitterToken;
+    return axios.get(url, { headers: { "Authorization": `Bearer ${token}` } })
+      .then(response => response.data);
+  };
+
+  getTweets().then(data => {
     res.json({
       message: "Request received!",
       data

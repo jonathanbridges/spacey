@@ -8,7 +8,7 @@
 
 .News--Source{
   float: left;
-  width: 50%;
+  width: 33.3%;
   a{
     position: relative;
     display: block;
@@ -90,6 +90,18 @@
 }
 
 .Timeline--Image{
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.Timeline--Image::after{
+  content: "";
+  position: absolute;
+  top: -12px;
+  background-image: url('https://i.gifer.com/24OD.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100px;
   height: 100px;
 }
@@ -105,4 +117,8 @@
 
 .Timeline--Description{
   font-weight: 400;
+}
+
+.Timeline--Media{
+  width: 100%;
 }
