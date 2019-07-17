@@ -4,6 +4,7 @@
 @import 'nasaiotd';
 @import 'news';
 @import 'rover';
+@import 'nightsky';
 
 $MainBackground: #252c37;
 $MainPage--SideBarColor: #252c37;
@@ -44,13 +45,13 @@ body{
     color: white;
     position: absolute;
     box-shadow: $BoxShadow;
-    z-index: 1;
-
+    z-index: 1111;
     h1 {
         min-width: fit-content;
     }
 }
 .MainPage--Body{
+    position: relative;
     background: red;
     display: grid;
     height:$HeightOfDashBoard;
@@ -67,7 +68,7 @@ body{
     flex-direction: row;
     justify-content: center;
     padding-top: 2rem;
-    z-index: 0;
+    z-index: 111;
     position: relative;
     background: $MainPage--SideBarColor;
     grid-area: left;
@@ -81,6 +82,10 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    div{
+        z-index: 11;
+        position: relative;
+    }
 }
 
 .slider {
