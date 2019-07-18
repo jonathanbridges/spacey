@@ -90,26 +90,21 @@
   color: white;
 }
 
+.Timeline--Profile{
+  width: 36px;
+  border-radius: 50%;
+}
+
 .Timeline--Image{
   position: relative;
   width: 100px;
   height: 100px;
-}
-
-.Timeline--Image::after{
-  content: "";
-  position: absolute;
-  top: -12px;
-  background-image: url('https://i.gifer.com/24OD.gif');
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100px;
-  height: 100px;
+  padding-top: 8px;
+  padding-right: 12px;
+  float: left;
 }
 
 .Timeline--Body{
-  width: calc(100% - 120px);
-  float: right;
   color: black;
 }
 

@@ -1,7 +1,5 @@
 import React from 'react';
 import { Timeline, TimelineEvent } from 'react-event-timeline';
-import LaunchIcon from './assets/launch_icon';
-import Img from './assets/img';
 
 class SpaceLaunchNews extends React.Component {
 
@@ -27,7 +25,7 @@ class SpaceLaunchNews extends React.Component {
       let media_image;
       if (extended_entities) {
         const { media_url_https } = extended_entities.media[0];
-        media_image = <img className="Timeline--Media" src={media_url_https}></img>;
+        media_image = <img className="Timeline--Media" src={media_url_https} alt="" />;
       } else {
         media_image = null;
       }
@@ -35,27 +33,24 @@ class SpaceLaunchNews extends React.Component {
       const titleStyle = { fontWeight: "500" };
       const subtitleStyle = { color: "purple" };
       const contentStyle = { padding: "12px" };
+      const profile_icon = <img className="Timeline--Profile" src={profile_image_url_https} alt={name} />;
 
       return (
         <TimelineEvent
           key={idx}
           title={name}
+
           titleStyle={titleStyle}
-          subtitle={created_at.slice(0, 11)}
+          subtitle={created_at.slice(0, 16)}
           subtitleStyle={subtitleStyle}
           contentStyle={contentStyle}
-          // createdAt={created_at.slice(0, 11)}
-          icon={<LaunchIcon />}
+          // createdAt={created_at.slice(0, 16)}
+          icon={profile_icon}
           // container="card"
           showContent
           collapsible
         >
-          <a className="Timeline--Link" href={news_url}>
-            <Img
-              className="Timeline--Image"
-              src={profile_image_url_https}
-              alt=""
-            ></Img>
+          <a className="Timeline--Link" href={news_url} target="_blank" rel="noopener noreferrer">
             <section className="Timeline--Body">
               <p className="Timeline--Location">{location}</p>
               <p className="Timeline--Description">{full_text}</p>
@@ -66,10 +61,15 @@ class SpaceLaunchNews extends React.Component {
       );
     }).filter(event => event);
 
+    const style = { overflow: "scroll", margin: "20px" };
+
     return (
       <div className="Timeline">
         <h1>Space Tweets</h1>
-        <Timeline>
+        <Timeline
+          className="Timeline--Contents"
+          style={style}
+        >
           {timeline_events}
         </Timeline>
       </div>

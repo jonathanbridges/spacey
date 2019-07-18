@@ -31,16 +31,16 @@ class HubbleNews extends React.Component {
           key={idx}
           title={title}
           titleStyle={titleStyle}
-          subtitle={pub_date}
+          subtitle={pub_date.split("T")[0]}
           subtitleStyle={subtitleStyle}
           contentStyle={contentStyle}
-          // createdAt={pub_date}
+          // createdAt={pub_date.split("T")[0]}
           icon={<LaunchIcon />}
           // container="card"
           showContent
           collapsible
         >
-          <a className="Timeline--Link" href={link}>
+          <a className="Timeline--Link" href={link} target="_blank" rel="noopener noreferrer">
             <Img className="Timeline--Image" src={thumbnail} alt=""></Img>
             <section className="Timeline--Body">
               <p className="Timeline--Description">{description}</p>

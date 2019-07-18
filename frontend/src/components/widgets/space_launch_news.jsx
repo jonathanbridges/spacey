@@ -34,16 +34,16 @@ class SpaceLaunchNews extends React.Component {
           key={idx}
           title={name}
           titleStyle={titleStyle}
-          subtitle={date}
+          subtitle={date.split("T")[0]}
           subtitleStyle={subtitleStyle}
           contentStyle={contentStyle}
-          // createdAt={date}
+          // createdAt={date.split("T")[0]}
           icon={<LaunchIcon />}
           // container="card"
           showContent
           collapsible
         >
-          <a className="Timeline--Link" href={news_url}>
+          <a className="Timeline--Link" href={news_url} target="_blank" rel="noopener noreferrer">
             <Img className="Timeline--Image" src={feature_image} alt=""></Img>
             <section className="Timeline--Body">
               <p className="Timeline--Location">{location}</p>
