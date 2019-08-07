@@ -54,12 +54,10 @@ class MainPage extends React.Component {
             <SideBar />
           </div>
           <div className="MainPage--Widgets">
-            <div className="top-widgets">
-              <NasaIOTD />
-              <HubbleNews />
-              <SpaceLaunchNews />
-              <TwitterFeed />
-            </div>
+            <NasaIOTD />
+            <TwitterFeed />
+            <SpaceLaunchNews />
+            <HubbleNews />
             <RoverPhotos />
           </div>
           <div className="stars" />
