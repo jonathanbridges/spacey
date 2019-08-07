@@ -4,11 +4,13 @@ import { Timeline, TimelineEvent } from 'react-event-timeline';
 class SpaceLaunchNews extends React.Component {
 
   componentDidMount() {
-    this.props.fetchTweets();
+    // this.props.fetchTweets();
   }
 
   render() {
-    if (!this.props.tweets) return <div className="Timeline"></div>;
+    if (!this.props.tweets) {
+      return <div className="Timeline twitterfeed"></div>;
+    }
 
     // const data = this.props.tweets;
     const data = this.props.tweets.slice(0, 30);
@@ -64,7 +66,7 @@ class SpaceLaunchNews extends React.Component {
     const style = { overflow: "scroll", margin: "20px" };
 
     return (
-      <div className="Timeline">
+      <div className="Timeline twitterfeed">
         <h1>Space Tweets</h1>
         <Timeline
           className="Timeline--Contents"

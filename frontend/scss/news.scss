@@ -1,3 +1,5 @@
+$WidgetHeight: calc((100vh - 100px) / 2);
+
 .News--Sources{
   margin-top: -30px;
   height: 80px;
@@ -66,8 +68,9 @@
 
 .Timeline{
   // min-width: 420px !important;
-  height: 500px;
-  min-height: 500px;
+  // height: 500px;
+  // min-height: 500px;
+  height: $WidgetHeight;
   overflow-y: scroll;
   padding: 20px;
   background: #10161e;
@@ -123,3 +126,15 @@
 .news-container {
   width: 47%;
 }
+
+.twitterfeed {
+  grid-area: top-right;
+}
+
+// .spacelaunchnews {
+//   grid-area: left;
+// }
+
+// .hubblenews {
+//   grid-area: right;
+// }

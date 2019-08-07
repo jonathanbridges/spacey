@@ -14,6 +14,7 @@ $BoxShadow : 0px 1px 80px rgb(21, 10, 47);
 
 $HeightOfDashBoard: 100%;
 $NavBarHeight: 100px;
+$WidgetHeight: calc((100vh - 100px) / 2);
 
 #root{
     height: $HeightOfDashBoard;
@@ -82,15 +83,20 @@ body{
 .MainPage--Widgets{
     background: rgb(43, 37, 65);
     grid-area: right;
-    flex-wrap: wrap;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-areas:
+        "top-left top-right"
+        "left right"
+        "bottom bottom";
+    grid-template-rows: min-content;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 1em;
+    grid-row-gap: 3em;
     div{
         z-index: 11;
         position: relative;
     }
-    padding: 2% 0 2% 0;
+    padding: 3em 2%;
 }
 
 .slider {
@@ -114,10 +120,10 @@ body{
     margin: 2rem;
 }
 
-.top-widgets {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    padding-bottom: 2%;
-}
+// .top-widgets {
+//     display: flex;
+//     width: 100%;
+//     justify-content: space-evenly;
+//     padding-bottom: 2%;
+// }
 
