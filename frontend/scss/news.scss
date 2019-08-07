@@ -1,5 +1,3 @@
-$WidgetHeight: calc((100vh - 100px) / 2);
-
 .News--Sources{
   margin-top: -30px;
   height: 80px;
@@ -70,23 +68,8 @@ $WidgetHeight: calc((100vh - 100px) / 2);
   // min-width: 420px !important;
   // height: 500px;
   // min-height: 500px;
-  height: $WidgetHeight;
   overflow-y: scroll;
   padding: 20px;
-  background: #10161e;
-  -webkit-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
-  -moz-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
-  box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
-  -webkit-border-bottom-right-radius: 8px;
-  -webkit-border-bottom-left-radius: 8px;
-  -moz-border-radius-bottomright: 8px;
-  -moz-border-radius-bottomleft: 8px;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-  border-bottom: 2px solid #72655F;
-  border-right: 2px solid #72655F;
-  border-left: 2px solid #72655F;
-  color: white;
 }
 
 .Timeline--Link{

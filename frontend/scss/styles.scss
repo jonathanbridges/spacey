@@ -14,7 +14,6 @@ $BoxShadow : 0px 1px 80px rgb(21, 10, 47);
 
 $HeightOfDashBoard: 100%;
 $NavBarHeight: 100px;
-$WidgetHeight: calc((100vh - 100px) / 2);
 
 #root{
     height: $HeightOfDashBoard;
@@ -97,6 +96,17 @@ body{
         position: relative;
     }
     padding: 3em 2%;
+}
+
+.MainPage--Widgets > div:not(.rover-images) {
+    height: 100vh;
+    -webkit-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
+    box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
+    border: 2px solid #72655F;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.3);
+    color: white;
 }
 
 .slider {
