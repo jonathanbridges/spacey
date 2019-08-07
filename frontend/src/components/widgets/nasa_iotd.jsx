@@ -17,7 +17,7 @@ class imageOfTheDay extends React.Component {
 
       return (
         <div className="NasaIotd">
-          <h3 className="NasaIotd--header">NASA Image of the Day</h3>
+          <h1 className="NasaIotd--header">NASA Image of the Day</h1>
           <p className="NasaIotd--copyright">Copyright: {iotd.copyright}</p>
           <img className="NasaIotd--img" src={iotd.url} width="100%" height="auto" alt=""/>
           <p className="NasaIotd-desc">{iotd.explanation}</p>

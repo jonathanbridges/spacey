@@ -1,12 +1,17 @@
 .NasaIotd{
+    overflow-y: scroll;
     padding: 30px;
-    background: #10161e;
-    color: white;
+    // background: #10161e;
+    // color: white;
     // width: 47%;
-    height: auto;
+    // height: auto;
     grid-area: top-left;
 }
 
 .NasaIotd--header{
     // background: green
+}
+
+.NasaIotd--img{
+    margin: 2em 0;
 }
