@@ -3,7 +3,7 @@ import { Timeline, TimelineEvent } from 'react-event-timeline';
 
 class SpaceLaunchNews extends React.Component {
   componentDidMount() {
-    // this.props.fetchTweets();
+    this.props.fetchTweets();
   }
 
   render() {
