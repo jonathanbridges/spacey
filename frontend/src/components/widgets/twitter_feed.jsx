@@ -3,7 +3,7 @@ import { Timeline, TimelineEvent } from 'react-event-timeline';
 
 class SpaceLaunchNews extends React.Component {
   componentDidMount() {
-    this.props.fetchTweets();
+    // this.props.fetchTweets();
   }
 
   render() {
@@ -13,6 +13,9 @@ class SpaceLaunchNews extends React.Component {
 
     // const data = this.props.tweets;
     const data = this.props.tweets.slice(0, 30);
+    const style = { overflow: "scroll", margin: "20px" };
+    const lineStyle = {};
+    const lineColor = "#72655F";
     const timeline_events = data
       .map((event, idx) => {
         const {
@@ -76,12 +79,15 @@ class SpaceLaunchNews extends React.Component {
       })
       .filter(event => event);
 
-    const style = { overflow: "scroll", margin: "20px" };
-
     return (
       <div className="Timeline twitterfeed">
         <h1>Space Tweets</h1>
-        <Timeline className="Timeline--Contents" style={style}>
+        <Timeline
+          className="Timeline--Contents"
+          style={style}
+          lineStyle={lineStyle}
+          lineColor={lineColor}
+        >
           {timeline_events}
         </Timeline>
       </div>

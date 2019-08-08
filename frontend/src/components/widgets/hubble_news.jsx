@@ -26,6 +26,9 @@ class HubbleNews extends React.Component {
     }
 
     const { data } = this.props.hubbleNews.data;
+    const style = {};
+    const lineStyle = {};
+    const lineColor = "#72655F";
     const timeline_events = data
       .slice(0, 20)
       .map((event, idx) => {
@@ -78,7 +81,13 @@ class HubbleNews extends React.Component {
     return (
       <div className="Timeline hubblenews">
         <h1>Hubble News</h1>
-        <Timeline>{timeline_events}</Timeline>
+        <Timeline
+          style={style}
+          lineStyle={lineStyle}
+          lineColor={lineColor}
+        >
+          {timeline_events}
+        </Timeline>
       </div>
     );
   }

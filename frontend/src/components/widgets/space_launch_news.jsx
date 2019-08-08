@@ -26,6 +26,9 @@ class SpaceLaunchNews extends React.Component {
     }
 
     const { data } = this.props.spaceLaunchNews.data;
+    const style = {};
+    const lineStyle = {};
+    const lineColor = "#72655F";
     const timeline_events = data
       .map((event, idx) => {
         const {
@@ -41,7 +44,8 @@ class SpaceLaunchNews extends React.Component {
 
         const titleStyle = { fontWeight: "500" };
         const subtitleStyle = { color: "purple" };
-        const contentStyle = { padding: "12px" };
+        const contentStyle = { borderRadius: "8px", padding: "12px" };
+        const bubbleStyle = { borderColor: lineColor };
         const thumbnailIcon = (
           <img
             className="Timeline--Thumbnail"
@@ -58,10 +62,11 @@ class SpaceLaunchNews extends React.Component {
             subtitle={date.split("T")[0]}
             subtitleStyle={subtitleStyle}
             contentStyle={contentStyle}
+            bubbleStyle={bubbleStyle}
             // createdAt={date.split("T")[0]}
             icon={thumbnailIcon}
             // container="card"
-            // showContent
+            showContent
             collapsible
           >
             <a
@@ -91,7 +96,13 @@ class SpaceLaunchNews extends React.Component {
     return (
       <div className="Timeline spacelaunchnews">
         <h1>Space Launch News</h1>
-        <Timeline>{timeline_events}</Timeline>
+        <Timeline
+          style={style}
+          lineStyle={lineStyle}
+          lineColor={lineColor}
+        >
+          {timeline_events}
+        </Timeline>
       </div>
     );
   }
