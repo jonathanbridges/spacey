@@ -115,18 +115,18 @@
   -webkit-box-orient: vertical;
 }
 
-.Timeline--Description::after {
+.Timeline--Body.expanded .Timeline--Description{
+  overflow: initial;
+  display: block;
+}
+
+.Timeline--Body.expanded .Timeline--Description::after {
   content: " Go to article";
   color: purple;
 }
 
-.Timeline--Description:hover::after {
+.Timeline--Body.expanded .Timeline--Description:hover::after {
   color: blue;
-}
-
-.Timeline--Body.expanded .Timeline--Description{
-  overflow: initial;
-  display: block;
 }
 
 .Timeline--Media{
