@@ -1,6 +1,7 @@
 $ButtonHeigth: 40px;
 $ButtonWidth: 90px;
 $ButtonColor: rgb(21, 31, 47);
+$BreakPoint: 768px;
 .NavBar--SignedOut{
     //background: grey;
     height: 100%;
@@ -12,7 +13,6 @@ $ButtonColor: rgb(21, 31, 47);
     a{
         text-decoration-line: none;
     }
-
 }
 
 .NavBar--Signup{
@@ -40,5 +40,10 @@ $ButtonColor: rgb(21, 31, 47);
 .emoji {
     position: absolute;
     top: 34px;
-    left: 200px;
+    left: 4vw;
+    cursor: pointer;
+
+    @media screen and (max-width: $BreakPoint) {
+        left: 1vw;
+    }
 }

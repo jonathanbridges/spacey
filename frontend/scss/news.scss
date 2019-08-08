@@ -65,52 +65,48 @@
 }
 
 .Timeline{
-  // min-width: 420px !important;
-  height: 500px;
-  min-height: 500px;
-  overflow-y: scroll;
-  padding: 20px;
-  background: #10161e;
-  -webkit-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
-  -moz-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
-  box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
-  -webkit-border-bottom-right-radius: 8px;
-  -webkit-border-bottom-left-radius: 8px;
-  -moz-border-radius-bottomright: 8px;
-  -moz-border-radius-bottomleft: 8px;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-  border-bottom: 2px solid #72655F;
-  border-right: 2px solid #72655F;
-  border-left: 2px solid #72655F;
-  color: white;
+  & > div{
+    flex: 1;
+    overflow-y: scroll;
+    margin-top: 10px;
+  }
 }
 
 .Timeline--Link{
   color: white;
 }
 
+.Timeline--Profile{
+  width: 36px;
+  border-radius: 50%;
+}
+
+.Timeline--Thumbnail{
+  position: absolute;
+  left: -1px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
 .Timeline--Image{
   position: relative;
   width: 100px;
   height: 100px;
-}
-
-.Timeline--Image::after{
-  content: "";
-  position: absolute;
-  top: -12px;
-  background-image: url('https://i.gifer.com/24OD.gif');
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100px;
-  height: 100px;
+  padding-top: 4px;
+  padding-right: 12px;
+  float: left;
 }
 
 .Timeline--Body{
-  width: calc(100% - 120px);
-  float: right;
   color: black;
+  transition: max-height 1s ease-out;
+  max-height: 100px;
+}
+
+.Timeline--Body.expanded,
+.twitterfeed .Timeline--Body{
+  max-height: 1000px;
 }
 
 .Timeline--Location{
@@ -119,6 +115,30 @@
 
 .Timeline--Description{
   font-weight: 400;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.Timeline--Body.expanded .Timeline--Description,
+.twitterfeed .Timeline--Body .Timeline--Description{
+  overflow: initial;
+  display: block;
+}
+
+.Timeline--Body.expanded .Timeline--Description::after {
+  content: " Go to article";
+  color: purple;
+}
+
+.twitterfeed .Timeline--Body .Timeline--Description::after {
+  content: " Go to tweet";
+}
+
+.Timeline--Body.expanded .Timeline--Description:hover::after,
+.twitterfeed .Timeline--Body .Timeline--Description::after {
+  color: blue;
 }
 
 .Timeline--Media{
@@ -128,3 +148,15 @@
 .news-container {
   width: 47%;
 }
+
+// .twitterfeed {
+//   grid-area: top-right;
+// }
+
+// .spacelaunchnews {
+//   grid-area: left;
+// }
+
+// .hubblenews {
+//   grid-area: right;
+// }

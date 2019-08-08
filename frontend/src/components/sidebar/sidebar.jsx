@@ -1,13 +1,14 @@
 import React from 'react'
+import SideBarHeader from './sidebar_header'
 import NasaIotdButtonContainer from './nasaiotdbutton/nasaiotd_button'
 
 const SideBar = ()=>{
-    return (
-        <div>
-            <NasaIotdButtonContainer/>
-            
+    return [
+        <SideBarHeader />,
+        <div className="SideBarToggles">
+            <NasaIotdButtonContainer />
         </div>
-    )
+    ];
 }
 
 export default SideBar

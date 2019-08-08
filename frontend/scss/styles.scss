@@ -15,6 +15,8 @@ $BoxShadow : 0px 1px 80px rgb(21, 10, 47);
 $HeightOfDashBoard: 100%;
 $NavBarHeight: 100px;
 
+$BreakPoint: 768px;
+
 #root{
     height: $HeightOfDashBoard;
 }
@@ -23,6 +25,11 @@ $NavBarHeight: 100px;
     background: purple;
     height: $HeightOfDashBoard;
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background: $MainBackground--Header;
 }
@@ -36,7 +43,7 @@ body{
 }
 .NavBar{
     display: flex;
-    padding: 0px 70px;
+    padding: 0 4% 0 10%;
     align-items: center;
     justify-content: space-between;
     background: $MainBackground--Header;
@@ -46,6 +53,7 @@ body{
     position: absolute;
     box-shadow: $BoxShadow;
     z-index: 1111;
+
     h1 {
         min-width: fit-content;
     }
@@ -56,7 +64,7 @@ body{
     display: grid;
     height:$HeightOfDashBoard;
     width:100%;
-    grid-template-areas: "top top" "left right";
+    grid-template-areas: "left top" "left right";
     grid-template-rows: $NavBarHeight 1fr;
     grid-template-columns: 10% 90%;
     overflow: hidden;
@@ -67,30 +75,75 @@ body{
     grid-area: top;
 }
 .MainPage--SideBar{
+    position: fixed;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 2rem;
+    flex-direction: column;
     z-index: 111;
-    background: $MainPage--SideBarColor;
     grid-area: left;
-    box-shadow:$BoxShadow;
-    height: 1100px;
-    opacity: .8;
+    width: 10%;
+    height: 100%;
     overflow: visible;
+
+    .SideBarHeader{
+        width: 100%;
+        height: $NavBarHeight;
+        background: $MainBackground--Header;
+        font-size: 2em;
+    }
+
+    .SideBarToggles {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex: 1;
+        background: $MainPage--SideBarColor;
+        box-shadow:$BoxShadow;
+        padding-top: 2rem;
+        opacity: .8;
+    }
 }
+
 .MainPage--Widgets{
     background: rgb(43, 37, 65);
     grid-area: right;
-    flex-wrap: wrap;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-areas:
+        "top-left top-right"
+        "left right"
+        "bottom bottom";
+    grid-template-rows: min-content;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 1em;
+    grid-row-gap: 3em;
     div{
         z-index: 11;
         position: relative;
     }
-    padding: 2% 0 2% 0;
+    padding: 3em 2%;
+
+    @media screen and (max-width: $BreakPoint) {
+        display: block;
+    }
+}
+
+.MainPage--Widgets > div:not(.rover-images) {
+    -webkit-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
+    box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
+    border: 2px solid #72655F;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.3);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+
+    @media screen and (max-width: $BreakPoint) {
+        height: 75vh;
+        margin-bottom: 1em;
+    }
 }
 
 .slider {
@@ -114,10 +167,10 @@ body{
     margin: 2rem;
 }
 
-.top-widgets {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    padding-bottom: 2%;
-}
+// .top-widgets {
+//     display: flex;
+//     width: 100%;
+//     justify-content: space-evenly;
+//     padding-bottom: 2%;
+// }
 
