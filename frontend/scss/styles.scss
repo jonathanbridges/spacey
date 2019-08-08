@@ -15,6 +15,8 @@ $BoxShadow : 0px 1px 80px rgb(21, 10, 47);
 $HeightOfDashBoard: 100%;
 $NavBarHeight: 100px;
 
+$BreakPoint: 768px;
+
 #root{
     height: $HeightOfDashBoard;
 }
@@ -79,6 +81,7 @@ body{
     opacity: .8;
     overflow: visible;
 }
+
 .MainPage--Widgets{
     background: rgb(43, 37, 65);
     grid-area: right;
@@ -96,6 +99,10 @@ body{
         position: relative;
     }
     padding: 3em 2%;
+
+    @media screen and (max-width: $BreakPoint) {
+        display: block;
+    }
 }
 
 .MainPage--Widgets > div:not(.rover-images) {
@@ -107,6 +114,10 @@ body{
     border-radius: 8px;
     background: rgba(0,0,0,0.3);
     color: white;
+    @media screen and (max-width: $BreakPoint) {
+        height: 75vh;
+        margin-bottom: 1em;
+    }
 }
 
 .slider {
