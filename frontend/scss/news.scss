@@ -107,7 +107,8 @@
   max-height: 100px;
 }
 
-.Timeline--Body.expanded{
+.Timeline--Body.expanded,
+.twitterfeed .Timeline--Body{
   max-height: 1000px;
 }
 
@@ -123,7 +124,8 @@
   -webkit-box-orient: vertical;
 }
 
-.Timeline--Body.expanded .Timeline--Description{
+.Timeline--Body.expanded .Timeline--Description,
+.twitterfeed .Timeline--Body .Timeline--Description{
   overflow: initial;
   display: block;
 }
@@ -133,7 +135,12 @@
   color: purple;
 }
 
-.Timeline--Body.expanded .Timeline--Description:hover::after {
+.twitterfeed .Timeline--Body .Timeline--Description::after {
+  content: " Go to tweet";
+}
+
+.Timeline--Body.expanded .Timeline--Description:hover::after,
+.twitterfeed .Timeline--Body .Timeline--Description::after {
   color: blue;
 }
 
