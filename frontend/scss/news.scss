@@ -65,10 +65,6 @@
 }
 
 .Timeline{
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-
   & > div{
     flex: 1;
     overflow-y: scroll;

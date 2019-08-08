@@ -1,12 +1,9 @@
 .NasaIotd{
-    display: flex;
-    flex-direction: column;
-    grid-area: top-left;
-    padding: 20px;
     // background: #10161e;
     // color: white;
     // width: 47%;
     // height: auto;
+    grid-area: top-left;
 }
 
 .NasaIotd--header{

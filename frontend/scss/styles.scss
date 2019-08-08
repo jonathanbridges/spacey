@@ -106,7 +106,6 @@ body{
 }
 
 .MainPage--Widgets > div:not(.rover-images) {
-    height: 100vh;
     -webkit-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
     -moz-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
     box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
@@ -114,6 +113,12 @@ body{
     border-radius: 8px;
     background: rgba(0,0,0,0.3);
     color: white;
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+
     @media screen and (max-width: $BreakPoint) {
         height: 75vh;
         margin-bottom: 1em;
