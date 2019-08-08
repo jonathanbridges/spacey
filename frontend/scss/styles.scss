@@ -25,6 +25,11 @@ $BreakPoint: 768px;
     background: purple;
     height: $HeightOfDashBoard;
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background: $MainBackground--Header;
 }
@@ -38,7 +43,7 @@ body{
 }
 .NavBar{
     display: flex;
-    padding: 0px 70px;
+    padding: 0px 10%;
     align-items: center;
     justify-content: space-between;
     background: $MainBackground--Header;
@@ -58,7 +63,7 @@ body{
     display: grid;
     height:$HeightOfDashBoard;
     width:100%;
-    grid-template-areas: "top top" "left right";
+    grid-template-areas: "left top" "left right";
     grid-template-rows: $NavBarHeight 1fr;
     grid-template-columns: 10% 90%;
     overflow: hidden;
@@ -69,17 +74,32 @@ body{
     grid-area: top;
 }
 .MainPage--SideBar{
+    position: fixed;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 2rem;
+    flex-direction: column;
     z-index: 111;
-    background: $MainPage--SideBarColor;
     grid-area: left;
-    box-shadow:$BoxShadow;
-    height: 1100px;
-    opacity: .8;
+    width: 10%;
+    height: 100%;
     overflow: visible;
+
+    .SideBarHeader{
+        width: 100%;
+        height: $NavBarHeight;
+        background: $MainBackground--Header;
+        font-size: 2em;
+    }
+
+    .SideBarToggles {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex: 1;
+        background: $MainPage--SideBarColor;
+        box-shadow:$BoxShadow;
+        padding-top: 2rem;
+        opacity: .8;
+    }
 }
 
 .MainPage--Widgets{
