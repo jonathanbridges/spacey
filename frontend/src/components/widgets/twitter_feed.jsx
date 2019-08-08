@@ -2,21 +2,8 @@ import React from 'react';
 import { Timeline, TimelineEvent } from 'react-event-timeline';
 
 class SpaceLaunchNews extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-
   componentDidMount() {
     this.props.fetchTweets();
-  }
-
-  handleClick(e) {
-    const target = e.currentTarget;
-    if (target.classList.length === 1) {
-      target.classList.add("expanded");
-      e.preventDefault();
-    }
   }
 
   render() {
@@ -78,7 +65,7 @@ class SpaceLaunchNews extends React.Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <section className="Timeline--Body" onClick={this.handleClick}>
+              <section className="Timeline--Body">
                 <p className="Timeline--Location">{location}</p>
                 <p className="Timeline--Description">{full_text}</p>
                 {media_image}
