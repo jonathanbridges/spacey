@@ -43,7 +43,7 @@ body{
 }
 .NavBar{
     display: flex;
-    padding: 0px 10%;
+    padding: 0 4% 0 10%;
     align-items: center;
     justify-content: space-between;
     background: $MainBackground--Header;
@@ -53,6 +53,7 @@ body{
     position: absolute;
     box-shadow: $BoxShadow;
     z-index: 1111;
+
     h1 {
         min-width: fit-content;
     }
