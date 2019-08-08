@@ -1,6 +1,5 @@
 import React from 'react';
 import { Timeline, TimelineEvent } from 'react-event-timeline';
-import LaunchIcon from './assets/launch_icon';
 import Img from './assets/img';
 
 class HubbleNews extends React.Component {
@@ -35,6 +34,13 @@ class HubbleNews extends React.Component {
         const titleStyle = { fontWeight: "500" };
         const subtitleStyle = { color: "purple" };
         const contentStyle = { padding: "12px" };
+        const thumbnailIcon = (
+          <img
+            className="Timeline--Thumbnail"
+            src={thumbnail}
+            alt=""
+          />
+        );
 
         return (
           <TimelineEvent
@@ -45,9 +51,9 @@ class HubbleNews extends React.Component {
             subtitleStyle={subtitleStyle}
             contentStyle={contentStyle}
             // createdAt={pub_date.split("T")[0]}
-            icon={<LaunchIcon />}
+            icon={thumbnailIcon}
             // container="card"
-            showContent
+            // showContent
             collapsible
           >
             <a
@@ -57,7 +63,10 @@ class HubbleNews extends React.Component {
               rel="noopener noreferrer"
             >
               <Img className="Timeline--Image" src={thumbnail} alt="" />
-              <section className="Timeline--Body" onClick={this.handleClick}>
+              <section
+                className="Timeline--Body"
+                onClick={this.handleClick}
+              >
                 <p className="Timeline--Description">{description}</p>
               </section>
             </a>

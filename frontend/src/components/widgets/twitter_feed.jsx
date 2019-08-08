@@ -50,7 +50,7 @@ class SpaceLaunchNews extends React.Component {
         const titleStyle = { fontWeight: "500" };
         const subtitleStyle = { color: "purple" };
         const contentStyle = { padding: "12px" };
-        const profile_icon = (
+        const profileIcon = (
           <img
             className="Timeline--Profile"
             src={profile_image_url_https}
@@ -67,7 +67,7 @@ class SpaceLaunchNews extends React.Component {
             subtitleStyle={subtitleStyle}
             contentStyle={contentStyle}
             // createdAt={created_at.slice(0, 16)}
-            icon={profile_icon}
+            icon={profileIcon}
             // container="card"
             showContent
             collapsible
