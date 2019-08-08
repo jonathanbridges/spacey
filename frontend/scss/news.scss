@@ -70,6 +70,9 @@
   // min-height: 500px;
   overflow-y: scroll;
   padding: 20px;
+  svg {
+    fill: #da3a2f;
+  }
 }
 
 .Timeline--Link{
@@ -85,13 +88,19 @@
   position: relative;
   width: 100px;
   height: 100px;
-  padding-top: 8px;
+  padding-top: 4px;
   padding-right: 12px;
   float: left;
 }
 
 .Timeline--Body{
   color: black;
+  transition: max-height 1s ease-out;
+  max-height: 100px;
+}
+
+.Timeline--Body.expanded{
+  max-height: 1000px;
 }
 
 .Timeline--Location{
@@ -100,6 +109,24 @@
 
 .Timeline--Description{
   font-weight: 400;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.Timeline--Description::after {
+  content: " Go to article";
+  color: purple;
+}
+
+.Timeline--Description:hover::after {
+  color: blue;
+}
+
+.Timeline--Body.expanded .Timeline--Description{
+  overflow: initial;
+  display: block;
 }
 
 .Timeline--Media{
@@ -110,9 +137,9 @@
   width: 47%;
 }
 
-.twitterfeed {
-  grid-area: top-right;
-}
+// .twitterfeed {
+//   grid-area: top-right;
+// }
 
 // .spacelaunchnews {
 //   grid-area: left;
