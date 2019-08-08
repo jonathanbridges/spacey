@@ -65,13 +65,16 @@
 }
 
 .Timeline{
-  // min-width: 420px !important;
-  // height: 500px;
-  // min-height: 500px;
-  overflow-y: scroll;
+  position: relative;
   padding: 20px;
-  svg {
-    fill: #da3a2f;
+  h1{
+    position: sticky;
+    top: 0;
+  }
+  & > div{
+    overflow-y: scroll;
+    height: calc(100% - 40px);
+    margin: 10px 0;
   }
 }
 
