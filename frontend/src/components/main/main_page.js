@@ -18,7 +18,12 @@ import TwitterFeed from '../widgets/twitter_feed_container';
 
 
 const mstp=(state,ownProps)=>({
-  modal: state.ui.modal
+  modal: state.ui.modal,
+  nasaIotd:state.ui.nasaIotd,
+  twitterFeed: state.ui.twitterFeed,
+  spaceLaunchnews: state.ui.spaceLaunchnews,
+  hubbleNews: state.ui.hubbleNews,
+  roverPhotos: state.ui.roverPhotos
 })
 
 const mdtp = (dispatch) =>({
@@ -30,6 +35,7 @@ const mdtp = (dispatch) =>({
 class MainPage extends React.Component {
 
   render() {
+    console.log(this.props)
     let overlay = ""
     if( this.props.modal!=='off'){
       if(this.props.modal==='signUp'){
@@ -54,11 +60,12 @@ class MainPage extends React.Component {
             <SideBar />
           </div>
           <div className="MainPage--Widgets">
-            <NasaIOTD />
-            <TwitterFeed />
-            <SpaceLaunchNews />
-            <HubbleNews />
-            <RoverPhotos />
+            {this.props.nasaIotd ==='on'?<NasaIOTD/>: ""}
+            {this.props.twitterFeed ==='on'?<TwitterFeed/>: ""}
+            {this.props.spaceLaunchnews ==='on'?<SpaceLaunchNews/>: ""}
+            {this.props.hubbleNews==='on'?<HubbleNews />: ""}
+            {this.props.roverPhotos==='on'?<RoverPhotos/>: ""}
+
           </div>
           <div className="stars" />
           <div className="twinkling" />

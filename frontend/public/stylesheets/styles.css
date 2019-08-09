@@ -409,54 +409,54 @@ https://codepen.io/YusukeNakaya/pen/XyOaBj
   animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
 }
 .shooting_star:nth-child(1) {
-  top: calc(50% - 480px);
-  left: calc(50% - 9px);
-  animation-delay: 3687ms;
+  top: calc(50% - 138px);
+  left: calc(50% - 165px);
+  animation-delay: 1690ms;
 }
 .shooting_star:nth-child(2) {
-  top: calc(50% - 22px);
-  left: calc(50% - 132px);
-  animation-delay: 8635ms;
+  top: calc(50% - -261px);
+  left: calc(50% - 172px);
+  animation-delay: 2156ms;
 }
 .shooting_star:nth-child(3) {
-  top: calc(50% - 500px);
-  left: calc(50% - 128px);
-  animation-delay: 7858ms;
+  top: calc(50% - -38px);
+  left: calc(50% - 242px);
+  animation-delay: 3747ms;
 }
 .shooting_star:nth-child(4) {
-  top: calc(50% - -275px);
-  left: calc(50% - 54px);
-  animation-delay: 4782ms;
+  top: calc(50% - 1px);
+  left: calc(50% - 186px);
+  animation-delay: 5001ms;
 }
 .shooting_star:nth-child(5) {
-  top: calc(50% - -277px);
-  left: calc(50% - 136px);
-  animation-delay: 3499ms;
+  top: calc(50% - 366px);
+  left: calc(50% - 18px);
+  animation-delay: 5410ms;
 }
 .shooting_star:nth-child(6) {
-  top: calc(50% - -376px);
-  left: calc(50% - 61px);
-  animation-delay: 1930ms;
+  top: calc(50% - -389px);
+  left: calc(50% - 295px);
+  animation-delay: 8093ms;
 }
 .shooting_star:nth-child(7) {
-  top: calc(50% - -265px);
-  left: calc(50% - 136px);
-  animation-delay: 3985ms;
+  top: calc(50% - -216px);
+  left: calc(50% - 257px);
+  animation-delay: 5197ms;
 }
 .shooting_star:nth-child(8) {
-  top: calc(50% - -427px);
-  left: calc(50% - 11px);
-  animation-delay: 9143ms;
+  top: calc(50% - -277px);
+  left: calc(50% - 263px);
+  animation-delay: 8738ms;
 }
 .shooting_star:nth-child(9) {
-  top: calc(50% - 127px);
-  left: calc(50% - 52px);
-  animation-delay: 5059ms;
+  top: calc(50% - -399px);
+  left: calc(50% - 131px);
+  animation-delay: 797ms;
 }
 .shooting_star:nth-child(10) {
-  top: calc(50% - -389px);
-  left: calc(50% - 149px);
-  animation-delay: 3431ms;
+  top: calc(50% - -106px);
+  left: calc(50% - 219px);
+  animation-delay: 472ms;
 }
 
 @keyframes tail {
@@ -573,7 +573,7 @@ body {
 }
 .MainPage--SideBar .SideBarToggles {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   flex: 1;
   background: #252c37;

@@ -7,14 +7,14 @@ class imageOfTheDay extends React.Component {
   }
 
   render () {
-    if(this.props.display==="off"){
-      return null
-    }
+//    if(this.props.display==="off"){
+//      return null
+//    }
     if (this.props.nasaIOTD === undefined) {
       return (<div></div>)
     } else {
       let iotd = this.props.nasaIOTD.data;
-
+//
       return (
         <div className="NasaIotd">
           <h1 className="NasaIotd--header">NASA Image of the Day</h1>

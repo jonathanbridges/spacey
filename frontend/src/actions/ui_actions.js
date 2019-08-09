@@ -1,16 +1,20 @@
-export const TURN_ON_NASAIOTD = "TURN_ON_NASAIOTD"
-export const TURN_OFF_NASAIOTD = "TURN_OFF_NASAIOTD"
+export const TURN_ON_WIDGET = "TURN_ON_WIDGET"
+export const TURN_OFF_WIDGET = "TURN_OFF_WIDGET"
 
+export const TURN_ON_TWITTER_FEED = "TURN_ON_TWITTER_FEED"
+export const TURN_OFF_TWITTER_FEED = "TURN_OFF_TWITTER_FEED"
 
 export const TURN_ON_MODAL = "TURN_ON_MODAL"
 export const TURN_OFF_MODAL = "TURN_OFF_MODAL"
 
-const turnOnNiotd = () => ({
-  type: 'TURN_ON_NASAIOTD',
+const turnOnWidget = (value) => ({
+  type: 'TURN_ON_WIDGET',
+  widget: value
 });
 
-const turnOffNiotd = () => ({
-  type: 'TURN_OFF_NASAIOTD',
+const turnOffWidget = (value) => ({
+  type: 'TURN_OFF_WIDGET',
+  widget: value
 });
 
 
@@ -27,11 +31,11 @@ const turnOffModal = () => ({
 
 
 
-export const dispatchTurnOnNiotd = () => dispatch => (
-   dispatch(turnOnNiotd())
+export const dispatchTurnOnWidget = (value) => dispatch => (
+   dispatch(turnOnWidget(value))
 )
-export const dispatchTurnOffNiotd = () => dispatch => (
-   dispatch(turnOffNiotd())
+export const dispatchTurnOffWidget = (value) => dispatch => (
+   dispatch(turnOffWidget(value))
 )
 
 export const dispatchTurnOn = (modal) => dispatch => (
