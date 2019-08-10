@@ -9,6 +9,7 @@ import SignUpContainer from '../session/signup_form_container';
 
 import NavBar from '../nav/navbar_container';
 import SideBar from '../sidebar/sidebar';
+import SideBarHeader from '../sidebar/sidebar_header';
 
 import HubbleNews from '../widgets/hubble_news_container';
 import NasaIOTD from '../widgets/nasa_iotd_container';
@@ -57,6 +58,7 @@ class MainPage extends React.Component {
         <NavBar />
         <div className="MainPage--Body">
           <div className="MainPage--SideBar">
+            <SideBarHeader />
             <SideBar />
           </div>
           <div className="MainPage--Widgets">
