@@ -19,12 +19,10 @@ const uiReducer = (oldState = allOn, action) => {
   let nextState=Object.assign({}, oldState);
   switch (action.type) {
     case TURN_ON_WIDGET:
-      console.log(action.widget,'will be turned on')
       nextState[action.widget]= 'on'
       return nextState
 
     case TURN_OFF_WIDGET:
-      console.log(action.widget,'will be turned off')
       nextState[action.widget]= 'off'
       return nextState
     
@@ -37,7 +35,11 @@ const uiReducer = (oldState = allOn, action) => {
       return nextState
 
     case RECEIVE_CURRENT_USER:
+      console.log(action,"----------------------this is i teh currenet suer!!!!!!!!!!!-----------------------")
+
+      nextState=Object.assign({},action.currentUser.ui)
       nextState.modal = 'off'
+
       return  nextState
       
     default:

@@ -15,6 +15,57 @@ router.get('/current', passport.authenticate('jwt', { session: false }), (req, r
   });
 })
 
+
+
+
+
+router.post('/update', (req, res) => {
+  console.log('--------------------------------------------------------new post-------------------------------------------------------------------------------')
+  const email = req.body.user.email;
+
+
+
+//
+  console.log(req.body.ui,'.... thsi si what im stetting it to!!!!')
+//  let edit = Object.assign({},req.body.ui)
+//  let curVal= req.body.ui[req.body.widget]
+//  console.log(req.body.widget,req.body.ui,'before')
+//  if(curVal==='on'){
+//     edit[req.body.widget]='off'
+//  }else{
+//     edit[req.body.widget]='on'
+//  }
+//  console.log('after',edit)
+  //User.findOne({ email }).then(user=>{
+  User.findOneAndUpdate({ email }, {$set:{'ui':req.body.ui}},{new:true}).then(user=>{
+    //console.log(user)
+        if (user) {
+            const payload = { id: user.id, email: user.email, ui:user.ui };
+            console.log('----------------------',user,'-----------this is before sending baclk!!!!')
+
+            jwt.sign(
+              payload,
+              keys.secretOrKey,
+              // Tell the key to expire in one hour
+              { expiresIn: 3600 },
+              (err, token) => {
+                res.json({
+                  success: true,
+                  token: 'Bearer ' + token
+                });
+              });
+          } else {
+            errors.password = 'Incorrect password'
+            return res.status(400).json({errors:{email:'there is no one signed in'}});
+          }
+        })
+})
+
+
+
+
+
+
 router.post('/register', (req, res) => {
   const { errors, isValid } = validateRegisterInput(req.body);
 
