@@ -34,18 +34,27 @@ const SideBarButton = ( props )=>{
     //console.log(copy,'--------this is copy--------')
     //copy.ui[props.widgetValue]='off'
     if(props.widgetValue ==='on'){
-        func = props.turnOff.bind(this)
         copy[props.widget]='off'
+        func = props.turnOff.bind(this)
     }else{
-        func= props.turnOn.bind(this)
         copy[props.widget]='on'
+        func= props.turnOn.bind(this)
     }
     //console.log(copy ,'after  !!!!!thsi is copy'   )
     let output={...props.settings}
     output.ui=copy
 
+    //debugger
+    let current=false
+    if(props.settings.user){
+        current=!!(Object.keys(props.settings.user).length>0)
+    }
+
+
+    console.log('this is props--------------------------------',props,'this is protps',current)
+
     return(<div>
-        <button onClick={()=>props.update(output)}>{props.title}</button>
+        <button onClick={()=>current? props.update(output): func(props.widget)}>{props.title}</button>
 
     </div>)
 }

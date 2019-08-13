@@ -20,7 +20,7 @@ router.get('/current', passport.authenticate('jwt', { session: false }), (req, r
 
 
 router.post('/update', (req, res) => {
-  console.log('--------------------------------------------------------new post-------------------------------------------------------------------------------')
+  //console.log('--------------------------------------------------------new post-------------------------------------------------------------------------------')
   const email = req.body.user.email;
 
 
@@ -121,7 +121,7 @@ router.post('/login', (req, res) => {
       bcrypt.compare(password, user.password)
         .then(isMatch => {
           if (isMatch) {
-            const payload = { id: user.id, email: user.email };
+            const payload = { id: user.id, email: user.email, ui:user.ui };
 
             jwt.sign(
               payload,

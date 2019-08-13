@@ -33,10 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Create a preconfigured state we can immediately add to our store
     const preloadedState = { session: { isAuthenticated: true, user: decodedUser } };
+    preloadedState.ui=preloadedState.session.user.ui
 
     store = configureStore(preloadedState);
 
     const currentTime = Date.now() / 1000;
+    console.log(preloadedState,'this is predlaoded state!!!!!!!!!!!!!!!')
 
     // If the user's token has expired
     if (decodedUser.exp < currentTime) {

@@ -35,7 +35,7 @@ const uiReducer = (oldState = allOn, action) => {
       return nextState
 
     case RECEIVE_CURRENT_USER:
-      console.log(action,"----------------------this is i teh currenet suer!!!!!!!!!!!-----------------------")
+      //console.log(action,"----------------------this is i teh currenet suer!!!!!!!!!!!-----------------------")
 
       nextState=Object.assign({},action.currentUser.ui)
       nextState.modal = 'off'
