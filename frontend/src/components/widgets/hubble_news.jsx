@@ -20,6 +20,10 @@ class HubbleNews extends React.Component {
     }
   }
 
+  toggleContent() {
+    return e => e.target.closest('div').nextSibling.childNodes[1].click();
+  }
+
   render() {
     if (!this.props.hubbleNews) {
       return <div className="Timeline hubblenews" />;
@@ -29,7 +33,7 @@ class HubbleNews extends React.Component {
     const style = {};
     const lineStyle = {};
     const lineColor = "#72655F";
-    const timeline_events = data
+    const timelineEvents = data
       .slice(0, 20)
       .map((event, idx) => {
         const { pub_date, title, description, thumbnail, link } = event;
@@ -43,6 +47,7 @@ class HubbleNews extends React.Component {
             className="Timeline--Thumbnail"
             src={thumbnail}
             alt=""
+            onClick={this.toggleContent()}
           />
         );
 
@@ -67,7 +72,12 @@ class HubbleNews extends React.Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Img className="Timeline--Image" src={thumbnail} alt="" />
+              <Img
+                className="Timeline--Image"
+                src={thumbnail}
+                alt=""
+                modalOn={this.props.modalOn}
+              />
               <section
                 className="Timeline--Body"
                 onClick={this.handleClick}
@@ -88,7 +98,7 @@ class HubbleNews extends React.Component {
           lineStyle={lineStyle}
           lineColor={lineColor}
         >
-          {timeline_events}
+          {timelineEvents}
         </Timeline>
       </div>
     );

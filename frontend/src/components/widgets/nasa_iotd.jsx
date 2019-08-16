@@ -6,6 +6,17 @@ class imageOfTheDay extends React.Component {
     this.props.fetchImageOfTheDay();
   }
 
+  setModalImg() {
+    return e => {
+      e.preventDefault();
+      const src = e.target.src;
+      const setSrc = () => document.querySelector('.ModalImg').src = src;
+
+      this.props.modalOn('image');
+      setTimeout(setSrc, 0);
+    };
+  }
+
   render () {
 //    if(this.props.display==="off"){
 //      return null
@@ -19,7 +30,7 @@ class imageOfTheDay extends React.Component {
         <div className="NasaIotd">
           <h1 className="NasaIotd--header">NASA Image of the Day</h1>
           <p className="NasaIotd--copyright">Copyright: {iotd.copyright}</p>
-          <img className="NasaIotd--img" src={iotd.url} width="100%" height="auto" alt=""/>
+          <img className="NasaIotd--img" src={iotd.url} width="100%" height="auto" alt="" onClick={this.setModalImg()} />
           <p className="NasaIotd--desc">{iotd.explanation}</p>
         </div>
       )
