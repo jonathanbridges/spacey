@@ -32,6 +32,11 @@ html{
 
 body{
     background: $MainBackground--Header;
+
+    // Hides scroll bar on main document body.
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar { width: 0 !important }
 }
 
 .MainPage{
@@ -87,7 +92,7 @@ body{
     .SideBarHeader{
         width: 100%;
         height: $NavBarHeight;
-        background: $MainBackground--Header;
+        background: $MainPage--SideBarColor;
         font-size: 2em;
     }
 
@@ -123,6 +128,7 @@ body{
 
     @media screen and (max-width: $BreakPoint) {
         display: block;
+        padding: 4% 2%;
     }
 }
 
