@@ -13,21 +13,22 @@ class SpaceLaunchNews extends React.Component {
 
     // const data = this.props.tweets;
     const data = this.props.tweets.slice(0, 30);
-    const style = { overflow: "scroll", margin: "20px" };
+    const style = { overflow: "scroll" };
     const lineStyle = {};
     const lineColor = "#72655F";
     const timeline_events = data
       .map((event, idx) => {
         const {
+          id_str,
           full_text,
           location,
-          user: { name, profile_image_url_https },
-          news_url,
+          user: { name, screen_name, profile_image_url_https },
           extended_entities,
           created_at
         } = event;
-
+        const url = `https://twitter.com/${screen_name}/status/${id_str}`;
         let media_image;
+
         if (extended_entities) {
           const { media_url_https } = extended_entities.media[0];
           media_image = (
@@ -64,7 +65,7 @@ class SpaceLaunchNews extends React.Component {
           >
             <a
               className="Timeline--Link"
-              href={news_url}
+              href={url}
               target="_blank"
               rel="noopener noreferrer"
             >
