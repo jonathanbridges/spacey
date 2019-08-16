@@ -4,7 +4,7 @@ $ModalWidth: 600px;
 
 .overlay{
   position: absolute;
-  z-index:  133;
+  z-index:  111111;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -49,18 +49,24 @@ $ModalWidth: 600px;
   }
 
 }
-.ModalImg{
+.ModalImgBox{
   position: fixed;
-  border-radius: 10px;
-  width:$ModalWidth;
-  z-index: 33;
   background: $ModalBackgroundClr;
   box-shadow: 0px 0px 100px  black;
+  border-radius: 10px;
+  max-width: $ModalWidth;
+  max-height: 95%;
+  overflow: hidden;
   transition: 0.3s ease-out;
   cursor: zoom-in;
+
   &.big{
-    width: 95%;
+    max-width: 95%;
     cursor: zoom-out;
+  }
+  .ModalImg {
+    width: 100%;
+    transition: 0.3s ease-out;
   }
 }
 .SessionErrors{

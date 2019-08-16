@@ -2,7 +2,6 @@ import React from 'react'
 
 const SideBarHeader = ()=>{
     const scrollToTop = () => {
-        console.log('test');
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }

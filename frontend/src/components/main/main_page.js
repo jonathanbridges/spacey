@@ -37,7 +37,6 @@ const mdtp = (dispatch) =>({
 class MainPage extends React.Component {
 
   render() {
-    console.log(this.props)
     let overlay = ""
     if( this.props.modal!=='off'){
       if(this.props.modal==='signUp'){
