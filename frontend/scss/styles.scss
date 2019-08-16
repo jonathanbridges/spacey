@@ -11,7 +11,7 @@ $MainPage--SideBarColor: #252c37;
 $MainBackground--Header: rgb(16, 22, 31);
 $LeftSideBar: 20%;
 $BoxShadow : 0px 1px 80px rgb(21, 10, 47);
-
+$ButtonColor: #15202F;
 $HeightOfDashBoard: 100%;
 $NavBarHeight: 100px;
 
@@ -94,13 +94,40 @@ body{
     .SideBarToggles {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        //justify-content: center;
         flex: 1;
         background: $MainPage--SideBarColor;
         box-shadow:$BoxShadow;
         padding-top: 2rem;
-        opacity: .8;
     }
+}
+.SideBar--Background{
+    opacity: .8;
+
+}
+.SideBar--Button--on{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    margin: 10px 0px;
+    background: $ButtonColor;
+    text-align: center;
+    height: 70px;
+
+
+}
+.SideBar--Button--off{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    margin: 10px 0px;
+    background: pink;
+    text-align: center;
+    height: 70px;
+
+
 }
 
 .MainPage--Widgets{
@@ -167,7 +194,6 @@ body{
     margin: 2rem;
 }
 
-// .top-widgets {
 //     display: flex;
 //     width: 100%;
 //     justify-content: space-evenly;

@@ -409,54 +409,54 @@ https://codepen.io/YusukeNakaya/pen/XyOaBj
   animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
 }
 .shooting_star:nth-child(1) {
-  top: calc(50% - 138px);
-  left: calc(50% - 165px);
-  animation-delay: 1690ms;
+  top: calc(50% - 325px);
+  left: calc(50% - 256px);
+  animation-delay: 7349ms;
 }
 .shooting_star:nth-child(2) {
-  top: calc(50% - -261px);
-  left: calc(50% - 172px);
-  animation-delay: 2156ms;
+  top: calc(50% - -232px);
+  left: calc(50% - 260px);
+  animation-delay: 9454ms;
 }
 .shooting_star:nth-child(3) {
-  top: calc(50% - -38px);
-  left: calc(50% - 242px);
-  animation-delay: 3747ms;
+  top: calc(50% - -12px);
+  left: calc(50% - 213px);
+  animation-delay: 5051ms;
 }
 .shooting_star:nth-child(4) {
-  top: calc(50% - 1px);
-  left: calc(50% - 186px);
-  animation-delay: 5001ms;
+  top: calc(50% - 484px);
+  left: calc(50% - 26px);
+  animation-delay: 5640ms;
 }
 .shooting_star:nth-child(5) {
-  top: calc(50% - 366px);
-  left: calc(50% - 18px);
-  animation-delay: 5410ms;
+  top: calc(50% - 281px);
+  left: calc(50% - 283px);
+  animation-delay: 968ms;
 }
 .shooting_star:nth-child(6) {
-  top: calc(50% - -389px);
-  left: calc(50% - 295px);
-  animation-delay: 8093ms;
+  top: calc(50% - 82px);
+  left: calc(50% - 180px);
+  animation-delay: 1438ms;
 }
 .shooting_star:nth-child(7) {
-  top: calc(50% - -216px);
-  left: calc(50% - 257px);
-  animation-delay: 5197ms;
+  top: calc(50% - -266px);
+  left: calc(50% - 196px);
+  animation-delay: 823ms;
 }
 .shooting_star:nth-child(8) {
-  top: calc(50% - -277px);
-  left: calc(50% - 263px);
-  animation-delay: 8738ms;
+  top: calc(50% - 47px);
+  left: calc(50% - 79px);
+  animation-delay: 3289ms;
 }
 .shooting_star:nth-child(9) {
-  top: calc(50% - -399px);
-  left: calc(50% - 131px);
-  animation-delay: 797ms;
+  top: calc(50% - -36px);
+  left: calc(50% - 98px);
+  animation-delay: 7319ms;
 }
 .shooting_star:nth-child(10) {
-  top: calc(50% - -106px);
-  left: calc(50% - 219px);
-  animation-delay: 472ms;
+  top: calc(50% - 453px);
+  left: calc(50% - 282px);
+  animation-delay: 9281ms;
 }
 
 @keyframes tail {
@@ -574,12 +574,36 @@ body {
 .MainPage--SideBar .SideBarToggles {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   flex: 1;
   background: #252c37;
   box-shadow: 0px 1px 80px #150a2f;
   padding-top: 2rem;
+}
+
+.SideBar--Background {
   opacity: 0.8;
+}
+
+.SideBar--Button--on {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  margin: 10px 0px;
+  background: #15202F;
+  text-align: center;
+  height: 70px;
+}
+
+.SideBar--Button--off {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  margin: 10px 0px;
+  background: pink;
+  text-align: center;
+  height: 70px;
 }
 
 .MainPage--Widgets {

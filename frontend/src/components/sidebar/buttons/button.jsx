@@ -54,7 +54,7 @@ const SideBarButton = ( props )=>{
     console.log('this is props--------------------------------',props,'this is protps',current)
 
     return(<div>
-        <button onClick={()=>current? props.update(output): func(props.widget)}>{props.title}</button>
+        <div className={`SideBar--Button--${props.widgetValue}`} onClick={()=>current? props.update(output): func(props.widget)}>{props.title}</div>
 
     </div>)
 }
