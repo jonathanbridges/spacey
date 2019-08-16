@@ -20,6 +20,10 @@ class SpaceLaunchNews extends React.Component {
     }
   }
 
+  toggleContent() {
+    return e => e.target.closest('div').nextSibling.childNodes[1].click();
+  }
+
   render() {
     if (!this.props.spaceLaunchNews) {
       return <div className="Timeline spacelaunchnews" />;
@@ -29,7 +33,7 @@ class SpaceLaunchNews extends React.Component {
     const style = {};
     const lineStyle = {};
     const lineColor = "#72655F";
-    const timeline_events = data
+    const timelineEvents = data
       .map((event, idx) => {
         const {
           date,
@@ -51,6 +55,7 @@ class SpaceLaunchNews extends React.Component {
             className="Timeline--Thumbnail"
             src={feature_image}
             alt=""
+            onClick={this.toggleContent()}
           />
         );
 
@@ -69,17 +74,18 @@ class SpaceLaunchNews extends React.Component {
             showContent
             collapsible
           >
+            <Img
+              className="Timeline--Image"
+              src={feature_image}
+              alt=""
+              modalOn={this.props.modalOn}
+            />
             <a
               className="Timeline--Link"
               href={news_url}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Img
-                className="Timeline--Image"
-                src={feature_image}
-                alt=""
-              />
               <section
                 className="Timeline--Body"
                 onClick={this.handleClick}
@@ -101,7 +107,7 @@ class SpaceLaunchNews extends React.Component {
           lineStyle={lineStyle}
           lineColor={lineColor}
         >
-          {timeline_events}
+          {timelineEvents}
         </Timeline>
       </div>
     );

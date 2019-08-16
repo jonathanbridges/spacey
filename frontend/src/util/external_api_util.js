@@ -34,11 +34,11 @@ export const fetchHubbleNews = () => {
 
 export const fetchTweets = () => {
   let nasaUrl = `/api/external/tweets/nasa`;
-  let nasaJPLUrl = `/api/external/tweets/nasajpl`;
-  let nasaHubbleUrl = `/api/external/tweets/nasahubble`;
+  // let nasaJPLUrl = `/api/external/tweets/nasajpl`;
+  // let nasaHubbleUrl = `/api/external/tweets/nasahubble`;
   // let hubbleSpaceUrl = `/api/external/tweets/hubble_space`;
   // let marsCuriosityUrl = `/api/external/tweets/marscuriosity`;
-  let ISSResearchUrl = `/api/external/tweets/ISS_Research`;
+  // let ISSResearchUrl = `/api/external/tweets/ISS_Research`;
   // let esaUrl = `/api/external/tweets/esa`;
   // let spaceXUrl = `/api/external/tweets/spacex`;
   // let billNyeUrl = `/api/external/tweets/billnye`;
@@ -49,12 +49,6 @@ export const fetchTweets = () => {
 
   let tweets = [];
   return axios.get(nasaUrl)
-    .then(res => tweets = tweets.concat(res.data.data))
-    .then(() => axios.get(nasaJPLUrl))
-    .then(res => tweets = tweets.concat(res.data.data))
-    .then(() => axios.get(nasaHubbleUrl))
-    .then(res => tweets = tweets.concat(res.data.data))
-    .then(() => axios.get(ISSResearchUrl))
     .then(res => tweets = tweets.concat(res.data.data))
     .then(() => axios.get(spaceFeaturesUrl))
     .then(res => tweets = tweets.concat(res.data.data))

@@ -1,9 +1,14 @@
 import React from 'react';
 import { Timeline, TimelineEvent } from 'react-event-timeline';
+import Img from './assets/img';
 
 class SpaceLaunchNews extends React.Component {
   componentDidMount() {
     this.props.fetchTweets();
+  }
+
+  toggleContent() {
+    return e => e.target.closest('div').nextSibling.childNodes[1].click();
   }
 
   render() {
@@ -13,25 +18,31 @@ class SpaceLaunchNews extends React.Component {
 
     // const data = this.props.tweets;
     const data = this.props.tweets.slice(0, 30);
-    const style = { overflow: "scroll", margin: "20px" };
+    const style = { overflow: "scroll" };
     const lineStyle = {};
     const lineColor = "#72655F";
-    const timeline_events = data
+    const timelineEvents = data
       .map((event, idx) => {
         const {
+          id_str,
           full_text,
           location,
-          user: { name, profile_image_url_https },
-          news_url,
+          user: { name, screen_name, profile_image_url_https },
           extended_entities,
           created_at
         } = event;
-
+        const url = `https://twitter.com/${screen_name}/status/${id_str}`;
         let media_image;
+
         if (extended_entities) {
           const { media_url_https } = extended_entities.media[0];
           media_image = (
-            <img className="Timeline--Media" src={media_url_https} alt="" />
+            <Img
+              className="Timeline--Media"
+              src={media_url_https}
+              alt=""
+              modalOn={this.props.modalOn}
+            />
           );
         } else {
           media_image = null;
@@ -39,12 +50,13 @@ class SpaceLaunchNews extends React.Component {
 
         const titleStyle = { fontWeight: "500" };
         const subtitleStyle = { color: "purple" };
-        const contentStyle = { padding: "12px" };
+        const contentStyle = { borderRadius: "8px", padding: "12px" };
         const profileIcon = (
           <img
             className="Timeline--Profile"
             src={profile_image_url_https}
             alt={name}
+            onClick={this.toggleContent()}
           />
         );
 
@@ -64,7 +76,7 @@ class SpaceLaunchNews extends React.Component {
           >
             <a
               className="Timeline--Link"
-              href={news_url}
+              href={url}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -83,12 +95,11 @@ class SpaceLaunchNews extends React.Component {
       <div className="Timeline twitterfeed">
         <h1>Space Tweets</h1>
         <Timeline
-          className="Timeline--Contents"
           style={style}
           lineStyle={lineStyle}
           lineColor={lineColor}
         >
-          {timeline_events}
+          {timelineEvents}
         </Timeline>
       </div>
     );

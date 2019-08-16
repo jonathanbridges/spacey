@@ -6,6 +6,7 @@ import { dispatchTurnOff, dispatchTurnOn } from '../../actions/ui_actions';
 
 import LoginContainer from '../session/login_form_container';
 import SignUpContainer from '../session/signup_form_container';
+import ImageBoxContainer from '../modals/image_box_container';
 
 import NavBar from '../nav/navbar_container';
 import SideBar from '../sidebar/sidebar';
@@ -49,6 +50,11 @@ class MainPage extends React.Component {
           <div className="overlay--ClickGrabber"  onClick={()=>this.props.modalOff()} ></div>
           <LoginContainer/>
        </div> )
+      } else if (this.props.modal === 'image') {
+        overlay = (<div className='overlay' >
+          <div className="overlay--ClickGrabber" onClick={() => this.props.modalOff()} ></div>
+          <ImageBoxContainer />
+        </div>)
       }
     }
 

@@ -12,6 +12,17 @@ class roverImages extends React.Component {
     });
   }
 
+  setModalImg() {
+    return e => {
+      e.preventDefault();
+      const src = e.target.style.backgroundImage.slice(5,-2);
+      const setSrc = () => document.querySelector('.ModalImg').src = src;
+
+      this.props.modalOn('image');
+      setTimeout(setSrc, 0);
+    };
+  }
+
   render() {
     if (!this.props.roverImages) {
 
@@ -25,7 +36,7 @@ class roverImages extends React.Component {
 
       let roverImageCollection = this.props.roverImages.data.photos;
       let roverImages = roverImageCollection.map((roverImg, idx) => (
-        <div className="rover-img-container" key={idx} style={{backgroundImage: `url(${roverImg.img_src})`}}>
+        <div className="rover-img-container" key={idx} style={{backgroundImage: `url(${roverImg.img_src})`}} onClick={this.setModalImg()}>
           <div className="rover-deets">
             <p className="rover-info"> Curiosity: {this.props.roverImages.data.photos[`${idx}`].camera.full_name} </p>
           </div>
