@@ -69,17 +69,17 @@ class SpaceLaunchNews extends React.Component {
             showContent
             collapsible
           >
+            <Img
+              className="Timeline--Image"
+              src={feature_image}
+              alt=""
+            />
             <a
               className="Timeline--Link"
               href={news_url}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Img
-                className="Timeline--Image"
-                src={feature_image}
-                alt=""
-              />
               <section
                 className="Timeline--Body"
                 onClick={this.handleClick}

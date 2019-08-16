@@ -40,7 +40,7 @@ class SpaceLaunchNews extends React.Component {
 
         const titleStyle = { fontWeight: "500" };
         const subtitleStyle = { color: "purple" };
-        const contentStyle = { padding: "12px" };
+        const contentStyle = { borderRadius: "8px", padding: "12px" };
         const profileIcon = (
           <img
             className="Timeline--Profile"

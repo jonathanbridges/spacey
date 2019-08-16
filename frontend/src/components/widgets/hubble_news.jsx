@@ -36,7 +36,8 @@ class HubbleNews extends React.Component {
 
         const titleStyle = { fontWeight: "500" };
         const subtitleStyle = { color: "purple" };
-        const contentStyle = { padding: "12px" };
+        const contentStyle = { borderRadius: "8px", padding: "12px" };
+        const bubbleStyle = { borderColor: lineColor };
         const thumbnailIcon = (
           <img
             className="Timeline--Thumbnail"
@@ -53,6 +54,7 @@ class HubbleNews extends React.Component {
             subtitle={pub_date.split("T")[0]}
             subtitleStyle={subtitleStyle}
             contentStyle={contentStyle}
+            bubbleStyle={bubbleStyle}
             // createdAt={pub_date.split("T")[0]}
             icon={thumbnailIcon}
             // container="card"
