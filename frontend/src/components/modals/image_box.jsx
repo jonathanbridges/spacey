@@ -1,7 +1,10 @@
 import React from 'react';
 
 const ImageBox = () => (
-  <img class="ImageBox" src="https://pbs.twimg.com/media/ECHV-NAUIAAUMjX.jpg" />
+  <img
+    className="ModalImg"
+    onClick={e => e.target.classList.toggle('big')}
+  />
 );
 
 export default ImageBox;
