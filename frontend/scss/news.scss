@@ -22,7 +22,7 @@
     background: #10161e;
     -webkit-box-shadow: 8px 12px 25px 2px rgba(0,0,0,0.4);
     -moz-box-shadow: 8px 12px 25px 2px rgba(0,0,0,0.4);
-    -box-shadow: 8px 12px 25px 2px rgba(0,0,0,0.4);
+    box-shadow: 8px 12px 25px 2px rgba(0,0,0,0.4);
     border: 0px solid #000;
     -webkit-transition: padding 0.2s ease, margin 0.2s ease;
     -moz-transition: padding 0.2s ease, margin 0.2s ease;
@@ -110,11 +110,15 @@
 }
 
 .Timeline--Location{
-  font-weight: 500;
+  font-size: 80%;
+  color: #111;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .Timeline--Description{
-  font-weight: 400;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 4;
@@ -122,6 +126,7 @@
 }
 
 .Timeline--Body.expanded .Timeline--Description,
+.Timeline--Body.expanded .Timeline--Location,
 .twitterfeed .Timeline--Body .Timeline--Description{
   overflow: initial;
   display: block;
@@ -138,7 +143,7 @@
 }
 
 .Timeline--Body.expanded .Timeline--Description:hover::after,
-.twitterfeed .Timeline--Body:hover .Timeline--Description::after {
+.twitterfeed .Timeline--Body .Timeline--Description:hover::after {
   color: purple;
 }
 

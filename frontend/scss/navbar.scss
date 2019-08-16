@@ -1,4 +1,4 @@
-$ButtonHeigth: 40px;
+$ButtonHeight: 40px;
 $ButtonWidth: 90px;
 $ButtonColor: rgb(21, 31, 47);
 $BreakPoint: 768px;
@@ -15,29 +15,35 @@ $BreakPoint: 768px;
     }
 }
 
-.NavBar--Signup{
-    border-radius:  5px;
-    width:  $ButtonWidth;
-    height:   $ButtonHeigth;
-    background: $ButtonColor;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
+.NavBar--Signup,
 .NavBar--Login{
     border-radius:  5px;
     width:  $ButtonWidth;
-    height:   $ButtonHeigth;
+    height:   $ButtonHeight;
     background: $ButtonColor;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 1px 2px rgba(128, 0, 255, 0.05);
+    transition: 0.2s ease-in-out;
     cursor: pointer;
 }
 
-.emoji {
+.NavBar--Signup:hover, .NavBar--Signup:focus,
+.NavBar--Login:hover, .NavBar--Login:focus{
+    box-shadow: 0 5px 15px rgba(128, 0, 255, 0.1);
+    transform: translateY(-0.1em);
+}
+
+.NavBar--Logo{
+    width: 10%;
+}
+
+.NavBar--Header{
+    cursor: pointer;
+}
+
+.emoji{
     position: absolute;
     top: 34px;
     left: 4vw;
