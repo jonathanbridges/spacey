@@ -129,16 +129,17 @@
 
 .Timeline--Body.expanded .Timeline--Description::after {
   content: " Go to article";
-  color: purple;
+  color: blue;
 }
 
 .twitterfeed .Timeline--Body .Timeline--Description::after {
   content: " Go to tweet";
+  color: blue;
 }
 
 .Timeline--Body.expanded .Timeline--Description:hover::after,
-.twitterfeed .Timeline--Body .Timeline--Description::after {
-  color: blue;
+.twitterfeed .Timeline--Body:hover .Timeline--Description::after {
+  color: purple;
 }
 
 .Timeline--Media{

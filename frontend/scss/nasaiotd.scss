@@ -14,7 +14,14 @@
     margin: 2em 0;
 }
 
+.NasaIotd--copyright{
+    margin-left: 2em;
+    font-size: 80%;
+    color: purple;
+}
+
 .NasaIotd--desc{
     flex: 1;
     overflow-y: scroll;
+    font-size: 80%;
 }
