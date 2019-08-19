@@ -26,12 +26,23 @@ $BreakPoint: 768px;
     height: $HeightOfDashBoard;
 }
 
+*{
+    // Hides scroll bar on page.
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar { width: 0 !important }
+}
+
 html{
     scroll-behavior: smooth;
 }
 
 body{
     background: $MainBackground--Header;
+
+    // Hides scroll bar on main document body.
+    // overflow: -moz-scrollbars-none;
+    // -ms-overflow-style: none;
+    // &::-webkit-scrollbar { width: 0 !important }
 }
 
 .MainPage{
@@ -150,6 +161,7 @@ body{
 
     @media screen and (max-width: $BreakPoint) {
         display: block;
+        padding: 4% 2%;
     }
 }
 
@@ -188,6 +200,7 @@ body{
     background-size: cover;
     object-fit: cover;
     background-position-y: top;
+    cursor: zoom-in;
 }
 
 .rover-info {

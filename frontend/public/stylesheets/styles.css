@@ -17,17 +17,7 @@
   text-decoration-line: none;
 }
 
-.NavBar--Signup {
-  border-radius: 5px;
-  width: 90px;
-  height: 40px;
-  background: #151f2f;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
+.NavBar--Signup,
 .NavBar--Login {
   border-radius: 5px;
   width: 90px;
@@ -36,6 +26,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 1px 2px rgba(128, 0, 255, 0.05);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.NavBar--Signup:hover, .NavBar--Signup:focus,
+.NavBar--Login:hover, .NavBar--Login:focus {
+  box-shadow: 0 5px 15px rgba(128, 0, 255, 0.1);
+  transform: translateY(-0.1em);
+}
+
+.NavBar--Logo {
+  width: 10%;
+}
+
+.NavBar--Header {
   cursor: pointer;
 }
 
@@ -53,7 +59,7 @@
 
 .overlay {
   position: absolute;
-  z-index: 133;
+  z-index: 111111;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -62,15 +68,18 @@
 }
 
 .overlay--ClickGrabber {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: black;
-  opacity: 0.25;
+  opacity: 0.5;
   z-index: -1;
 }
 
 .ModalForm {
+  position: fixed;
   border-radius: 10px;
   width: 600px;
   z-index: 33;
@@ -97,6 +106,26 @@
   width: 400px;
 }
 
+.ModalImgBox {
+  position: fixed;
+  background: #1e2b3d;
+  box-shadow: 0px 0px 100px black;
+  border-radius: 10px;
+  max-width: 600px;
+  max-height: 95%;
+  overflow: hidden;
+  transition: 0.3s ease-out;
+  cursor: zoom-in;
+}
+.ModalImgBox.big {
+  max-width: 95%;
+  cursor: zoom-out;
+}
+.ModalImgBox .ModalImg {
+  width: 100%;
+  transition: 0.3s ease-out;
+}
+
 .SessionErrors {
   color: #fff;
   position: absolute;
@@ -115,11 +144,19 @@
 
 .NasaIotd--img {
   margin: 2em 0;
+  cursor: zoom-in;
+}
+
+.NasaIotd--copyright {
+  color: purple;
+  margin-left: 2em;
+  font-size: 80%;
 }
 
 .NasaIotd--desc {
   flex: 1;
   overflow-y: scroll;
+  font-size: 80%;
 }
 
 .News--Sources {
@@ -147,7 +184,7 @@
   background: #10161e;
   -webkit-box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
-  -box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
   border: 0px solid #000;
   -webkit-transition: padding 0.2s ease, margin 0.2s ease;
   -moz-transition: padding 0.2s ease, margin 0.2s ease;
@@ -218,6 +255,7 @@
   padding-top: 4px;
   padding-right: 12px;
   float: left;
+  cursor: zoom-in;
 }
 
 .Timeline--Body {
@@ -232,11 +270,15 @@
 }
 
 .Timeline--Location {
-  font-weight: 500;
+  font-size: 80%;
+  color: #111;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .Timeline--Description {
-  font-weight: 400;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 4;
@@ -244,6 +286,7 @@
 }
 
 .Timeline--Body.expanded .Timeline--Description,
+.Timeline--Body.expanded .Timeline--Location,
 .twitterfeed .Timeline--Body .Timeline--Description {
   overflow: initial;
   display: block;
@@ -251,20 +294,22 @@
 
 .Timeline--Body.expanded .Timeline--Description::after {
   content: " Go to article";
-  color: purple;
+  color: blue;
 }
 
 .twitterfeed .Timeline--Body .Timeline--Description::after {
   content: " Go to tweet";
+  color: blue;
 }
 
 .Timeline--Body.expanded .Timeline--Description:hover::after,
-.twitterfeed .Timeline--Body .Timeline--Description::after {
-  color: blue;
+.twitterfeed .Timeline--Body .Timeline--Description:hover::after {
+  color: purple;
 }
 
 .Timeline--Media {
   width: 100%;
+  cursor: zoom-in;
 }
 
 .news-container {
@@ -409,54 +454,54 @@ https://codepen.io/YusukeNakaya/pen/XyOaBj
   animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
 }
 .shooting_star:nth-child(1) {
-  top: calc(50% - 138px);
-  left: calc(50% - 50px);
-  animation-delay: 9103ms;
+  top: calc(50% - -421px);
+  left: calc(50% - 154px);
+  animation-delay: 8228ms;
 }
 .shooting_star:nth-child(2) {
-  top: calc(50% - -296px);
-  left: calc(50% - 16px);
-  animation-delay: 5490ms;
+  top: calc(50% - -190px);
+  left: calc(50% - 165px);
+  animation-delay: 9316ms;
 }
 .shooting_star:nth-child(3) {
-  top: calc(50% - 78px);
-  left: calc(50% - 98px);
-  animation-delay: 6505ms;
+  top: calc(50% - 363px);
+  left: calc(50% - 218px);
+  animation-delay: 5831ms;
 }
 .shooting_star:nth-child(4) {
-  top: calc(50% - -465px);
-  left: calc(50% - 113px);
-  animation-delay: 2436ms;
+  top: calc(50% - -438px);
+  left: calc(50% - 222px);
+  animation-delay: 1989ms;
 }
 .shooting_star:nth-child(5) {
-  top: calc(50% - -225px);
-  left: calc(50% - 147px);
-  animation-delay: 7837ms;
+  top: calc(50% - 324px);
+  left: calc(50% - 231px);
+  animation-delay: 267ms;
 }
 .shooting_star:nth-child(6) {
-  top: calc(50% - -154px);
-  left: calc(50% - 38px);
-  animation-delay: 4002ms;
+  top: calc(50% - -353px);
+  left: calc(50% - 228px);
+  animation-delay: 1156ms;
 }
 .shooting_star:nth-child(7) {
-  top: calc(50% - -250px);
-  left: calc(50% - 295px);
-  animation-delay: 4183ms;
+  top: calc(50% - -475px);
+  left: calc(50% - 60px);
+  animation-delay: 1483ms;
 }
 .shooting_star:nth-child(8) {
-  top: calc(50% - 454px);
-  left: calc(50% - 93px);
-  animation-delay: 7537ms;
+  top: calc(50% - -273px);
+  left: calc(50% - 275px);
+  animation-delay: 5110ms;
 }
 .shooting_star:nth-child(9) {
-  top: calc(50% - -140px);
-  left: calc(50% - 249px);
-  animation-delay: 9196ms;
+  top: calc(50% - 493px);
+  left: calc(50% - 64px);
+  animation-delay: 504ms;
 }
 .shooting_star:nth-child(10) {
-  top: calc(50% - -447px);
-  left: calc(50% - 24px);
-  animation-delay: 9468ms;
+  top: calc(50% - 119px);
+  left: calc(50% - 30px);
+  animation-delay: 4293ms;
 }
 
 @keyframes tail {
@@ -504,6 +549,13 @@ https://codepen.io/YusukeNakaya/pen/XyOaBj
 .App {
   background: purple;
   height: 100%;
+}
+
+* {
+  -ms-overflow-style: none;
+}
+*::-webkit-scrollbar {
+  width: 0 !important;
 }
 
 html {
@@ -624,6 +676,7 @@ body {
 @media screen and (max-width: 768px) {
   .MainPage--Widgets {
     display: block;
+    padding: 4% 2%;
   }
 }
 
@@ -662,6 +715,7 @@ body {
   background-size: cover;
   object-fit: cover;
   background-position-y: top;
+  cursor: zoom-in;
 }
 
 .rover-info {

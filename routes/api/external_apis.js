@@ -11,6 +11,7 @@ router.get('/spacelaunchnow', (req, res) => {
   };
 
   getSpaceLaunchNews().then(data => {
+    data.sort((a, b) => b.id - a.id);
     res.json({
       message: "Request received!",
       data
@@ -45,6 +46,7 @@ router.get('/tweets/:handle?', (req, res) => {
   };
 
   getTweets().then(data => {
+    data = data.slice(0, 5);
     res.json({
       message: "Request received!",
       data

@@ -6,15 +6,19 @@
     grid-area: top-left;
 }
 
-.NasaIotd--header{
-    // background: green
-}
-
 .NasaIotd--img{
     margin: 2em 0;
+    cursor: zoom-in;
+}
+
+.NasaIotd--copyright{
+    color: purple;
+    margin-left: 2em;
+    font-size: 80%;
 }
 
 .NasaIotd--desc{
     flex: 1;
     overflow-y: scroll;
+    font-size: 80%;
 }
