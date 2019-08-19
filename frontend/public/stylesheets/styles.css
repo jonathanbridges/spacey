@@ -409,54 +409,54 @@ https://codepen.io/YusukeNakaya/pen/XyOaBj
   animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
 }
 .shooting_star:nth-child(1) {
-  top: calc(50% - 325px);
-  left: calc(50% - 256px);
-  animation-delay: 7349ms;
+  top: calc(50% - 138px);
+  left: calc(50% - 50px);
+  animation-delay: 9103ms;
 }
 .shooting_star:nth-child(2) {
-  top: calc(50% - -232px);
-  left: calc(50% - 260px);
-  animation-delay: 9454ms;
+  top: calc(50% - -296px);
+  left: calc(50% - 16px);
+  animation-delay: 5490ms;
 }
 .shooting_star:nth-child(3) {
-  top: calc(50% - -12px);
-  left: calc(50% - 213px);
-  animation-delay: 5051ms;
+  top: calc(50% - 78px);
+  left: calc(50% - 98px);
+  animation-delay: 6505ms;
 }
 .shooting_star:nth-child(4) {
-  top: calc(50% - 484px);
-  left: calc(50% - 26px);
-  animation-delay: 5640ms;
+  top: calc(50% - -465px);
+  left: calc(50% - 113px);
+  animation-delay: 2436ms;
 }
 .shooting_star:nth-child(5) {
-  top: calc(50% - 281px);
-  left: calc(50% - 283px);
-  animation-delay: 968ms;
+  top: calc(50% - -225px);
+  left: calc(50% - 147px);
+  animation-delay: 7837ms;
 }
 .shooting_star:nth-child(6) {
-  top: calc(50% - 82px);
-  left: calc(50% - 180px);
-  animation-delay: 1438ms;
+  top: calc(50% - -154px);
+  left: calc(50% - 38px);
+  animation-delay: 4002ms;
 }
 .shooting_star:nth-child(7) {
-  top: calc(50% - -266px);
-  left: calc(50% - 196px);
-  animation-delay: 823ms;
+  top: calc(50% - -250px);
+  left: calc(50% - 295px);
+  animation-delay: 4183ms;
 }
 .shooting_star:nth-child(8) {
-  top: calc(50% - 47px);
-  left: calc(50% - 79px);
-  animation-delay: 3289ms;
+  top: calc(50% - 454px);
+  left: calc(50% - 93px);
+  animation-delay: 7537ms;
 }
 .shooting_star:nth-child(9) {
-  top: calc(50% - -36px);
-  left: calc(50% - 98px);
-  animation-delay: 7319ms;
+  top: calc(50% - -140px);
+  left: calc(50% - 249px);
+  animation-delay: 9196ms;
 }
 .shooting_star:nth-child(10) {
-  top: calc(50% - 453px);
-  left: calc(50% - 282px);
-  animation-delay: 9281ms;
+  top: calc(50% - -447px);
+  left: calc(50% - 24px);
+  animation-delay: 9468ms;
 }
 
 @keyframes tail {
