@@ -1,42 +1,71 @@
 .overlay {
   position: absolute;
-  z-index: 133;
+  z-index: 111111;
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .overlay--ClickGrabber {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: black;
-  opacity: .25;
-  z-index: -1; }
+  opacity: 0.5;
+  z-index: -1;
+}
 
 .ModalForm {
+  position: fixed;
   border-radius: 10px;
   width: 600px;
   z-index: 33;
   height: 300px;
   background: #1e2b3d;
-  box-shadow: 0px 0px 100px  black;
+  box-shadow: 0px 0px 100px black;
   display: flex;
   justify-content: center;
-  align-items: center; }
-  .ModalForm input[type=text] {
-    margin: 10px 0px;
-    height: 30px;
-    width: 400px; }
-  .ModalForm input[type=password] {
-    margin: 10px 0px;
-    height: 30px;
-    width: 400px; }
-  .ModalForm input[type=submit] {
-    margin: 10px 0px;
-    height: 30px;
-    width: 400px; }
+  align-items: center;
+}
+.ModalForm input[type=text] {
+  margin: 10px 0px;
+  height: 30px;
+  width: 400px;
+}
+.ModalForm input[type=password] {
+  margin: 10px 0px;
+  height: 30px;
+  width: 400px;
+}
+.ModalForm input[type=submit] {
+  margin: 10px 0px;
+  height: 30px;
+  width: 400px;
+}
+
+.ModalImgBox {
+  position: fixed;
+  background: #1e2b3d;
+  box-shadow: 0px 0px 100px black;
+  border-radius: 10px;
+  max-width: 600px;
+  max-height: 95%;
+  overflow: hidden;
+  transition: 0.3s ease-out;
+  cursor: zoom-in;
+}
+.ModalImgBox.big {
+  max-width: 95%;
+  cursor: zoom-out;
+}
+.ModalImgBox .ModalImg {
+  width: 100%;
+  transition: 0.3s ease-out;
+}
 
 .SessionErrors {
   color: #fff;
@@ -47,6 +76,7 @@
   top: 220px;
   padding: 30px 0px;
   font-weight: bold;
-  border-radius: 3px; }
+  border-radius: 3px;
+}
 
 /*# sourceMappingURL=modal.css.map */
