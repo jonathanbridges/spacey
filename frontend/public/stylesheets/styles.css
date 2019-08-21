@@ -454,54 +454,54 @@ https://codepen.io/YusukeNakaya/pen/XyOaBj
   animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
 }
 .shooting_star:nth-child(1) {
-  top: calc(50% - -421px);
-  left: calc(50% - 154px);
-  animation-delay: 8228ms;
+  top: calc(50% - -56px);
+  left: calc(50% - 290px);
+  animation-delay: 1101ms;
 }
 .shooting_star:nth-child(2) {
-  top: calc(50% - -190px);
-  left: calc(50% - 165px);
-  animation-delay: 9316ms;
+  top: calc(50% - 134px);
+  left: calc(50% - 220px);
+  animation-delay: 537ms;
 }
 .shooting_star:nth-child(3) {
-  top: calc(50% - 363px);
-  left: calc(50% - 218px);
-  animation-delay: 5831ms;
+  top: calc(50% - 392px);
+  left: calc(50% - 266px);
+  animation-delay: 7973ms;
 }
 .shooting_star:nth-child(4) {
-  top: calc(50% - -438px);
-  left: calc(50% - 222px);
-  animation-delay: 1989ms;
+  top: calc(50% - -10px);
+  left: calc(50% - 143px);
+  animation-delay: 4782ms;
 }
 .shooting_star:nth-child(5) {
-  top: calc(50% - 324px);
-  left: calc(50% - 231px);
-  animation-delay: 267ms;
+  top: calc(50% - 25px);
+  left: calc(50% - 118px);
+  animation-delay: 7662ms;
 }
 .shooting_star:nth-child(6) {
-  top: calc(50% - -353px);
-  left: calc(50% - 228px);
-  animation-delay: 1156ms;
+  top: calc(50% - 179px);
+  left: calc(50% - 44px);
+  animation-delay: 6358ms;
 }
 .shooting_star:nth-child(7) {
-  top: calc(50% - -475px);
-  left: calc(50% - 60px);
-  animation-delay: 1483ms;
+  top: calc(50% - 238px);
+  left: calc(50% - 161px);
+  animation-delay: 1257ms;
 }
 .shooting_star:nth-child(8) {
-  top: calc(50% - -273px);
-  left: calc(50% - 275px);
-  animation-delay: 5110ms;
+  top: calc(50% - -88px);
+  left: calc(50% - 203px);
+  animation-delay: 6231ms;
 }
 .shooting_star:nth-child(9) {
-  top: calc(50% - 493px);
-  left: calc(50% - 64px);
-  animation-delay: 504ms;
+  top: calc(50% - 142px);
+  left: calc(50% - 95px);
+  animation-delay: 6910ms;
 }
 .shooting_star:nth-child(10) {
-  top: calc(50% - 119px);
-  left: calc(50% - 30px);
-  animation-delay: 4293ms;
+  top: calc(50% - 34px);
+  left: calc(50% - 106px);
+  animation-delay: 2312ms;
 }
 
 @keyframes tail {
@@ -629,7 +629,7 @@ body {
   flex: 1;
   background: #252c37;
   box-shadow: 0px 1px 80px #150a2f;
-  padding-top: 2rem;
+  padding: .5em;
 }
 
 .SideBar--Background {
@@ -642,9 +642,11 @@ body {
   justify-content: center;
   opacity: 1;
   margin: 10px 0px;
-  background: #15202F;
+  background: white;
+  border-radius: 8px;
   text-align: center;
   height: 70px;
+  cursor: pointer;
 }
 
 .SideBar--Button--off {
@@ -653,9 +655,13 @@ body {
   justify-content: center;
   opacity: 1;
   margin: 10px 0px;
-  background: pink;
+  color: white;
+  background: #15202F;
   text-align: center;
   height: 70px;
+  border: 2px solid white;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .MainPage--Widgets {
@@ -665,9 +671,8 @@ body {
   grid-template-areas: "top-left top-right" "left right" "bottom bottom";
   grid-template-rows: min-content;
   grid-template-columns: 50% 50%;
-  grid-column-gap: 1em;
-  grid-row-gap: 3em;
-  padding: 3em 2%;
+  margin: .5em;
+  /* padding: 3em 2%; */
 }
 .MainPage--Widgets div {
   z-index: 11;
@@ -677,6 +682,7 @@ body {
   .MainPage--Widgets {
     display: block;
     padding: 4% 2%;
+    margin: 0;
   }
 }
 
@@ -692,6 +698,7 @@ body {
   flex-direction: column;
   height: 100vh;
   padding: 20px;
+  margin: .5em
 }
 @media screen and (max-width: 768px) {
   .MainPage--Widgets > div:not(.rover-images) {
