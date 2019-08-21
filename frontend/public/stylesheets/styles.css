@@ -42,13 +42,7 @@
 }
 
 .NavBar--Header {
-  cursor: pointer;
-}
-
-.logout {
-  height: 40px;
-  font-size: 1rem;
-  padding: .5rem;
+  cursor: default;
 }
 
 .emoji {
@@ -91,25 +85,41 @@
   z-index: 33;
   height: 300px;
   background: #1e2b3d;
+  border: 2px solid white;
   box-shadow: 0px 0px 100px black;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.ModalForm input[type=text] {
-  margin: 10px 0px;
-  height: 30px;
-  width: 400px;
+
+form input {
+  width: 286px;
+  min-height: 30px;
+  font-size: .9rem;
+  text-align: center;
+  margin-bottom: 1rem;
 }
-.ModalForm input[type=password] {
-  margin: 10px 0px;
-  height: 30px;
-  width: 400px;
+
+.sign-up-form, .login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.ModalForm input[type=submit] {
-  margin: 10px 0px;
-  height: 30px;
-  width: 400px;
+
+.modal-h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 1em;
+}
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    margin-bottom: 0;
 }
 
 .ModalImgBox {
@@ -135,10 +145,8 @@
 .SessionErrors {
   color: #fff;
   position: absolute;
-  background: #4e0000;
-  width: 400px;
   text-align: center;
-  top: 220px;
+  top: 0;
   padding: 30px 0px;
   font-weight: bold;
   border-radius: 3px;
@@ -323,7 +331,13 @@
 }
 
 .rover-images {
-  width: 100%;
+  box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
+  border: 2px solid #72655F;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  margin: .5em;
   grid-area: bottom;
 }
 
@@ -460,54 +474,54 @@ https://codepen.io/YusukeNakaya/pen/XyOaBj
   animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
 }
 .shooting_star:nth-child(1) {
-  top: calc(50% - 284px);
-  left: calc(50% - 4px);
-  animation-delay: 2136ms;
+  top: calc(50% - -56px);
+  left: calc(50% - 290px);
+  animation-delay: 1101ms;
 }
 .shooting_star:nth-child(2) {
-  top: calc(50% - 297px);
-  left: calc(50% - 177px);
-  animation-delay: 4224ms;
+  top: calc(50% - 134px);
+  left: calc(50% - 220px);
+  animation-delay: 537ms;
 }
 .shooting_star:nth-child(3) {
-  top: calc(50% - -415px);
-  left: calc(50% - 130px);
-  animation-delay: 8290ms;
+  top: calc(50% - 392px);
+  left: calc(50% - 266px);
+  animation-delay: 7973ms;
 }
 .shooting_star:nth-child(4) {
-  top: calc(50% - -410px);
-  left: calc(50% - 86px);
-  animation-delay: 6267ms;
+  top: calc(50% - -10px);
+  left: calc(50% - 143px);
+  animation-delay: 4782ms;
 }
 .shooting_star:nth-child(5) {
-  top: calc(50% - -493px);
-  left: calc(50% - 110px);
-  animation-delay: 7846ms;
+  top: calc(50% - 25px);
+  left: calc(50% - 118px);
+  animation-delay: 7662ms;
 }
 .shooting_star:nth-child(6) {
-  top: calc(50% - 375px);
-  left: calc(50% - 71px);
-  animation-delay: 4367ms;
+  top: calc(50% - 179px);
+  left: calc(50% - 44px);
+  animation-delay: 6358ms;
 }
 .shooting_star:nth-child(7) {
-  top: calc(50% - 353px);
-  left: calc(50% - 29px);
-  animation-delay: 7265ms;
+  top: calc(50% - 238px);
+  left: calc(50% - 161px);
+  animation-delay: 1257ms;
 }
 .shooting_star:nth-child(8) {
-  top: calc(50% - 410px);
-  left: calc(50% - 206px);
-  animation-delay: 1140ms;
+  top: calc(50% - -88px);
+  left: calc(50% - 203px);
+  animation-delay: 6231ms;
 }
 .shooting_star:nth-child(9) {
-  top: calc(50% - -301px);
-  left: calc(50% - 277px);
-  animation-delay: 8443ms;
+  top: calc(50% - 142px);
+  left: calc(50% - 95px);
+  animation-delay: 6910ms;
 }
 .shooting_star:nth-child(10) {
-  top: calc(50% - -438px);
-  left: calc(50% - 207px);
-  animation-delay: 4117ms;
+  top: calc(50% - 34px);
+  left: calc(50% - 106px);
+  animation-delay: 2312ms;
 }
 
 @keyframes tail {
@@ -581,7 +595,7 @@ body {
 
 .NavBar {
   display: flex;
-  padding: 0 1em 0 10%;
+  padding: 0 4% 0 10%;
   align-items: center;
   justify-content: space-between;
   background: #10161f;
@@ -635,7 +649,7 @@ body {
   flex: 1;
   background: #252c37;
   box-shadow: 0px 1px 80px #150a2f;
-  padding-top: 2rem;
+  padding: .5em;
 }
 
 .SideBar--Background {
@@ -648,9 +662,12 @@ body {
   justify-content: center;
   opacity: 1;
   margin: 10px 0px;
-  background: #15202F;
+  background: white;
+  border-radius: 8px;
   text-align: center;
   height: 70px;
+  cursor: pointer;
+  padding: .1em;
 }
 
 .SideBar--Button--off {
@@ -659,9 +676,14 @@ body {
   justify-content: center;
   opacity: 1;
   margin: 10px 0px;
-  background: pink;
+  color: white;
+  background: #15202F;
   text-align: center;
   height: 70px;
+  border: 2px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: .1em;
 }
 
 .MainPage--Widgets {
@@ -671,9 +693,8 @@ body {
   grid-template-areas: "top-left top-right" "left right" "bottom bottom";
   grid-template-rows: min-content;
   grid-template-columns: 50% 50%;
-  grid-column-gap: 1em;
-  grid-row-gap: 3em;
-  padding: 3em 2%;
+  margin: .5em;
+  /* padding: 3em 2%; */
 }
 .MainPage--Widgets div {
   z-index: 11;
@@ -683,6 +704,7 @@ body {
   .MainPage--Widgets {
     display: block;
     padding: 4% 2%;
+    margin: 0;
   }
 }
 
@@ -698,6 +720,7 @@ body {
   flex-direction: column;
   height: 100vh;
   padding: 20px;
+  margin: .5em
 }
 @media screen and (max-width: 768px) {
   .MainPage--Widgets > div:not(.rover-images) {
@@ -708,8 +731,7 @@ body {
 
 .slider {
   overflow: hidden;
-  border-radius: 3rem;
-  box-shadow: 0 0.1px 0.1px 0.2px;
+  border-radius: 8px;
   min-height: 480px;
 }
 
@@ -720,12 +742,14 @@ body {
   height: 480px;
   background-size: cover;
   object-fit: cover;
-  background-position-y: top;
+  background-position-y: center;
   cursor: zoom-in;
 }
 
 .rover-info {
   margin: 2rem;
+  background-color: black;
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */
