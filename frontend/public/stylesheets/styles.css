@@ -45,6 +45,12 @@
   cursor: pointer;
 }
 
+.logout {
+  height: 40px;
+  font-size: 1rem;
+  padding: .5rem;
+}
+
 .emoji {
   position: absolute;
   top: 34px;
@@ -454,54 +460,54 @@ https://codepen.io/YusukeNakaya/pen/XyOaBj
   animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
 }
 .shooting_star:nth-child(1) {
-  top: calc(50% - -56px);
-  left: calc(50% - 290px);
-  animation-delay: 1101ms;
+  top: calc(50% - 284px);
+  left: calc(50% - 4px);
+  animation-delay: 2136ms;
 }
 .shooting_star:nth-child(2) {
-  top: calc(50% - 134px);
-  left: calc(50% - 220px);
-  animation-delay: 537ms;
+  top: calc(50% - 297px);
+  left: calc(50% - 177px);
+  animation-delay: 4224ms;
 }
 .shooting_star:nth-child(3) {
-  top: calc(50% - 392px);
-  left: calc(50% - 266px);
-  animation-delay: 7973ms;
+  top: calc(50% - -415px);
+  left: calc(50% - 130px);
+  animation-delay: 8290ms;
 }
 .shooting_star:nth-child(4) {
-  top: calc(50% - -10px);
-  left: calc(50% - 143px);
-  animation-delay: 4782ms;
+  top: calc(50% - -410px);
+  left: calc(50% - 86px);
+  animation-delay: 6267ms;
 }
 .shooting_star:nth-child(5) {
-  top: calc(50% - 25px);
-  left: calc(50% - 118px);
-  animation-delay: 7662ms;
+  top: calc(50% - -493px);
+  left: calc(50% - 110px);
+  animation-delay: 7846ms;
 }
 .shooting_star:nth-child(6) {
-  top: calc(50% - 179px);
-  left: calc(50% - 44px);
-  animation-delay: 6358ms;
+  top: calc(50% - 375px);
+  left: calc(50% - 71px);
+  animation-delay: 4367ms;
 }
 .shooting_star:nth-child(7) {
-  top: calc(50% - 238px);
-  left: calc(50% - 161px);
-  animation-delay: 1257ms;
+  top: calc(50% - 353px);
+  left: calc(50% - 29px);
+  animation-delay: 7265ms;
 }
 .shooting_star:nth-child(8) {
-  top: calc(50% - -88px);
-  left: calc(50% - 203px);
-  animation-delay: 6231ms;
+  top: calc(50% - 410px);
+  left: calc(50% - 206px);
+  animation-delay: 1140ms;
 }
 .shooting_star:nth-child(9) {
-  top: calc(50% - 142px);
-  left: calc(50% - 95px);
-  animation-delay: 6910ms;
+  top: calc(50% - -301px);
+  left: calc(50% - 277px);
+  animation-delay: 8443ms;
 }
 .shooting_star:nth-child(10) {
-  top: calc(50% - 34px);
-  left: calc(50% - 106px);
-  animation-delay: 2312ms;
+  top: calc(50% - -438px);
+  left: calc(50% - 207px);
+  animation-delay: 4117ms;
 }
 
 @keyframes tail {
@@ -575,7 +581,7 @@ body {
 
 .NavBar {
   display: flex;
-  padding: 0 4% 0 10%;
+  padding: 0 1em 0 10%;
   align-items: center;
   justify-content: space-between;
   background: #10161f;
@@ -629,7 +635,7 @@ body {
   flex: 1;
   background: #252c37;
   box-shadow: 0px 1px 80px #150a2f;
-  padding: .5em;
+  padding-top: 2rem;
 }
 
 .SideBar--Background {
@@ -642,11 +648,9 @@ body {
   justify-content: center;
   opacity: 1;
   margin: 10px 0px;
-  background: white;
-  border-radius: 8px;
+  background: #15202F;
   text-align: center;
   height: 70px;
-  cursor: pointer;
 }
 
 .SideBar--Button--off {
@@ -655,13 +659,9 @@ body {
   justify-content: center;
   opacity: 1;
   margin: 10px 0px;
-  color: white;
-  background: #15202F;
+  background: pink;
   text-align: center;
   height: 70px;
-  border: 2px solid white;
-  border-radius: 8px;
-  cursor: pointer;
 }
 
 .MainPage--Widgets {
@@ -671,8 +671,9 @@ body {
   grid-template-areas: "top-left top-right" "left right" "bottom bottom";
   grid-template-rows: min-content;
   grid-template-columns: 50% 50%;
-  margin: .5em;
-  /* padding: 3em 2%; */
+  grid-column-gap: 1em;
+  grid-row-gap: 3em;
+  padding: 3em 2%;
 }
 .MainPage--Widgets div {
   z-index: 11;
@@ -682,7 +683,6 @@ body {
   .MainPage--Widgets {
     display: block;
     padding: 4% 2%;
-    margin: 0;
   }
 }
 
@@ -698,7 +698,6 @@ body {
   flex-direction: column;
   height: 100vh;
   padding: 20px;
-  margin: .5em
 }
 @media screen and (max-width: 768px) {
   .MainPage--Widgets > div:not(.rover-images) {

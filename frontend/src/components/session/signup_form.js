@@ -60,26 +60,23 @@ class SignupForm extends React.Component {
     return (
       <div className="ModalForm">
         <form onSubmit={this.handleSubmit}>
+          <h2 className="modal-h2">Enter your Credentials</h2>
           <div className="login-form">
-            <br/>
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
                 placeholder="Email"
               />
-            <br/>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 placeholder="Password"
               />
-            <br/>
               <input type="password"
                 value={this.state.password2}
                 onChange={this.update('password2')}
                 placeholder="Confirm Password"
               />
-            <br/>
             <input type="submit" value="Sign Up" />
             { Object.keys(this.state.errors).length>0?this.renderErrors(): ""}
           </div>

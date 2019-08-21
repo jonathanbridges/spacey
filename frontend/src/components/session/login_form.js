@@ -17,7 +17,7 @@ class LoginForm extends React.Component {
     this.renderErrors = this.renderErrors.bind(this);
   }
 
-  // Once the user has been authenticated, redirect to the Tweets page
+  // Once the user has been authenticated, redirect to the Main page
   componentWillReceiveProps(nextProps) {
     if (nextProps.currentUser === true) {
       this.props.history.push('/');
@@ -64,19 +64,18 @@ class LoginForm extends React.Component {
     return (
       <div className="ModalForm">
         <form onSubmit={this.handleSubmit}>
-          <div>
-              <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
-                placeholder="Email"
-              />
-            <br/>
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                placeholder="Password"
-              />
-            <br/>
+          <h2 className="modal-h2">Enter your Credentials</h2>
+          <div className="login-form">
+            <input type="text"
+              value={this.state.email}
+              onChange={this.update('email')}
+              placeholder="Email"
+            />
+            <input type="password"
+              value={this.state.password}
+              onChange={this.update('password')}
+              placeholder="Password"
+            />
             <input type="submit" value="Login" />
             { Object.keys(this.state.errors).length>0?this.renderErrors(): ""}
           </div>

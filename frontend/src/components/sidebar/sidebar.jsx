@@ -14,11 +14,3 @@ const SideBar = ()=>{
 }
 
 export default SideBar
-
-//            <NasaIotdButtonContainer />
-//            <br/>
-//            <TwitterFeedButtonContainer/>
-//            <br/>
-//            <SpaceLaunchNewsButtonsContainer/>
-//            <br/>
-//            <div></div>
