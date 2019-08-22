@@ -45,6 +45,14 @@
   cursor: default;
 }
 
+.logout {
+  height: 40px;
+  font-size: 1rem;
+  padding: .5em;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 .emoji {
   position: absolute;
   top: 34px;
@@ -113,12 +121,12 @@ form input {
 }
 
 input[type=submit] {
-    padding:5px 15px; 
-    background:#ccc; 
+    padding:5px 15px;
+    background:#ccc;
     border:0 none;
     cursor:pointer;
     -webkit-border-radius: 5px;
-    border-radius: 5px; 
+    border-radius: 5px;
     margin-bottom: 0;
 }
 
@@ -339,6 +347,10 @@ input[type=submit] {
   flex-direction: column;
   margin: .5em;
   grid-area: bottom;
+}
+
+.paging-dot {
+  background: white !important;
 }
 
 /* =============================================================================
@@ -603,7 +615,7 @@ body {
   width: 100%;
   color: white;
   position: absolute;
-  box-shadow: 0px 1px 80px #150a2f;
+  box-shadow: 0px 1px 20px #150a2f;
   z-index: 1111;
 }
 .NavBar h1 {
