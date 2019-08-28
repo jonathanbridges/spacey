@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 1px 2px rgba(128, 0, 255, 0.05);
-  transition: 0.2s ease-in-out;
+  transition: 0..2s ease-in-out;
   cursor: pointer;
 }
 
@@ -208,11 +208,11 @@ input[type=submit] {
   -moz-box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
   box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
   border: 0px solid #000;
-  -webkit-transition: padding 0.2s ease, margin 0.2s ease;
-  -moz-transition: padding 0.2s ease, margin 0.2s ease;
-  -ms-transition: padding 0.2s ease, margin 0.2s ease;
-  -o-transition: padding 0.2s ease, margin 0.2s ease;
-  transition: padding 0.2s ease, margin 0.2s ease;
+  -webkit-transition: padding 0..2s ease, margin 0..2s ease;
+  -moz-transition: padding 0..2s ease, margin 0..2s ease;
+  -ms-transition: padding 0..2s ease, margin 0..2s ease;
+  -o-transition: padding 0..2s ease, margin 0..2s ease;
+  transition: padding 0..2s ease, margin 0..2s ease;
 }
 .News--Source a:hover {
   margin: 35px 0 0 0;
@@ -775,11 +775,64 @@ body {
   width: 1em;
   height: 1em;
   background-color: white;
-  cursor: pointer;
+  cursor: help;
+}
+
+.info:hover {
+  color: transparent;
+  -webkit-animation: fadein 0s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 0s; /* Firefox < 16 */
+  -ms-animation: fadein 0s; /* Internet Explorer */
+  -o-animation: fadein 0s; /* Opera < 12.1 */
+  animation: fadein 0s;
 }
 
 .spacer {
   flex-grow: 1;
+}
+
+.info:hover:after {
+  -webkit-animation: fadein .5s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein .5s; /* Firefox < 16 */
+  -ms-animation: fadein .5s; /* Internet Explorer */
+  -o-animation: fadein .5s; /* Opera < 12.1 */
+  animation: fadein .5s;
+
+  border: 1px solid white;
+  position: relative;
+  left: 9.7rem;
+  content: "Welcome to Spacey! Toggle any sources you wish using the buttons on the left. After creating an account, your choices will be saved.";
+  height: auto;
+  min-width: 15rem;
+  text-align: center;
+  color: white;
+  padding: .3rem;
+  font-size: .8rem;
+  border-radius: 8px;
+  cursor: help;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 /*# sourceMappingURL=styles.css.map */
