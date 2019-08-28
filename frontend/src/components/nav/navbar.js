@@ -51,6 +51,8 @@ class NavBar extends React.Component {
           <h1 className="NavBar--Header">Spacey
             <span className="emoji" role="img" aria-label="rocket">🚀</span>
           </h1>
+          <h3 className="info">?</h3>
+          <div className="spacer"></div>
           {this.props.loggedIn}
           {this.getLinks()}
         </div>

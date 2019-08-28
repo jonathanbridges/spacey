@@ -764,4 +764,22 @@ body {
   color: white;
 }
 
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  color: black;
+  width: 1em;
+  height: 1em;
+  background-color: white;
+  cursor: pointer;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
 /*# sourceMappingURL=styles.css.map */
