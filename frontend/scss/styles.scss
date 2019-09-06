@@ -26,26 +26,20 @@ $BreakPoint: 768px;
     height: $HeightOfDashBoard;
 }
 
+*{
+    // Hides scroll bar on page.
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar { width: 0 !important }
+}
+
 html{
     scroll-behavior: smooth;
 }
 
 body{
     background: $MainBackground--Header;
-
-    // Hides scroll bar on main document body.
-    overflow: -moz-scrollbars-none;
-    -ms-overflow-style: none;
-    &::-webkit-scrollbar { width: 0 !important }
 }
 
-.MainPage{
-    width: 100vw;
-    height: $HeightOfDashBoard;
-    background: $MainBackground;
-    position: relative;
-
-}
 .NavBar{
     display: flex;
     padding: 0 4% 0 10%;
@@ -99,44 +93,49 @@ body{
     .SideBarToggles {
         display: flex;
         flex-direction: column;
-        //justify-content: center;
         flex: 1;
         background: $MainPage--SideBarColor;
         box-shadow:$BoxShadow;
-        padding-top: 2rem;
+        padding: .5em;
     }
 }
 .SideBar--Background{
     opacity: .8;
-
-}
-.SideBar--Button--on{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-    margin: 10px 0px;
-    background: $ButtonColor;
-    text-align: center;
-    height: 70px;
-
-
-}
-.SideBar--Button--off{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-    margin: 10px 0px;
-    background: pink;
-    text-align: center;
-    height: 70px;
-
-
 }
 
-.MainPage--Widgets{
-    background: rgb(43, 37, 65);
+.SideBar--Button--on {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  margin: 10px 0px;
+  background: white;
+  border-radius: 8px;
+  text-align: center;
+  height: 70px;
+  border: 2px solid white;
+  cursor: pointer;
+  padding: .1em;
+}
+
+.SideBar--Button--off {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  margin: 10px 0px;
+  color: white;
+  background: #15202F;
+  text-align: center;
+  height: 70px;
+  border: 2px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: .1em;
+}
+
+.MainPage--Widgets {
+    background: #2b2541;
     grid-area: right;
     display: grid;
     grid-template-areas:
@@ -145,18 +144,36 @@ body{
         "bottom bottom";
     grid-template-rows: min-content;
     grid-template-columns: 50% 50%;
-    grid-column-gap: 1em;
-    grid-row-gap: 3em;
-    div{
+    margin: .5em;
+
+    div {
         z-index: 11;
         position: relative;
     }
-    padding: 3em 2%;
 
     @media screen and (max-width: $BreakPoint) {
         display: block;
         padding: 4% 2%;
+        margin: 0;
     }
+}
+
+.rover-images {
+    grid-area: bottom;
+    -webkit-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
+    box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
+    border: 2px solid #72655F;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.3);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: .5em;
+}
+
+.rover-images .paging-dot {
+  background: white !important;
 }
 
 .MainPage--Widgets > div:not(.rover-images) {
@@ -167,11 +184,11 @@ body{
     border-radius: 8px;
     background: rgba(0,0,0,0.3);
     color: white;
-
     display: flex;
     flex-direction: column;
     height: 100vh;
     padding: 20px;
+    margin: .5em;
 
     @media screen and (max-width: $BreakPoint) {
         height: 75vh;
@@ -181,8 +198,6 @@ body{
 
 .slider {
     overflow: hidden;
-    border-radius: 3rem;
-    box-shadow: 0 0.1px 0.1px 0.2px;
     min-height: 480px;
 }
 
@@ -193,17 +208,124 @@ body{
     height: 480px;
     background-size: cover;
     object-fit: cover;
-    background-position-y: top;
+    background-position-y: center;
     cursor: zoom-in;
 }
 
 .rover-info {
     margin: 2rem;
+    background-color: black;
+    color: white;
 }
 
-//     display: flex;
-//     width: 100%;
-//     justify-content: space-evenly;
-//     padding-bottom: 2%;
-// }
+.logout {
+  height: 40px;
+  font-size: 1rem;
+  padding: .5em;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  color: black;
+  width: 1em;
+  height: 1em;
+  background-color: white;
+  cursor: help;
+}
+
+.info:hover {
+  color: transparent;
+  -webkit-animation: fadein 0s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 0s; /* Firefox < 16 */
+  -ms-animation: fadein 0s; /* Internet Explorer */
+  -o-animation: fadein 0s; /* Opera < 12.1 */
+  animation: fadein 0s;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.info:hover:after {
+  -webkit-animation: fadein .5s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein .5s; /* Firefox < 16 */
+  -ms-animation: fadein .5s; /* Internet Explorer */
+  -o-animation: fadein .5s; /* Opera < 12.1 */
+  animation: fadein .5s;
+
+  border: 1px solid white;
+  position: relative;
+  left: 9.7rem;
+  content: "Welcome to Spacey! Toggle any sources you wish using the buttons on the left. After creating an account, your choices will be saved.";
+  height: auto;
+  min-width: 15rem;
+  text-align: center;
+  color: white;
+  padding: .3rem;
+  font-size: .8rem;
+  border-radius: 8px;
+  cursor: help;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+form input {
+  width: 286px;
+  min-height: 30px;
+  font-size: .9rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.sign-up-form, .login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 1em;
+}
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    padding:5px 15px;
+    background:#ccc;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    border-radius: 5px;
+    margin-bottom: 0;
+}
+
 

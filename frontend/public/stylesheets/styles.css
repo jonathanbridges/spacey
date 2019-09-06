@@ -79,7 +79,6 @@
 }
 
 .ModalForm {
-  position: fixed;
   border-radius: 10px;
   width: 600px;
   z-index: 33;
@@ -89,21 +88,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.ModalForm input[type=text] {
-  margin: 10px 0px;
-  height: 30px;
-  width: 400px;
-}
-.ModalForm input[type=password] {
-  margin: 10px 0px;
-  height: 30px;
-  width: 400px;
-}
-.ModalForm input[type=submit] {
-  margin: 10px 0px;
-  height: 30px;
-  width: 400px;
 }
 
 .ModalImgBox {
@@ -316,9 +300,8 @@
   width: 47%;
 }
 
-.rover-images {
-  width: 100%;
-  grid-area: bottom;
+.rover-images .paging-dot {
+  background: white !important;
 }
 
 /* =============================================================================
@@ -454,33 +437,25 @@ https://codepen.io/YusukeNakaya/pen/XyOaBj
   animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
 }
 .shooting_star:nth-child(1) {
+<<<<<<< HEAD
   top: calc(50% - 418px);
   left: calc(50% - 9px);
   animation-delay: 9434ms;
+=======
+  top: calc(50% - -90px);
+  left: calc(50% - 42px);
+  animation-delay: 9257ms;
+>>>>>>> e888e640e3b9cfa4bff8ac44bca5ac17c18ff698
 }
 .shooting_star:nth-child(2) {
-  top: calc(50% - -107px);
-  left: calc(50% - 257px);
-  animation-delay: 6757ms;
+  top: calc(50% - -113px);
+  left: calc(50% - 290px);
+  animation-delay: 9806ms;
 }
 .shooting_star:nth-child(3) {
-  top: calc(50% - 0px);
-  left: calc(50% - 58px);
-  animation-delay: 3224ms;
-}
-.shooting_star:nth-child(4) {
-  top: calc(50% - 465px);
-  left: calc(50% - 265px);
-  animation-delay: 767ms;
-}
-.shooting_star:nth-child(5) {
-  top: calc(50% - -410px);
-  left: calc(50% - 256px);
-  animation-delay: 6945ms;
-}
-.shooting_star:nth-child(6) {
-  top: calc(50% - 240px);
+  top: calc(50% - -187px);
   left: calc(50% - 230px);
+<<<<<<< HEAD
   animation-delay: 4501ms;
 }
 .shooting_star:nth-child(7) {
@@ -502,6 +477,44 @@ https://codepen.io/YusukeNakaya/pen/XyOaBj
   top: calc(50% - 367px);
   left: calc(50% - 266px);
   animation-delay: 5691ms;
+=======
+  animation-delay: 935ms;
+}
+.shooting_star:nth-child(4) {
+  top: calc(50% - 222px);
+  left: calc(50% - 70px);
+  animation-delay: 5795ms;
+}
+.shooting_star:nth-child(5) {
+  top: calc(50% - -397px);
+  left: calc(50% - 252px);
+  animation-delay: 4495ms;
+}
+.shooting_star:nth-child(6) {
+  top: calc(50% - 304px);
+  left: calc(50% - 199px);
+  animation-delay: 6321ms;
+}
+.shooting_star:nth-child(7) {
+  top: calc(50% - -165px);
+  left: calc(50% - 62px);
+  animation-delay: 8257ms;
+}
+.shooting_star:nth-child(8) {
+  top: calc(50% - 435px);
+  left: calc(50% - 180px);
+  animation-delay: 5403ms;
+}
+.shooting_star:nth-child(9) {
+  top: calc(50% - -161px);
+  left: calc(50% - 292px);
+  animation-delay: 641ms;
+}
+.shooting_star:nth-child(10) {
+  top: calc(50% - 355px);
+  left: calc(50% - 148px);
+  animation-delay: 1540ms;
+>>>>>>> e888e640e3b9cfa4bff8ac44bca5ac17c18ff698
 }
 
 @keyframes tail {
@@ -551,24 +564,19 @@ https://codepen.io/YusukeNakaya/pen/XyOaBj
   height: 100%;
 }
 
+* {
+  -ms-overflow-style: none;
+}
+*::-webkit-scrollbar {
+  width: 0 !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   background: #10161f;
-  overflow: -moz-scrollbars-none;
-  -ms-overflow-style: none;
-}
-body::-webkit-scrollbar {
-  width: 0 !important;
-}
-
-.MainPage {
-  width: 100vw;
-  height: 100%;
-  background: #252c37;
-  position: relative;
 }
 
 .NavBar {
@@ -627,7 +635,7 @@ body::-webkit-scrollbar {
   flex: 1;
   background: #252c37;
   box-shadow: 0px 1px 80px #150a2f;
-  padding-top: 2rem;
+  padding: 0.5em;
 }
 
 .SideBar--Background {
@@ -640,9 +648,13 @@ body::-webkit-scrollbar {
   justify-content: center;
   opacity: 1;
   margin: 10px 0px;
-  background: #15202F;
+  background: white;
+  border-radius: 8px;
   text-align: center;
   height: 70px;
+  border: 2px solid white;
+  cursor: pointer;
+  padding: 0.1em;
 }
 
 .SideBar--Button--off {
@@ -651,9 +663,14 @@ body::-webkit-scrollbar {
   justify-content: center;
   opacity: 1;
   margin: 10px 0px;
-  background: pink;
+  color: white;
+  background: #15202F;
   text-align: center;
   height: 70px;
+  border: 2px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0.1em;
 }
 
 .MainPage--Widgets {
@@ -663,9 +680,7 @@ body::-webkit-scrollbar {
   grid-template-areas: "top-left top-right" "left right" "bottom bottom";
   grid-template-rows: min-content;
   grid-template-columns: 50% 50%;
-  grid-column-gap: 1em;
-  grid-row-gap: 3em;
-  padding: 3em 2%;
+  margin: 0.5em;
 }
 .MainPage--Widgets div {
   z-index: 11;
@@ -675,7 +690,26 @@ body::-webkit-scrollbar {
   .MainPage--Widgets {
     display: block;
     padding: 4% 2%;
+    margin: 0;
   }
+}
+
+.rover-images {
+  grid-area: bottom;
+  -webkit-box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
+  border: 2px solid #72655F;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em;
+}
+
+.rover-images .paging-dot {
+  background: white !important;
 }
 
 .MainPage--Widgets > div:not(.rover-images) {
@@ -690,6 +724,7 @@ body::-webkit-scrollbar {
   flex-direction: column;
   height: 100vh;
   padding: 20px;
+  margin: 0.5em;
 }
 @media screen and (max-width: 768px) {
   .MainPage--Widgets > div:not(.rover-images) {
@@ -700,8 +735,6 @@ body::-webkit-scrollbar {
 
 .slider {
   overflow: hidden;
-  border-radius: 3rem;
-  box-shadow: 0 0.1px 0.1px 0.2px;
   min-height: 480px;
 }
 
@@ -712,12 +745,145 @@ body::-webkit-scrollbar {
   height: 480px;
   background-size: cover;
   object-fit: cover;
-  background-position-y: top;
+  background-position-y: center;
   cursor: zoom-in;
 }
 
 .rover-info {
   margin: 2rem;
+  background-color: black;
+  color: white;
+}
+
+.logout {
+  height: 40px;
+  font-size: 1rem;
+  padding: 0.5em;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  color: black;
+  width: 1em;
+  height: 1em;
+  background-color: white;
+  cursor: help;
+}
+
+.info:hover {
+  color: transparent;
+  -webkit-animation: fadein 0s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 0s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 0s;
+  /* Internet Explorer */
+  -o-animation: fadein 0s;
+  /* Opera < 12.1 */
+  animation: fadein 0s;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.info:hover:after {
+  -webkit-animation: fadein 0.5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 0.5s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 0.5s;
+  /* Internet Explorer */
+  -o-animation: fadein 0.5s;
+  /* Opera < 12.1 */
+  animation: fadein 0.5s;
+  border: 1px solid white;
+  position: relative;
+  left: 9.7rem;
+  content: "Welcome to Spacey! Toggle any sources you wish using the buttons on the left. After creating an account, your choices will be saved.";
+  height: auto;
+  min-width: 15rem;
+  text-align: center;
+  color: white;
+  padding: 0.3rem;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  cursor: help;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+form input {
+  width: 286px;
+  min-height: 30px;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sign-up-form, .login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 1em;
+}
+
+input[type=submit] {
+  padding: 5px 15px;
+  background: #ccc;
+  padding: 5px 15px;
+  background: #ccc;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

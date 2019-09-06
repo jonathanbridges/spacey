@@ -20,7 +20,6 @@
 }
 
 .ModalForm {
-  position: fixed;
   border-radius: 10px;
   width: 600px;
   z-index: 33;
@@ -30,21 +29,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.ModalForm input[type=text] {
-  margin: 10px 0px;
-  height: 30px;
-  width: 400px;
-}
-.ModalForm input[type=password] {
-  margin: 10px 0px;
-  height: 30px;
-  width: 400px;
-}
-.ModalForm input[type=submit] {
-  margin: 10px 0px;
-  height: 30px;
-  width: 400px;
 }
 
 .ModalImgBox {

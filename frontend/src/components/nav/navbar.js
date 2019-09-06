@@ -21,17 +21,27 @@ class NavBar extends React.Component {
 
   // Selectively render links dependent on whether the user is logged in
   getLinks() {
+      let user = {
+        email: 'me@me.me',
+        password: 'password'
+      };
       if (this.props.loggedIn) {
         return (
             <div>
-              <span>Hi </span>
-                <button onClick={this.logoutUser}>Logout</button>
+              <button className="logout" onClick={this.logoutUser}>Logout</button>
             </div>
         );
       } else {
                //<button onClick={()=>this.props.modalOn('signUp')}> modal on</button>
         return (
             <div className ="NavBar--SignedOut">
+              <div className="NavBar--Signup" onClick={()=>this.props.login(user)}>
+                Demo
+              </div>
+              &nbsp;
+              &nbsp;
+              &nbsp;
+
               <div className="NavBar--Signup" onClick={()=>this.props.modalOn('signUp')}>
                 Signup
               </div>
@@ -52,6 +62,8 @@ class NavBar extends React.Component {
           <h1 className="NavBar--Header">Spacey
             <span className="emoji" role="img" aria-label="rocket">🚀</span>
           </h1>
+          <h3 className="info">?</h3>
+          <div className="spacer"></div>
           {this.props.loggedIn}
           {this.getLinks()}
         </div>
