@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 1px 2px rgba(128, 0, 255, 0.05);
-  transition: 0..2s ease-in-out;
+  transition: 0.2s ease-in-out;
   cursor: pointer;
 }
 
@@ -42,14 +42,6 @@
 }
 
 .NavBar--Header {
-  cursor: default;
-}
-
-.logout {
-  height: 40px;
-  font-size: 1rem;
-  padding: .5em;
-  border-radius: 8px;
   cursor: pointer;
 }
 
@@ -87,47 +79,15 @@
 }
 
 .ModalForm {
-  position: fixed;
   border-radius: 10px;
   width: 600px;
   z-index: 33;
   height: 300px;
   background: #1e2b3d;
-  border: 2px solid white;
   box-shadow: 0px 0px 100px black;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-form input {
-  width: 286px;
-  min-height: 30px;
-  font-size: .9rem;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.sign-up-form, .login-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.modal-h2 {
-  text-align: center;
-  color: white;
-  margin-bottom: 1em;
-}
-
-input[type=submit] {
-    padding:5px 15px;
-    background:#ccc;
-    border:0 none;
-    cursor:pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    margin-bottom: 0;
 }
 
 .ModalImgBox {
@@ -153,8 +113,10 @@ input[type=submit] {
 .SessionErrors {
   color: #fff;
   position: absolute;
+  background: #4e0000;
+  width: 400px;
   text-align: center;
-  top: 0;
+  top: 220px;
   padding: 30px 0px;
   font-weight: bold;
   border-radius: 3px;
@@ -208,11 +170,11 @@ input[type=submit] {
   -moz-box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
   box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
   border: 0px solid #000;
-  -webkit-transition: padding 0..2s ease, margin 0..2s ease;
-  -moz-transition: padding 0..2s ease, margin 0..2s ease;
-  -ms-transition: padding 0..2s ease, margin 0..2s ease;
-  -o-transition: padding 0..2s ease, margin 0..2s ease;
-  transition: padding 0..2s ease, margin 0..2s ease;
+  -webkit-transition: padding 0.2s ease, margin 0.2s ease;
+  -moz-transition: padding 0.2s ease, margin 0.2s ease;
+  -ms-transition: padding 0.2s ease, margin 0.2s ease;
+  -o-transition: padding 0.2s ease, margin 0.2s ease;
+  transition: padding 0.2s ease, margin 0.2s ease;
 }
 .News--Source a:hover {
   margin: 35px 0 0 0;
@@ -339,17 +301,10 @@ input[type=submit] {
 }
 
 .rover-images {
-  box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
-  border: 2px solid #72655F;
-  border-radius: 8px;
-  background: rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  margin: .5em;
+  width: 100%;
   grid-area: bottom;
 }
-
-.paging-dot {
+.rover-images .paging-dot {
   background: white !important;
 }
 
@@ -486,54 +441,54 @@ https://codepen.io/YusukeNakaya/pen/XyOaBj
   animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
 }
 .shooting_star:nth-child(1) {
-  top: calc(50% - -56px);
-  left: calc(50% - 290px);
-  animation-delay: 1101ms;
+  top: calc(50% - -8px);
+  left: calc(50% - 173px);
+  animation-delay: 2233ms;
 }
 .shooting_star:nth-child(2) {
-  top: calc(50% - 134px);
-  left: calc(50% - 220px);
-  animation-delay: 537ms;
+  top: calc(50% - 407px);
+  left: calc(50% - 173px);
+  animation-delay: 7898ms;
 }
 .shooting_star:nth-child(3) {
-  top: calc(50% - 392px);
-  left: calc(50% - 266px);
-  animation-delay: 7973ms;
+  top: calc(50% - 57px);
+  left: calc(50% - 100px);
+  animation-delay: 9729ms;
 }
 .shooting_star:nth-child(4) {
-  top: calc(50% - -10px);
-  left: calc(50% - 143px);
-  animation-delay: 4782ms;
+  top: calc(50% - 207px);
+  left: calc(50% - 132px);
+  animation-delay: 68ms;
 }
 .shooting_star:nth-child(5) {
-  top: calc(50% - 25px);
-  left: calc(50% - 118px);
-  animation-delay: 7662ms;
+  top: calc(50% - 399px);
+  left: calc(50% - 255px);
+  animation-delay: 4460ms;
 }
 .shooting_star:nth-child(6) {
-  top: calc(50% - 179px);
-  left: calc(50% - 44px);
-  animation-delay: 6358ms;
+  top: calc(50% - -499px);
+  left: calc(50% - 56px);
+  animation-delay: 4413ms;
 }
 .shooting_star:nth-child(7) {
-  top: calc(50% - 238px);
-  left: calc(50% - 161px);
-  animation-delay: 1257ms;
+  top: calc(50% - 93px);
+  left: calc(50% - 149px);
+  animation-delay: 4113ms;
 }
 .shooting_star:nth-child(8) {
-  top: calc(50% - -88px);
-  left: calc(50% - 203px);
-  animation-delay: 6231ms;
+  top: calc(50% - 264px);
+  left: calc(50% - 76px);
+  animation-delay: 5510ms;
 }
 .shooting_star:nth-child(9) {
-  top: calc(50% - 142px);
-  left: calc(50% - 95px);
-  animation-delay: 6910ms;
+  top: calc(50% - -351px);
+  left: calc(50% - 103px);
+  animation-delay: 3720ms;
 }
 .shooting_star:nth-child(10) {
-  top: calc(50% - 34px);
-  left: calc(50% - 106px);
-  animation-delay: 2312ms;
+  top: calc(50% - 43px);
+  left: calc(50% - 109px);
+  animation-delay: 8338ms;
 }
 
 @keyframes tail {
@@ -615,7 +570,7 @@ body {
   width: 100%;
   color: white;
   position: absolute;
-  box-shadow: 0px 1px 20px #150a2f;
+  box-shadow: 0px 1px 80px #150a2f;
   z-index: 1111;
 }
 .NavBar h1 {
@@ -661,7 +616,7 @@ body {
   flex: 1;
   background: #252c37;
   box-shadow: 0px 1px 80px #150a2f;
-  padding: .5em;
+  padding: 0.5em;
 }
 
 .SideBar--Background {
@@ -678,8 +633,9 @@ body {
   border-radius: 8px;
   text-align: center;
   height: 70px;
+  border: 2px solid white;
   cursor: pointer;
-  padding: .1em;
+  padding: 0.1em;
 }
 
 .SideBar--Button--off {
@@ -695,7 +651,7 @@ body {
   border: 2px solid white;
   border-radius: 8px;
   cursor: pointer;
-  padding: .1em;
+  padding: 0.1em;
 }
 
 .MainPage--Widgets {
@@ -705,8 +661,7 @@ body {
   grid-template-areas: "top-left top-right" "left right" "bottom bottom";
   grid-template-rows: min-content;
   grid-template-columns: 50% 50%;
-  margin: .5em;
-  /* padding: 3em 2%; */
+  margin: 0.5em;
 }
 .MainPage--Widgets div {
   z-index: 11;
@@ -732,7 +687,7 @@ body {
   flex-direction: column;
   height: 100vh;
   padding: 20px;
-  margin: .5em
+  margin: 0.5em;
 }
 @media screen and (max-width: 768px) {
   .MainPage--Widgets > div:not(.rover-images) {
@@ -764,6 +719,14 @@ body {
   color: white;
 }
 
+.logout {
+  height: 40px;
+  font-size: 1rem;
+  padding: 0.5em;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 .info {
   display: flex;
   justify-content: center;
@@ -780,10 +743,14 @@ body {
 
 .info:hover {
   color: transparent;
-  -webkit-animation: fadein 0s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 0s; /* Firefox < 16 */
-  -ms-animation: fadein 0s; /* Internet Explorer */
-  -o-animation: fadein 0s; /* Opera < 12.1 */
+  -webkit-animation: fadein 0s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 0s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 0s;
+  /* Internet Explorer */
+  -o-animation: fadein 0s;
+  /* Opera < 12.1 */
   animation: fadein 0s;
 }
 
@@ -792,12 +759,15 @@ body {
 }
 
 .info:hover:after {
-  -webkit-animation: fadein .5s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein .5s; /* Firefox < 16 */
-  -ms-animation: fadein .5s; /* Internet Explorer */
-  -o-animation: fadein .5s; /* Opera < 12.1 */
-  animation: fadein .5s;
-
+  -webkit-animation: fadein 0.5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 0.5s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 0.5s;
+  /* Internet Explorer */
+  -o-animation: fadein 0.5s;
+  /* Opera < 12.1 */
+  animation: fadein 0.5s;
   border: 1px solid white;
   position: relative;
   left: 9.7rem;
@@ -806,33 +776,78 @@ body {
   min-width: 15rem;
   text-align: center;
   color: white;
-  padding: .3rem;
-  font-size: .8rem;
+  padding: 0.3rem;
+  font-size: 0.8rem;
   border-radius: 8px;
   cursor: help;
 }
 
 @keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
 /* Firefox < 16 */
 @-moz-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
 /* Internet Explorer */
 @-ms-keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+form input {
+  width: 286px;
+  min-height: 30px;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sign-up-form, .login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 1em;
+}
+
+input[type=submit] {
+  padding: 5px 15px;
+  background: #ccc;
+  padding: 5px 15px;
+  background: #ccc;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -21,6 +21,7 @@ $ModalWidth: 600px;
   opacity: .5;
   z-index: -1;
 }
+
 .ModalForm{
   border-radius: 10px;
   width:$ModalWidth;
@@ -31,23 +32,8 @@ $ModalWidth: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
-  input[type=text]{
-    margin: 10px 0px;
-    height: 30px;
-    width:$InputWidth;
-  }
-  input[type=password]{
-    margin: 10px 0px;
-    height: 30px;
-    width: $InputWidth;
-  }
-  input[type=submit]{
-    margin: 10px 0px;
-    height: 30px;
-    width:$InputWidth;
-  }
-
 }
+
 .ModalImgBox{
   position: fixed;
   background: $ModalBackgroundClr;
