@@ -1,8 +1,17 @@
 .rover-images {
-  width: 100%;
-  grid-area: bottom;
+    grid-area: bottom;
+    -webkit-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
+    box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
+    border: 2px solid #72655F;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.3);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: .5em;
+}
 
-  .paging-dot {
-    background: white !important;
-  }
+.rover-images .paging-dot {
+  background: white !important;
 }

@@ -300,9 +300,19 @@
 }
 
 .rover-images {
-  width: 100%;
   grid-area: bottom;
+  -webkit-box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
+  border: 2px solid #72655F;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em;
 }
+
 .rover-images .paging-dot {
   background: white !important;
 }
@@ -440,102 +450,54 @@ https://codepen.io/YusukeNakaya/pen/XyOaBj
   animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
 }
 .shooting_star:nth-child(1) {
-<<<<<<< HEAD
-  top: calc(50% - -33px);
-  left: calc(50% - 211px);
-  animation-delay: 8209ms;
-=======
-<<<<<<< HEAD
-  top: calc(50% - 418px);
-  left: calc(50% - 9px);
-  animation-delay: 9434ms;
-=======
-  top: calc(50% - -90px);
-  left: calc(50% - 42px);
-  animation-delay: 9257ms;
->>>>>>> e888e640e3b9cfa4bff8ac44bca5ac17c18ff698
->>>>>>> e36a150d1dcd926e153b843a92daaeba460bd683
+  top: calc(50% - 349px);
+  left: calc(50% - 154px);
+  animation-delay: 1350ms;
 }
 .shooting_star:nth-child(2) {
-  top: calc(50% - -325px);
-  left: calc(50% - 206px);
-  animation-delay: 2347ms;
+  top: calc(50% - -345px);
+  left: calc(50% - 260px);
+  animation-delay: 3394ms;
 }
 .shooting_star:nth-child(3) {
-<<<<<<< HEAD
-  top: calc(50% - -324px);
-  left: calc(50% - 160px);
-  animation-delay: 395ms;
-=======
-  top: calc(50% - -187px);
-  left: calc(50% - 230px);
-<<<<<<< HEAD
-  animation-delay: 4501ms;
-}
-.shooting_star:nth-child(7) {
-  top: calc(50% - -310px);
-  left: calc(50% - 98px);
-  animation-delay: 6772ms;
-}
-.shooting_star:nth-child(8) {
-  top: calc(50% - 345px);
-  left: calc(50% - 183px);
-  animation-delay: 3676ms;
-}
-.shooting_star:nth-child(9) {
-  top: calc(50% - -70px);
-  left: calc(50% - 269px);
-  animation-delay: 8126ms;
-}
-.shooting_star:nth-child(10) {
-  top: calc(50% - 367px);
-  left: calc(50% - 266px);
-  animation-delay: 5691ms;
-=======
-  animation-delay: 935ms;
->>>>>>> e36a150d1dcd926e153b843a92daaeba460bd683
+  top: calc(50% - -409px);
+  left: calc(50% - 187px);
+  animation-delay: 8031ms;
 }
 .shooting_star:nth-child(4) {
-  top: calc(50% - -464px);
-  left: calc(50% - 137px);
-  animation-delay: 1776ms;
+  top: calc(50% - -456px);
+  left: calc(50% - 127px);
+  animation-delay: 9259ms;
 }
 .shooting_star:nth-child(5) {
-  top: calc(50% - 432px);
-  left: calc(50% - 193px);
-  animation-delay: 4398ms;
+  top: calc(50% - 280px);
+  left: calc(50% - 255px);
+  animation-delay: 5452ms;
 }
 .shooting_star:nth-child(6) {
-  top: calc(50% - 72px);
-  left: calc(50% - 23px);
-  animation-delay: 8502ms;
+  top: calc(50% - 24px);
+  left: calc(50% - 147px);
+  animation-delay: 3833ms;
 }
 .shooting_star:nth-child(7) {
-  top: calc(50% - 366px);
-  left: calc(50% - 199px);
-  animation-delay: 2198ms;
+  top: calc(50% - 13px);
+  left: calc(50% - 285px);
+  animation-delay: 6158ms;
 }
 .shooting_star:nth-child(8) {
-  top: calc(50% - -294px);
-  left: calc(50% - 300px);
-  animation-delay: 3634ms;
+  top: calc(50% - 181px);
+  left: calc(50% - 143px);
+  animation-delay: 5487ms;
 }
 .shooting_star:nth-child(9) {
-  top: calc(50% - -157px);
-  left: calc(50% - 266px);
-  animation-delay: 4359ms;
+  top: calc(50% - -20px);
+  left: calc(50% - 260px);
+  animation-delay: 6531ms;
 }
 .shooting_star:nth-child(10) {
-<<<<<<< HEAD
-  top: calc(50% - 479px);
-  left: calc(50% - 216px);
-  animation-delay: 1917ms;
-=======
-  top: calc(50% - 355px);
-  left: calc(50% - 148px);
-  animation-delay: 1540ms;
->>>>>>> e888e640e3b9cfa4bff8ac44bca5ac17c18ff698
->>>>>>> e36a150d1dcd926e153b843a92daaeba460bd683
+  top: calc(50% - 341px);
+  left: calc(50% - 296px);
+  animation-delay: 6460ms;
 }
 
 @keyframes tail {
@@ -713,24 +675,6 @@ body {
     padding: 4% 2%;
     margin: 0;
   }
-}
-
-.rover-images {
-  grid-area: bottom;
-  -webkit-box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
-  box-shadow: 2px 8px 25px -2px rgba(0, 0, 0, 0.3);
-  border: 2px solid #72655F;
-  border-radius: 8px;
-  background: rgba(0, 0, 0, 0.3);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  margin: 0.5em;
-}
-
-.rover-images .paging-dot {
-  background: white !important;
 }
 
 .MainPage--Widgets > div:not(.rover-images) {
