@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore(preloadedState);
 
     const currentTime = Date.now() / 1000;
-    console.log(preloadedState,'this is predlaoded state!!!!!!!!!!!!!!!')
+    //console.log(preloadedState,'this is predlaoded state!!!!!!!!!!!!!!!')
 
     // If the user's token has expired
     if (decodedUser.exp < currentTime) {

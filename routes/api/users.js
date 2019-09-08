@@ -41,7 +41,7 @@ router.post('/update', (req, res) => {
     //console.log(user)
         if (user) {
             const payload = { id: user.id, email: user.email, ui:user.ui };
-            console.log('----------------------',user,'-----------this is before sending baclk!!!!')
+            //console.log('----------------------',user,'-----------this is before sending baclk!!!!')
 
             jwt.sign(
               payload,

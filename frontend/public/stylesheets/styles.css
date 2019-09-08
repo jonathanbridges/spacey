@@ -440,9 +440,21 @@ https://codepen.io/YusukeNakaya/pen/XyOaBj
   animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
 }
 .shooting_star:nth-child(1) {
+<<<<<<< HEAD
   top: calc(50% - -33px);
   left: calc(50% - 211px);
   animation-delay: 8209ms;
+=======
+<<<<<<< HEAD
+  top: calc(50% - 418px);
+  left: calc(50% - 9px);
+  animation-delay: 9434ms;
+=======
+  top: calc(50% - -90px);
+  left: calc(50% - 42px);
+  animation-delay: 9257ms;
+>>>>>>> e888e640e3b9cfa4bff8ac44bca5ac17c18ff698
+>>>>>>> e36a150d1dcd926e153b843a92daaeba460bd683
 }
 .shooting_star:nth-child(2) {
   top: calc(50% - -325px);
@@ -450,9 +462,38 @@ https://codepen.io/YusukeNakaya/pen/XyOaBj
   animation-delay: 2347ms;
 }
 .shooting_star:nth-child(3) {
+<<<<<<< HEAD
   top: calc(50% - -324px);
   left: calc(50% - 160px);
   animation-delay: 395ms;
+=======
+  top: calc(50% - -187px);
+  left: calc(50% - 230px);
+<<<<<<< HEAD
+  animation-delay: 4501ms;
+}
+.shooting_star:nth-child(7) {
+  top: calc(50% - -310px);
+  left: calc(50% - 98px);
+  animation-delay: 6772ms;
+}
+.shooting_star:nth-child(8) {
+  top: calc(50% - 345px);
+  left: calc(50% - 183px);
+  animation-delay: 3676ms;
+}
+.shooting_star:nth-child(9) {
+  top: calc(50% - -70px);
+  left: calc(50% - 269px);
+  animation-delay: 8126ms;
+}
+.shooting_star:nth-child(10) {
+  top: calc(50% - 367px);
+  left: calc(50% - 266px);
+  animation-delay: 5691ms;
+=======
+  animation-delay: 935ms;
+>>>>>>> e36a150d1dcd926e153b843a92daaeba460bd683
 }
 .shooting_star:nth-child(4) {
   top: calc(50% - -464px);
@@ -485,9 +526,16 @@ https://codepen.io/YusukeNakaya/pen/XyOaBj
   animation-delay: 4359ms;
 }
 .shooting_star:nth-child(10) {
+<<<<<<< HEAD
   top: calc(50% - 479px);
   left: calc(50% - 216px);
   animation-delay: 1917ms;
+=======
+  top: calc(50% - 355px);
+  left: calc(50% - 148px);
+  animation-delay: 1540ms;
+>>>>>>> e888e640e3b9cfa4bff8ac44bca5ac17c18ff698
+>>>>>>> e36a150d1dcd926e153b843a92daaeba460bd683
 }
 
 @keyframes tail {
