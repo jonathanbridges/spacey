@@ -1,8 +1,5 @@
 .NasaIotd{
-    // background: #10161e;
-    // color: white;
-    // width: 47%;
-    // height: auto;
+    overflow-y: scroll;
     grid-area: top-left;
 }
 
@@ -18,6 +15,5 @@
 
 .NasaIotd--desc{
     flex: 1;
-    overflow-y: scroll;
     font-size: 80%;
 }

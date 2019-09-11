@@ -1,4 +1,5 @@
 .NasaIotd {
+  overflow-y: scroll;
   grid-area: top-left;
 }
 
@@ -14,7 +15,6 @@
 
 .NasaIotd--desc {
   flex: 1;
-  overflow-y: scroll;
   font-size: 80%;
 }
 
