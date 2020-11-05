@@ -126,17 +126,16 @@
   overflow-y: scroll;
   grid-area: top-left;
 }
-
+.NasaIotd > *:not(:last-child) {
+  margin: 0 0 0.5em;
+}
 .NasaIotd--img {
-  margin: 2em 0;
   cursor: zoom-in;
 }
-
 .NasaIotd--copyright {
   color: purple;
   font-size: 80%;
 }
-
 .NasaIotd--desc {
   flex: 1;
   font-size: 80%;
@@ -450,54 +449,54 @@ https://codepen.io/YusukeNakaya/pen/XyOaBj
   animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
 }
 .shooting_star:nth-child(1) {
-  top: calc(50% - -222px);
-  left: calc(50% - 211px);
-  animation-delay: 7995ms;
+  top: calc(50% - 419px);
+  left: calc(50% - 28px);
+  animation-delay: 4942ms;
 }
 .shooting_star:nth-child(2) {
-  top: calc(50% - 285px);
-  left: calc(50% - 63px);
-  animation-delay: 2576ms;
+  top: calc(50% - -182px);
+  left: calc(50% - 15px);
+  animation-delay: 8936ms;
 }
 .shooting_star:nth-child(3) {
-  top: calc(50% - -428px);
-  left: calc(50% - 230px);
-  animation-delay: 1835ms;
+  top: calc(50% - 27px);
+  left: calc(50% - 288px);
+  animation-delay: 7472ms;
 }
 .shooting_star:nth-child(4) {
-  top: calc(50% - 487px);
-  left: calc(50% - 268px);
-  animation-delay: 9315ms;
+  top: calc(50% - 384px);
+  left: calc(50% - 233px);
+  animation-delay: 5982ms;
 }
 .shooting_star:nth-child(5) {
-  top: calc(50% - -202px);
-  left: calc(50% - 178px);
-  animation-delay: 9189ms;
+  top: calc(50% - -206px);
+  left: calc(50% - 82px);
+  animation-delay: 3179ms;
 }
 .shooting_star:nth-child(6) {
-  top: calc(50% - 361px);
-  left: calc(50% - 69px);
-  animation-delay: 1084ms;
+  top: calc(50% - -126px);
+  left: calc(50% - 247px);
+  animation-delay: 7750ms;
 }
 .shooting_star:nth-child(7) {
-  top: calc(50% - -122px);
-  left: calc(50% - 243px);
-  animation-delay: 8561ms;
+  top: calc(50% - 184px);
+  left: calc(50% - 22px);
+  animation-delay: 1112ms;
 }
 .shooting_star:nth-child(8) {
-  top: calc(50% - 238px);
-  left: calc(50% - 172px);
-  animation-delay: 6768ms;
+  top: calc(50% - -275px);
+  left: calc(50% - 184px);
+  animation-delay: 1025ms;
 }
 .shooting_star:nth-child(9) {
-  top: calc(50% - -386px);
-  left: calc(50% - 44px);
-  animation-delay: 3771ms;
+  top: calc(50% - -60px);
+  left: calc(50% - 153px);
+  animation-delay: 4450ms;
 }
 .shooting_star:nth-child(10) {
-  top: calc(50% - -220px);
-  left: calc(50% - 34px);
-  animation-delay: 527ms;
+  top: calc(50% - 30px);
+  left: calc(50% - 86px);
+  animation-delay: 596ms;
 }
 
 @keyframes tail {

@@ -1,19 +1,18 @@
 .NasaIotd{
     overflow-y: scroll;
     grid-area: top-left;
-}
-
-.NasaIotd--img{
-    margin: 2em 0;
-    cursor: zoom-in;
-}
-
-.NasaIotd--copyright{
-    color: purple;
-    font-size: 80%;
-}
-
-.NasaIotd--desc{
-    flex: 1;
-    font-size: 80%;
+    > *:not(:last-child) {
+        margin: 0 0 .5em;
+    }
+    &--img {
+        cursor: zoom-in;
+    }
+    &--copyright {
+        color: purple;
+        font-size: 80%;
+    }
+    &--desc {
+        flex: 1;
+        font-size: 80%;
+    }
 }

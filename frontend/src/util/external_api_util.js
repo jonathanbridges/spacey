@@ -2,7 +2,13 @@ import keys from '../config/keys';
 import axios from 'axios';
 
 export const fetchImageOfTheDay = () => {
-  let url = `https://api.nasa.gov/planetary/apod?api_key=${keys.nasa}`;
+  // get date in ~ PST so that API doesn't return 404s when getting UTC dates
+  const date = new Date();
+  const utcDate = new Date(date.toUTCString());
+  utcDate.setHours(utcDate.getHours()-8);
+  const usDate = new Date(utcDate);
+  const formattedUseDate = (new Date(usDate)).toISOString().split('T')[0];
+  const url = `https://api.nasa.gov/planetary/apod?api_key=${keys.nasa}&date=${formattedUseDate}`;
   return axios.get(url);
 };
 
